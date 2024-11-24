@@ -89,9 +89,10 @@ each node can be in two modes. In other words, there are two functionalities for
 Thus, the tracker search that file in the torrent and sort the neighbors which own this file based on their upload frequency
   list, the more a node uploads, the more chance it has for being selected. Then a fixed number of neighboring peers are selected 
   for node *i* for later to request that file from them. Next, node *i* request that file from those neighboring peers, and 
-  conduct a UDP connection for getting a chunk of file from that peer.
+  conduct a TCP connection for getting a chunk of file from that peer.
   ```
   torrent -setMode download <filename>
+  torrent -setMode download_magnet <magnet_text>
   ```
 - **exit - (Optional mode):**
 An optional mode named **exit** has also implemented which is used for letting tracker know that a node has left the

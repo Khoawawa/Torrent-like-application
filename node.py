@@ -368,6 +368,12 @@ def run(args):
             t = Thread(target=node.set_download_mode, args=(filename,))
             t.setDaemon(True)
             t.start()
+
+        elif mode == 'download_magnet':
+            t = Thread(target=node.set_download_mode, args=(filename,))
+            t.setDaemon(True)
+            t.start()
+            
         #################### exit mode ####################
         elif mode == 'exit':
             node.exit_torrent()
