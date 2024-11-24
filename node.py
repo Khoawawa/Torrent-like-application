@@ -344,7 +344,7 @@ class Node:
                 }
             # asking tracker for the peers that have the info_hash
             # tracker response should have peers -> {peer -> {}, send_freq_list -> {}}
-            tracker_response = self.search_torrent(info_hash=info_hash,left=info['file_size'])
+            tracker_response = self.search_torrent(info_hash=info_hash,left=len(info['pieces']))
             file_owners = tracker_response['peers']
             
             self.split_file_owners(file_owners=file_owners,info=info,info_hash=info_hash)
@@ -492,7 +492,7 @@ def run(args):
 
         #################### send mode ####################
         if mode == 'send':
-            node.set_send_mode(file_name=file)
+            node.set_send_mode(torrent=file)
         #################### download mode ####################
         elif mode == 'download':
             t = Thread(target=node.set_download_mode, args=(file,))
