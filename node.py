@@ -325,9 +325,12 @@ class Node:
         self.files.append(info['file_name'])
 
     def set_download_mode(self, torrent_file: str):
-        file_path = f"{config.directory.node_files_dir}node{self.node_id}/{torrent_file}"
+        if torrent_file.startswith("magnet:?"):
+            is_magnet_text = True
+        else:
+            file_path = f"{config.directory.node_files_dir}node{self.node_id}/{torrent_file}"
         # check if torrent file is in the node directory
-        if not os.path.isfile(file_path):
+        if not os.path.isfile(file_path) and not is_magnet_text:
             log_content = f"You dont have the torrent file!"
             log(node_id=self.node_id, content=log_content)
             return
@@ -335,13 +338,17 @@ class Node:
             log_content = f"You just started to download {torrent_file}. Let's search it in torrent!"
             log(node_id=self.node_id, content=log_content)
             # load the torrent file
-            tracker_url,info_hash,info = TorrentFile.load_torrent_file(torrent_file)
-            with self.lock:
-                self.torrent_data = {
-                    'announce': tracker_url,
-                    'info_hash': info_hash,
-                    'info': info
-                }
+            if not is_magnet_text:
+                tracker_url,info_hash,info = TorrentFile.load_torrent_file(torrent_file)
+                with self.lock:
+                    self.torrent_data = {
+                        'announce': tracker_url,
+                        'info_hash': info_hash,
+                        'info': info
+                    }
+            else:
+                tracker_url, info_hash, file_name = TorrentFile.load_magnet_text(torrent_file)
+
             # asking tracker for the peers that have the info_hash
             # tracker response should have peers -> {peer -> {}, send_freq_list -> {}}
             tracker_response = self.search_torrent(info_hash=info_hash,left=info['file_size'])

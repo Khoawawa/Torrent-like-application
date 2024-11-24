@@ -8,3 +8,11 @@ class Node2Node(Message):
         self.dest_node_id = dest_node_id
         self.filename = filename
         self.size = size    # size = -1 means a node is asking for size
+
+class NodeInfo(Message):
+    def __init__(self, src_node_id: int, dest_node_id: int, info_hash: str, info: dict):
+        super().__init__()
+        self.src_node_id = src_node_id
+        self.dest_node_id = dest_node_id
+        self.info_hash = info_hash
+        self.info = info
