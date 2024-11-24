@@ -10,7 +10,7 @@ warnings.filterwarnings("ignore")
 # implemented classes
 from utils import *
 from messages.message import  Message
-from messages.tracker2node import Tracker2Node
+from messages.tracker2node import Tracker2Node, TrackerScrape2Node
 from segment import UDPSegment
 from configs import CFG, Config
 config = Config.from_json(CFG)
@@ -26,22 +26,20 @@ class Tracker:
 
     def send_segment(self, sock: socket.socket, data: bytes, addr: tuple,):
         ip, dest_port = addr
-        segment = UDPSegment(src_port=sock.getsockname()[1],
-                             dest_port=dest_port,
-                             data=data)
-        encrypted_data = segment.data
+        encrypted_data = data
         sock.sendto(encrypted_data, addr)
 
     def add_file_owner(self, msg: dict, addr: tuple):
         entry = {
             'node_id': msg['node_id'],
-            'addr': addr
+            'addr': addr,
+            'left': msg['left']
         }
-        log_content = f"Node {msg['node_id']} owns {msg['filename']} and is ready to send."
+        log_content = f"Node {msg['node_id']} owns {msg['info_hash']}"
         log(node_id=0, content=log_content, is_tracker=True)
 
-        self.file_owners_list[msg['filename']].append(json.dumps(entry))
-        self.file_owners_list[msg['filename']] = list(set(self.file_owners_list[msg['filename']]))
+        self.file_owners_list[msg['info_hash']].append(json.dumps(entry))
+        self.file_owners_list[msg['info_hash']] = list(set(self.file_owners_list[msg['info_hash']]))
         self.send_freq_list[msg['node_id']] += 1
         self.send_freq_list[msg['node_id']] -= 1
 
@@ -52,17 +50,20 @@ class Tracker:
         self.save_db_as_json()
 
     def search_file(self, msg: dict, addr: tuple):
-        log_content = f"Node{msg['node_id']} is searching for {msg['filename']}"
+        '''
+        Method to search for peers list who own the info_hash  (i.e the original file)
+        '''
+        
+        log_content = f"Node{msg['node_id']} is searching for {msg['info_hash']}"
         log(node_id=0, content=log_content, is_tracker=True)
 
         matched_entries = []
-        for json_entry in self.file_owners_list[msg['filename']]:
+        for json_entry in self.file_owners_list[msg['info_hash']]:
             entry = json.loads(json_entry)
             matched_entries.append((entry, self.send_freq_list[entry['node_id']]))
-
-        tracker_response = Tracker2Node(dest_node_id=msg['node_id'],
-                                        search_result=matched_entries,
-                                        filename=msg['filename'])
+        
+        tracker_response = Tracker2Node(node_id = msg['node_id'],
+                                        peers = matched_entries)
 
         self.send_segment(sock=self.tracker_socket,
                           data=tracker_response.encode(),
@@ -128,7 +129,53 @@ class Tracker:
         # saves files' information as a json file
         files_json = open(files_info_path, 'w')
         json.dump(self.file_owners_list, files_json, indent=4, sort_keys=True)
-
+    def scrape(self,msg,addr):
+        peers = self.file_owners_list[msg['info_hash']]
+        complete = 0
+        incomplete = 0
+        for peer in peers:
+            if peer['left'] == 0:
+                complete += 1
+            else:
+                incomplete += 1
+        files = {
+            msg['info_hash']: {
+                'complete' : complete,
+                'incomplete': incomplete
+            }
+        }
+        msg = TrackerScrape2Node(node_id=msg['node_id'],
+                                 files=files)
+        
+        self.send_segment(sock=self.tracker_socket,
+                          data=msg.encode(),
+                          addr=addr)
+    def update_stat(self,msg,addr):
+        info_hash = msg['info_hash']
+        if info_hash == '':
+            return
+        entry_found = False
+        updated_list = []
+        for json_entry in self.file_owners_list[msg['info_hash']]:
+            entry = json.loads(json_entry)
+            if entry['node_id'] == msg['node_id']:
+                if msg['left'] != -1: 
+                    entry['left'] = msg['left']
+                    entry_found = True
+            updated_list.append(json.dumps(entry))
+            
+        if not entry_found:
+            self.add_file_owner(msg,addr)
+            return
+        
+        log_content = f"Updated info_hash {info_hash} for node{msg['node_id']}"
+        log(0,log_content,is_tracker=True)
+        
+        self.file_owners_list[info_hash] = list(set(updated_list))
+        self.save_db_as_json()
+        
+         
+            
     def handle_node_request(self, data: bytes, addr: tuple):
         msg = Message.decode(data)
         mode = msg['mode']
@@ -140,6 +187,9 @@ class Tracker:
             self.update_db(msg=msg)
         elif mode == config.tracker_requests_mode.REGISTER:
             self.has_informed_tracker[(msg['node_id'], addr)] = True
+            self.update_stat(msg=msg,addr=addr)
+        elif mode == config.tracker_requests_mode.SCRAPE:
+            self.scrape(msg=msg, addr=addr)
         elif mode == config.tracker_requests_mode.EXIT:
             self.remove_node(node_id=msg['node_id'], addr=addr)
             log_content = f"Node {msg['node_id']} exited torrent intentionally."

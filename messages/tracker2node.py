@@ -1,9 +1,13 @@
 from messages.message import Message
 
 class Tracker2Node(Message):
-    def __init__(self, dest_node_id: int, search_result: list, filename: str):
+    def __init__(self, node_id: int, peers: list):
 
         super().__init__()
-        self.dest_node_id = dest_node_id
-        self.search_result = search_result
-        self.filename = filename
+        self.node_id = node_id
+        self.peers = peers
+class TrackerScrape2Node(Message):
+    def __init__(self,node_id: int, files: dict):
+        super().__init__()
+        self.node_id = node_id
+        self.files = files

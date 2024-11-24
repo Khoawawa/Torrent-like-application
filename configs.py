@@ -22,7 +22,8 @@ CFG = {
         "OWN": 1,       # tells the tracker that it is now in sending mode for a specific file
         "NEED": 2,      # tells the torrent that it needs a file, so the file must be searched in torrent
         "UPDATE": 3,    # tells tracker that it's upload freq rate must be incremented)
-        "EXIT": 4       # tells the tracker that it left the torrent
+        "SCRAPE": 4,
+        "EXIT": 5       # tells the tracker that it left the torrent
     }
 }
 

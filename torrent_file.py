@@ -9,6 +9,7 @@ config = Config.from_json(CFG)
 
 class TorrentFile:
     def __init__(self,file_name=None,file_size=None,file_path=None,file_mode=None):
+        
         self.file_name = file_name
         self.file_size = file_size
         self.piece_size = config.constants.CHUNK_PIECES_SIZE
