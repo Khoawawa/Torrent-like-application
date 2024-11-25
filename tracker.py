@@ -20,19 +20,19 @@ next_call = time.time()
 class Tracker:
     def __init__(self):
         self.tracker_socket = set_socket(config.constants.TRACKER_ADDR[1])
+        self.tracker_socket.listen(5)
         self.file_owners_list = defaultdict(list)
         self.send_freq_list = defaultdict(int)
         self.has_informed_tracker = defaultdict(bool)
 
     def send_segment(self, sock: socket.socket, data: bytes, addr: tuple,):
-        ip, dest_port = addr
-        encrypted_data = data
-        sock.sendto(encrypted_data, addr)
+        sock.connect(addr)
+        sock.send(data)
 
     def add_file_owner(self, msg: dict, addr: tuple):
         entry = {
             'node_id': msg['node_id'],
-            'addr': addr,
+            'addr': (addr[0],msg['port']),
             'left': msg['left']
         }
         log_content = f"Node {msg['node_id']} owns {msg['info_hash']}"
@@ -199,16 +199,18 @@ class Tracker:
         timer_thread = Thread(target=self.check_nodes_periodically, args=(config.constants.TRACKER_TIME_INTERVAL,))
         timer_thread.setDaemon(True)
         timer_thread.start()
-
         while True:
-            data, addr = self.tracker_socket.recvfrom(config.constants.BUFFER_SIZE)
-            t = Thread(target=self.handle_node_request, args=(data, addr))
-            t.start()
+            conn, addr = self.tracker_socket.accept()
+            log(0,f'Connected by {addr}',True)
+            with conn:
+                data = conn.recv(config.constants.BUFFER_SIZE)
+                t = Thread(target=self.handle_node_request,args=(data, addr))
+                t.start()
 
     def run(self):
         log_content = f"***************** Tracker program started just right now! *****************"
         log(node_id=0, content=log_content, is_tracker=True)
-        t = Thread(target=self.listen())
+        t = Thread(target=self.listen)
         t.daemon = True
         t.start()
         t.join()

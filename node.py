@@ -27,6 +27,7 @@ class Node:
         self.lock = Lock()
         self.node_id = node_id
         self.rcv_socket = set_socket(rcv_port)
+        self.rcv_socket.listen(5)
         self.send_socket = set_socket(send_port)
         self.files = self.fetch_owned_files()
         self.is_in_send_mode = False    # is thread uploading a file or not
@@ -34,9 +35,12 @@ class Node:
         self.torrent_data = None
 
     def send_segment(self, sock: socket.socket, data: bytes, addr: tuple):
-        ip, dest_port = addr
-        encrypted_data = data
-        sock.sendto(encrypted_data, addr)
+        try_conn = 0
+        while True:
+            sock.connect(addr)
+            sock.send(data)
+            break
+
 
     def split_file_to_chunks(self, file_path: str, rng: tuple) -> list:
         with open(file_path, "r+b") as f:
@@ -112,9 +116,11 @@ class Node:
 
     def listen(self):
         while True:
-            data, addr = self.send_socket.recvfrom(config.constants.BUFFER_SIZE)
-            msg = Message.decode(data)
-            self.handle_requests(msg=msg, addr=addr)
+            conn,addr = self.rcv_socket.accept()
+            with conn:
+                data = self.rcv_socket.recv(config.constants.BUFFER_SIZE)
+                msg = Message.decode(data)
+                self.handle_requests(msg=msg, addr=addr)
 
     def set_send_mode(self, torrent):
         # if file_name not in self.files:
@@ -149,11 +155,11 @@ class Node:
                                info_hash=info_hash,
                                left=0,
                                port=self.rcv_socket.getsockname[1])
-        
-        self.send_segment(sock=self.send_socket,
+        send_socket = set_socket(generate_random_port())
+        self.send_segment(sock=send_socket,
                           data=message.encode(),
                           addr=tuple(config.constants.TRACKER_ADDR))
-
+        free_socket(send_socket)
         if self.is_in_send_mode:    # has been already in send(upload) mode
             log_content = f"Some other node also requested a file from you! But you are already in SEND(upload) mode!"
             log(node_id=self.node_id, content=log_content)
@@ -165,7 +171,7 @@ class Node:
             
             log_content = f"You are free now! You are waiting for other nodes' requests!"
             log(node_id=self.node_id, content=log_content)
-            t = Thread(target=self.listen, args=())
+            t = Thread(target=self.listen)
             t.setDaemon(True)
             t.start()
 
@@ -181,7 +187,7 @@ class Node:
                           data=msg.encode(),
                           addr=tuple(dest_node["addr"]))
         while True:
-            data, addr = temp_sock.recvfrom(config.constants.BUFFER_SIZE)
+            data = temp_sock.recv(config.constants.BUFFER_SIZE)
             dest_node_response = Message.decode(data)
             size = dest_node_response["size"]
             free_socket(temp_sock)
@@ -234,7 +240,7 @@ class Node:
         log(node_id=self.node_id, content=log_content)
         #WAITING FOR THE OWNER TO ANSWER BACK WITH THE CHUNKS BYTE
         while True:
-            data, _ = temp_sock.recvfrom(config.constants.BUFFER_SIZE)
+            data = temp_sock.recv(config.constants.BUFFER_SIZE)
             msg = Message.decode(data)
             
             if msg["idx"] == -1: # end of the file
@@ -354,11 +360,11 @@ class Node:
                                info_hash=info_hash,
                                left=0,
                                port=self.rcv_socket.getsockname[1])
-        
-            self.send_segment(sock=self.send_socket,
+            send_socket = set_socket(generate_random_port())
+            self.send_segment(sock=send_socket,
                           data=message.encode(),
                           addr=tuple(config.constants.TRACKER_ADDR))
-            
+            free_socket(send_socket)
     def get_scrape(self,file):
         '''
         Method to scrape the tracker for swarm statistics
@@ -374,18 +380,21 @@ class Node:
                                   info_hash=info_hash,
                                   left=0,
                                   port=self.rcv_socket.getsockname()[1])
-        self.send_segment(self.send_socket,scrape_msg.encode(),config.constants.TRACKER_ADDR)
+        send_socket = set_socket(generate_random_port())
+        self.send_segment(send_socket,scrape_msg.encode(),config.constants.TRACKER_ADDR)
         #WAITING FOR RESPONSE FROM THE TRACKER
-        data,_ = self.rcv_socket.recvfrom(config.constants.BUFFER_SIZE)
+        data,_ = send_socket.recv(config.constants.BUFFER_SIZE)
         # THE RESPONSE SHOULD BE:
         # files -> {file_x -> {complete, dowloaded, incomplete}}
         tracker_response = Message.decode(data)
+        
+        free_socket(send_socket)
         # printing out scrape
         file_info = tracker_response['files'][info_hash]
         file_data = []
         for cat, val in file_info.items():
             file_data.append(f'{cat}: {val}')
-        log_content = f'{info_hash}:\n{"\n".join(file_data)}'
+        log_content = "{0}:\n{1}".format(info_hash,'\n'.join(file_data))
         log(node_id=self.node_id,content=log_content)
         
     def search_torrent(self, info_hash, left) -> dict:
@@ -402,10 +411,9 @@ class Node:
                           data=msg.encode(),
                           addr=tuple(config.constants.TRACKER_ADDR))
         # now we must wait for the tracker response
-        while True:
-            data, addr = search_sock.recvfrom(config.constants.BUFFER_SIZE)
-            tracker_msg = Message.decode(data)
-            return tracker_msg
+        data = search_sock.recv(config.constants.BUFFER_SIZE)
+        tracker_msg = Message.decode(data)
+        return tracker_msg
 
     def fetch_owned_files(self) -> list:
         files = []
@@ -437,12 +445,12 @@ class Node:
                            mode=config.tracker_requests_mode.REGISTER,
                            info_hash='',
                            left=-1,
-                           port=self.rcv_socket.getsockname[1])
-
-        self.send_segment(sock=self.send_socket,
+                           port=self.rcv_socket.getsockname()[1])
+        send_socket = set_socket(generate_random_port())
+        self.send_segment(sock=send_socket,
                           data=Message.encode(msg),
                           addr=tuple(config.constants.TRACKER_ADDR))
-
+        free_socket(send_socket)
         log_content = f"You entered Torrent."
         log(node_id=self.node_id, content=log_content)
 
@@ -463,11 +471,11 @@ class Node:
                            info_hash=info_hash,
                            left=left,
                            port=self.rcv_socket.getsockname()[1])
-
-        self.send_segment(sock=self.send_socket,
+        send_socket = set_socket(generate_random_port())
+        self.send_segment(sock=send_socket,
                           data=msg.encode(),
                           addr=tuple(config.constants.TRACKER_ADDR))
-
+        free_socket(send_socket)
         datetime.datetime.now()
         next_call = next_call + interval
         Timer(next_call - time.time(), self.inform_tracker_periodically, args=(interval,)).start()

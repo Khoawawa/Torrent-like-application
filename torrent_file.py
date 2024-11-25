@@ -87,6 +87,7 @@ class TorrentFile:
         else:
             return data
 # Testing
-torrentFile = TorrentFile('N5-2018.pdf', 54427 * 1024 , 'node_files\\peer1\\N5-2018.pdf', True)
-torrent_data = torrentFile.create_torrent_data()
-torrentFile.create_torrent_file(1, torrent_data)
+if __name__ == "__main__":
+    torrentFile = TorrentFile('N5-2018.pdf', 54427 * 1024 , 'node_files\\peer1\\N5-2018.pdf', True)
+    torrent_data = torrentFile.create_torrent_data()
+    torrentFile.create_torrent_file(1, torrent_data)
