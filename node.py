@@ -25,6 +25,7 @@ next_call = time.time()
 class Node:
     def __init__(self, node_id: int, rcv_port: int, send_port: int):
         self.lock = Lock()
+        self.left_lock = Lock()
         self.node_id = node_id
         self.rcv_socket = set_socket(rcv_port)
         self.rcv_socket.listen(5)
@@ -33,6 +34,7 @@ class Node:
         self.is_in_send_mode = False    # is thread uploading a file or not
         self.downloaded_files = {}
         self.torrent_data = None
+        self.left = -1
 
     def send_segment(self, sock: socket.socket, data: bytes, addr: tuple):
         try_conn = 0
@@ -168,7 +170,8 @@ class Node:
             self.is_in_send_mode = True
             with self.lock:
                 self.torrent_data = torrent_data
-            
+            with self.left_lock:
+                self.left = 0
             log_content = f"You are free now! You are waiting for other nodes' requests!"
             log(node_id=self.node_id, content=log_content)
             t = Thread(target=self.listen)
@@ -242,7 +245,9 @@ class Node:
         while True:
             data = temp_sock.recv(config.constants.BUFFER_SIZE)
             msg = Message.decode(data)
-            
+            with self.left_lock:
+                left -= self.torrent_data['piece_size']
+                
             if msg["idx"] == -1: # end of the file
                 free_socket(temp_sock)
                 return
@@ -348,6 +353,8 @@ class Node:
                     'info_hash': info_hash,
                     'info': info
                 }
+            with self.left_lock:
+                self.left = info['file_size']
             # asking tracker for the peers that have the info_hash
             # tracker response should have peers -> {peer -> {}, send_freq_list -> {}}
             tracker_response = self.search_torrent(info_hash=info_hash,left=len(info['pieces']))
@@ -464,7 +471,8 @@ class Node:
         with self.lock:
             if self.torrent_data != None:
                 info_hash = self.torrent_data['info_hash']
-                left = len(self.torrent_data['info']['pieces']) - len(self.downloaded_files['info_hash'])
+                with self.left_lock:
+                    left = self.left
             
         msg = Node2Tracker(node_id=self.node_id,
                            mode=config.tracker_requests_mode.REGISTER,
@@ -476,7 +484,7 @@ class Node:
                           data=msg.encode(),
                           addr=tuple(config.constants.TRACKER_ADDR))
         free_socket(send_socket)
-        datetime.datetime.now()
+        
         next_call = next_call + interval
         Timer(next_call - time.time(), self.inform_tracker_periodically, args=(interval,)).start()
 
@@ -511,7 +519,7 @@ def run(args):
             t = Thread(target=node.get_scrape,args=(file))
             t.setDaemon(True)
             t.start()
-            
+        
         #################### exit mode ####################
         elif mode == 'exit':
             node.exit_torrent()
