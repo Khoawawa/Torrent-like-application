@@ -140,7 +140,8 @@ class Tracker:
         complete = 0
         incomplete = 0
         for peer in peers:
-            if peer['left'] == 0:
+            entry = json.loads(peer)
+            if entry['left'] == 0:
                 complete += 1
             else:
                 incomplete += 1
@@ -196,7 +197,7 @@ class Tracker:
             self.has_informed_tracker[(msg['node_id'], (addr[0],msg['port']))] = True
             self.update_stat(msg=msg,addr=addr)
         elif mode == config.tracker_requests_mode.SCRAPE:
-            self.scrape(msg=msg, addr=addr)
+            self.scrape(msg=msg, addr=addr,conn_socket=conn_socket)
         elif mode == config.tracker_requests_mode.EXIT:
             self.remove_node(node_id=msg['node_id'], addr=addr)
             log_content = f"Node {msg['node_id']} exited torrent intentionally."

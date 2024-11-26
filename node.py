@@ -359,6 +359,8 @@ class Node:
                           data=message.encode(),
                           addr=tuple(config.constants.TRACKER_ADDR))
             free_socket(send_socket)
+            with self.lock:
+                self.torrent_data = None
     def get_scrape(self,file):
         '''
         Method to scrape the tracker for swarm statistics
@@ -366,7 +368,8 @@ class Node:
         Args:
             file: .torrent or magnet text(not implemented) -> info_hash
         '''
-        _, info_hash, _ = TorrentFile.load_torrent_file(file)
+        file_path = config.directory.node_files_dir + f'node{self.node_id}/' + file
+        _, info_hash, _ = TorrentFile.load_torrent_file(file_path)
         
         #SEND REQUEST TO TRACKER TO SCRAPE
         scrape_msg = Node2Tracker(node_id=self.node_id,
@@ -374,15 +377,11 @@ class Node:
                                   info_hash=info_hash,
                                   left=0,
                                   port=self.rcv_socket.getsockname()[1])
-        send_socket = set_socket(generate_random_port())
-        self.send_segment(send_socket,scrape_msg.encode(),config.constants.TRACKER_ADDR)
-        #WAITING FOR RESPONSE FROM THE TRACKER
-        data,_ = send_socket.recv(config.constants.BUFFER_SIZE)
-        # THE RESPONSE SHOULD BE:
-        # files -> {file_x -> {complete, dowloaded, incomplete}}
-        tracker_response = Message.decode(data)
-        
-        free_socket(send_socket)
+        with socket.socket(socket.AF_INET,socket.SOCK_STREAM) as send_socket:
+            send_socket.connect(tuple(config.constants.TRACKER_ADDR))
+            send_socket.send(scrape_msg.encode())
+            tracker_response = Message.decode(send_socket.recv(config.constants.BUFFER_SIZE))
+            
         # printing out scrape
         file_info = tracker_response['files'][info_hash]
         file_data = []
@@ -506,7 +505,7 @@ def run(args):
             t.start()
             
         elif mode == 'scrape':
-            t = Thread(target=node.get_scrape,args=(file))
+            t = Thread(target=node.get_scrape,args=(file,))
             t.setDaemon(True)
             t.start()
         
