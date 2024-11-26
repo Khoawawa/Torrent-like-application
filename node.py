@@ -43,7 +43,7 @@ class Node:
         try_conn = 0
         while True:
             sock.connect(addr)
-            sock.send(data)
+            sock.sendall(data)
             break
 
 
@@ -80,7 +80,7 @@ class Node:
             log_content = f"The {idx}/{len(chunk_pieces)} has been sent!"
             log(node_id=self.node_id, content=log_content)
             
-            temp_sock.send(msg.encode())
+            temp_sock.sendall(msg.encode())
             # self.send_segment(sock=temp_sock,
             #                   data=msg.encode(),
             #                   addr=dest_addr)
@@ -90,7 +90,7 @@ class Node:
                            dest_node_id=dest_node_id,
                            info_hash=info_hash,
                            range=rng)
-        temp_sock.send(msg.encode())
+        temp_sock.sendall(msg.encode())
         # self.send_segment(sock=temp_sock,
         #                   data=Message.encode(msg),
         #                   addr=dest_addr)
@@ -106,7 +106,7 @@ class Node:
         
         tracker_sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
         tracker_sock.connect(tuple(config.constants.TRACKER_ADDR))
-        tracker_sock.send(msg.encode())
+        tracker_sock.sendall(msg.encode())
         tracker_sock.close()
 
     def handle_requests(self, msg: dict, addr: tuple, conn_socket):
@@ -119,7 +119,7 @@ class Node:
                             rng=msg["range"],
                             dest_node_id=msg["src_node_id"],
                             dest_addr=addr, conn_socket=conn_socket)
-        free_socket(conn_socket)
+        conn_socket.close()
 
     def listen(self):
         log_content = 'Listening on port {0}'.format(self.rcv_socket.getsockname()[1])
@@ -181,7 +181,7 @@ class Node:
                           addr=tuple(config.constants.TRACKER_ADDR))
         free_socket(send_socket)
         if self.is_in_send_mode:    # has been already in send(upload) mode
-            log_content = f"Some other node also requested a file from you! But you are already in SEND(upload) mode!"
+            log_content = f"Some other node also requested a file from you! But you are already in ~(upload) mode!"
             log(node_id=self.node_id, content=log_content)
             return
         else:
@@ -192,7 +192,7 @@ class Node:
                 self.left = 0
             log_content = f"You are free now! You are waiting for other nodes' requests!"
             log(node_id=self.node_id, content=log_content)
-            t = Thread(target=self.listen())
+            t = Thread(target=self.listen)
             t.setName("sending thread")
             t.setDaemon(True)
             t.start()
@@ -221,7 +221,7 @@ class Node:
         temp_sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
         temp_sock.connect(tuple(dest_node['addr']))
         temp_sock.settimeout(10)
-        temp_sock.send(msg.encode())
+        temp_sock.sendall(msg.encode())
         # temp_sock = set_socket(temp_port)
         # self.send_segment(sock=temp_sock,
         #                   data=msg.encode(),
@@ -379,7 +379,7 @@ class Node:
                                   port=self.rcv_socket.getsockname()[1])
         with socket.socket(socket.AF_INET,socket.SOCK_STREAM) as send_socket:
             send_socket.connect(tuple(config.constants.TRACKER_ADDR))
-            send_socket.send(scrape_msg.encode())
+            send_socket.sendall(scrape_msg.encode())
             tracker_response = Message.decode(send_socket.recv(config.constants.BUFFER_SIZE))
             
         # printing out scrape
