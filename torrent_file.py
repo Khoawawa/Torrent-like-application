@@ -125,7 +125,7 @@ class TorrentFile:
         torrent_data = TorrentFile.decode_utf8(bencodepy.decode(torrent_data))
         return torrent_data['announce'], torrent_data['info_hash'], torrent_data['info']
     @staticmethod
-    def load_magnet_text(self, magnet_link):
+    def load_magnet_text(magnet_link):
         parsed = urllib.parse.urlparse(magnet_link)
         query_params = urllib.parse.parse_qs(parsed.query)
 
@@ -158,15 +158,15 @@ class TorrentFile:
         else:
             return data
 # Testing
-# torrentFile = TorrentFile('node_files\\node5\\N5-2018.pdf', True)
-# torrent_data = torrentFile.create_torrent_data()
-# torrentFile.create_torrent_file(5, torrent_data)
-
-# # torrentFile = TorrentFile('node_files\\node5\\ABC', False)
-# # # torrentFile = TorrentFile('node_files\\node1', False)
-# # torrent_data = torrentFile.create_torrent_data()
+torrentFile = TorrentFile('node_files\\node1\\file_A.txt', True)
+torrent_data = torrentFile.create_torrent_data()
 # # torrentFile.create_torrent_file(5, torrent_data)
-# # torrentFile.load_torrent_file('node_files\\node5\\ABC.torrent')
-# print(torrentFile.create_magnet_text(torrent_data))
+
+# # # torrentFile = TorrentFile('node_files\\node5\\ABC', False)
+# # # # torrentFile = TorrentFile('node_files\\node1', False)
+# # # torrent_data = torrentFile.create_torrent_data()
+# # # torrentFile.create_torrent_file(5, torrent_data)
+# # # torrentFile.load_torrent_file('node_files\\node5\\ABC.torrent')
+print(torrentFile.create_magnet_text(torrent_data))
 # a,b,c,d = torrentFile.load_magnet_text(torrentFile.create_magnet_text(torrent_data))
 # print(a,b,c,d)

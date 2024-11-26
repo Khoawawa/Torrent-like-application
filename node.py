@@ -3,11 +3,13 @@ from utils import *
 import os
 import argparse
 from threading import Thread, Timer, Lock
+import threading
 from operator import itemgetter
 import datetime
 import time
 from itertools import groupby
 import mmap
+import errno
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -16,7 +18,7 @@ from configs import CFG, Config
 config = Config.from_json(CFG)
 from messages.message import Message
 from messages.node2tracker import Node2Tracker
-from messages.node2node import Node2Node
+from messages.node2node import Node2Node, NodeInfo
 from messages.chunk_sharing import ChunkSharing
 from segment import UDPSegment
 from torrent_file import TorrentFile
@@ -25,18 +27,25 @@ next_call = time.time()
 class Node:
     def __init__(self, node_id: int, rcv_port: int, send_port: int):
         self.lock = Lock()
+        self.left_lock = Lock()
         self.node_id = node_id
         self.rcv_socket = set_socket(rcv_port)
+        self.rcv_socket.listen(5)
         self.send_socket = set_socket(send_port)
+        self.send_port = send_port
         self.files = self.fetch_owned_files()
         self.is_in_send_mode = False    # is thread uploading a file or not
         self.downloaded_files = {}
         self.torrent_data = None
+        self.left = -1
 
     def send_segment(self, sock: socket.socket, data: bytes, addr: tuple):
-        ip, dest_port = addr
-        encrypted_data = data
-        sock.sendto(encrypted_data, addr)
+        try_conn = 0
+        while True:
+            sock.connect(addr)
+            sock.send(data)
+            break
+
 
     def split_file_to_chunks(self, file_path: str, rng: tuple) -> list:
         with open(file_path, "r+b") as f:
@@ -52,14 +61,13 @@ class Node:
             f.flush()
             f.close()
 
-    def send_chunk(self, info_hash, rng: tuple, dest_node_id: int, dest_addr: tuple):
+    def send_chunk(self, info_hash, rng: tuple, dest_node_id: int, dest_addr: tuple,conn_socket):
         
         file_name = self.torrent_data['info']['file_name']
         file_path = f"{config.directory.node_files_dir}node{self.node_id}/{file_name}"
         chunk_pieces = self.split_file_to_chunks(file_path=file_path,
                                                  rng=rng)
-        temp_port = generate_random_port()
-        temp_sock = set_socket(temp_port)
+        temp_sock = conn_socket
         
         for idx, p in enumerate(chunk_pieces):
             msg = ChunkSharing(src_node_id=self.node_id,
@@ -72,9 +80,10 @@ class Node:
             log_content = f"The {idx}/{len(chunk_pieces)} has been sent!"
             log(node_id=self.node_id, content=log_content)
             
-            self.send_segment(sock=temp_sock,
-                              data=Message.encode(msg),
-                              addr=dest_addr)
+            temp_sock.send(msg.encode())
+            # self.send_segment(sock=temp_sock,
+            #                   data=msg.encode(),
+            #                   addr=dest_addr)
             
         # now let's tell the neighboring peer that sending has finished (idx = -1)
         msg = ChunkSharing(src_node_id=self.node_id,
@@ -82,39 +91,73 @@ class Node:
                            info_hash=info_hash,
                            range=rng)
         
-        self.send_segment(sock=temp_sock,
-                          data=Message.encode(msg),
-                          addr=dest_addr)
+        temp_sock.send(msg.encode())
+        # self.send_segment(sock=temp_sock,
+        #                   data=Message.encode(msg),
+        #                   addr=dest_addr)
 
         log_content = "The process of sending a chunk to node{} of file {} has finished!".format(dest_node_id, file_name)
         log(node_id=self.node_id, content=log_content)
 
         msg = Node2Tracker(node_id=self.node_id,
                            mode=config.tracker_requests_mode.UPDATE,
-                           info_hash=info_hash)
+                           info_hash=info_hash,
+                           left=0,
+                           port=self.rcv_socket.getsockname()[1])
+        
+        tracker_sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+        tracker_sock.connect(tuple(config.constants.TRACKER_ADDR))
+        tracker_sock.send(msg.encode())
+        tracker_sock.close()
 
-        self.send_segment(sock=temp_sock,
-                          data=Message.encode(msg),
-                          addr=tuple(config.constants.TRACKER_ADDR))
-
-        free_socket(temp_sock)
-
-    def handle_requests(self, msg: dict, addr: tuple):
+    def send_info(self, dest_node_id, dest_addr, conn_socket):
+        # temp_port = generate_random_port()
+        # temp_sock = set_socket(temp_port)
+        msg = NodeInfo(self.node_id, dest_node_id, self.torrent_data['info_hash'], self.torrent_data['info'])
+        
+        temp_sock = conn_socket
+        temp_sock.send(msg.encode())
+        print(temp_sock)
+        print(msg)
+        import sys
+        print(sys.getsizeof(msg))
+        log_content = f"Node {self.node_id} has sent info to Node {dest_node_id}!"
+        log(node_id=self.node_id, content=log_content)
+    def handle_requests(self, msg: dict, addr: tuple, conn_socket):
         # 1. asks the node about a file size
         if "size" in msg.keys() and msg["size"] == -1:
             self.tell_file_size(msg=msg, addr=addr)
         # 2. Wants a chunk of a file
         elif "range" in msg.keys() and msg["chunk"] is None:
-            self.send_chunk(filename=msg["filename"],
+            self.send_chunk(info_hash=msg["info_hash"],
                             rng=msg["range"],
                             dest_node_id=msg["src_node_id"],
-                            dest_addr=addr)
+                            dest_addr=addr, conn_socket=conn_socket)
+            conn_socket.close()
+        elif "info" in msg.keys() and msg["info"] is None:
+            self.send_info(dest_node_id=msg["src_node_id"],dest_addr=addr, conn_socket=conn_socket)
+            conn_socket.close()
 
     def listen(self):
-        while True:
-            data, addr = self.send_socket.recvfrom(config.constants.BUFFER_SIZE)
-            msg = Message.decode(data)
-            self.handle_requests(msg=msg, addr=addr)
+        log_content = 'Listening on port {0}'.format(self.rcv_socket.getsockname()[1])
+        log(self.node_id,log_content)
+        try:
+            while True:
+                try:
+                    conn,addr = self.rcv_socket.accept()
+                    log_content = f'Connected to {addr}'
+                    log(self.node_id,log_content)
+                    data = conn.recv(config.constants.BUFFER_SIZE)
+                    msg = Message.decode(data)
+                    self.handle_requests(msg=msg, addr=addr, conn_socket = conn)
+                except socket.error as e:
+                    if e.errno == errno.WSAENOTSOCK:
+                        log_content = "Receiving Socket was closed: stopping listener"
+                        log(self.node_id, log_content)
+                        break
+        finally:
+            log_content = "Stopped listening to request"
+            log(self.node_id,log_content)
 
     def set_send_mode(self, torrent):
         # if file_name not in self.files:
@@ -138,7 +181,7 @@ class Node:
         # torrent_data = torrent.create_torrent_data()
         # torrent.create_torrent_file(self.node_id,torrent_data)
         # info_hash = torrent_data['info_hash']
-        tracker_url,info_hash,info = TorrentFile.load_torrent_file(torrent)
+        tracker_url,info_hash,info = TorrentFile.load_torrent_file(config.directory.node_files_dir + f'node{self.node_id}/' + torrent)
         torrent_data = {
             'announce': tracker_url,
             'info_hash': info_hash,
@@ -148,12 +191,12 @@ class Node:
                                mode=config.tracker_requests_mode.OWN,
                                info_hash=info_hash,
                                left=0,
-                               port=self.rcv_socket.getsockname[1])
-        
-        self.send_segment(sock=self.send_socket,
+                               port=self.rcv_socket.getsockname()[1])
+        send_socket = set_socket(generate_random_port())
+        self.send_segment(sock=send_socket,
                           data=message.encode(),
                           addr=tuple(config.constants.TRACKER_ADDR))
-
+        free_socket(send_socket)
         if self.is_in_send_mode:    # has been already in send(upload) mode
             log_content = f"Some other node also requested a file from you! But you are already in SEND(upload) mode!"
             log(node_id=self.node_id, content=log_content)
@@ -162,47 +205,15 @@ class Node:
             self.is_in_send_mode = True
             with self.lock:
                 self.torrent_data = torrent_data
-            
+            with self.left_lock:
+                self.left = 0
             log_content = f"You are free now! You are waiting for other nodes' requests!"
             log(node_id=self.node_id, content=log_content)
-            t = Thread(target=self.listen, args=())
+            t = Thread(target=self.listen)
+            t.setName("sending thread")
             t.setDaemon(True)
             t.start()
 
-    def ask_file_size(self, filename: str, file_owner: tuple) -> int:
-        temp_port = generate_random_port()
-        temp_sock = set_socket(temp_port)
-        dest_node = file_owner[0]
-
-        msg = Node2Node(src_node_id=self.node_id,
-                        dest_node_id=dest_node["node_id"],
-                        filename=filename)
-        self.send_segment(sock=temp_sock,
-                          data=msg.encode(),
-                          addr=tuple(dest_node["addr"]))
-        while True:
-            data, addr = temp_sock.recvfrom(config.constants.BUFFER_SIZE)
-            dest_node_response = Message.decode(data)
-            size = dest_node_response["size"]
-            free_socket(temp_sock)
-
-            return size
-
-    def tell_file_size(self, msg: dict, addr: tuple):
-        filename = msg["filename"]
-        file_path = f"{config.directory.node_files_dir}node{self.node_id}/{filename}"
-        file_size = os.stat(file_path).st_size
-        response_msg = Node2Node(src_node_id=self.node_id,
-                        dest_node_id=msg["src_node_id"],
-                        filename=filename,
-                        size=file_size)
-        temp_port = generate_random_port()
-        temp_sock = set_socket(temp_port)
-        self.send_segment(sock=temp_sock,
-                          data=response_msg.encode(),
-                          addr=addr)
-
-        free_socket(temp_sock)
 
     def receive_chunk(self, info_hash, range: tuple, file_owner: tuple):
         '''
@@ -224,21 +235,33 @@ class Node:
                            info_hash=info_hash,
                            range=range)
         
-        temp_port = generate_random_port()
-        temp_sock = set_socket(temp_port)
-        self.send_segment(sock=temp_sock,
-                          data=msg.encode(),
-                          addr=tuple(dest_node["addr"]))
+        # temp_port = generate_random_port()
+        temp_sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+        temp_sock.connect(tuple(dest_node['addr']))
+        temp_sock.settimeout(10)
+        temp_sock.send(msg.encode())
+        # temp_sock = set_socket(temp_port)
+        # self.send_segment(sock=temp_sock,
+        #                   data=msg.encode(),
+        #                   addr=tuple(dest_node["addr"]))
+        log_content = "Asking for chunks of node {0} at address {1}".format(dest_node['node_id'],dest_node['addr'])
+        log(node_id=self.node_id, content=log_content)
         
         log_content = "I sent a request for a chunk of {0} for node{1}".format(info_hash, dest_node["node_id"])
         log(node_id=self.node_id, content=log_content)
+        with self.lock:
+            piece_size = self.torrent_data['info']['piece_size']
         #WAITING FOR THE OWNER TO ANSWER BACK WITH THE CHUNKS BYTE
         while True:
-            data, _ = temp_sock.recvfrom(config.constants.BUFFER_SIZE)
+            data = temp_sock.recv(config.constants.BUFFER_SIZE)
             msg = Message.decode(data)
             
+            with self.left_lock:
+                self.left -= piece_size
+
             if msg["idx"] == -1: # end of the file
-                free_socket(temp_sock)
+                # free_socket(temp_sock)
+                temp_sock.close()
                 return
 
             self.downloaded_files[info_hash].append(msg)
@@ -284,12 +307,7 @@ class Node:
         #IMPLEMENT LOGIC FOR MULTI FILE OR ONE FILE HERE
         # 1. first ask the size of the file from peers
         log_content = f"You are going to download {info_hash} from Node(s) {[o[0]['node_id'] for o in to_be_used_owners]}"
-        log(node_id=self.node_id, content=log_content)
-        file_size = self.ask_file_size(filename=info['file_name'], file_owner=to_be_used_owners[0])
-        log_content = f"The file {info['file_name']} which you are about to download, has size of {file_size} bytes"
-        log(node_id=self.node_id, content=log_content)
-
-        # 2. Now, we know the size, let's split it equally among peers to download chunks of it from them
+        file_size = info['file_size']
         step = file_size / len(to_be_used_owners)
         chunks_ranges = [(round(step*i), round(step*(i+1))) for i in range(len(to_be_used_owners))]
 
@@ -323,8 +341,36 @@ class Node:
         log_content = f"{info['file_name']} has successfully downloaded and saved in my files directory."
         log(node_id=self.node_id, content=log_content)
         self.files.append(info['file_name'])
+    
+    def ask_peer_info(self, info_hash, file_owners):
+        file_owner = file_owners[0]
+        msg = NodeInfo(self.node_id, file_owner[0]['node_id'], info_hash, None)
 
+        temp_sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+        temp_sock.connect(tuple(file_owner[0]["addr"]))
+        temp_sock.settimeout(10)
+        temp_sock.send(msg.encode())
+        print(temp_sock)
+        # temp_port = generate_random_port()
+        # temp_sock = set_socket(temp_port)
+        # self.send_segment(sock=temp_sock,
+        #             data=Message.encode(msg),
+        #             addr=tuple(file_owner[0]["addr"]))
+        # log_content = "I sent a request for info for node{1}".format(info_hash, file_owner[0]["node_id"])
+        # log(node_id=self.node_id, content=log_content)
+        data = b""
+        while True:
+            packet = temp_sock.recv(config.constants.BUFFER_SIZE)
+            if not packet: break
+            data += packet
+        # data = temp_sock.recv(config.constants.BUFFER_SIZE)
+        respond_msg = Message.decode(data)
+        temp_sock.close()
+        return respond_msg['info']
+            
     def set_download_mode(self, torrent_file: str):
+        is_magnet_text = False
+        file_path = ""
         if torrent_file.startswith("magnet:?"):
             is_magnet_text = True
         else:
@@ -339,66 +385,80 @@ class Node:
             log(node_id=self.node_id, content=log_content)
             # load the torrent file
             if not is_magnet_text:
-                tracker_url,info_hash,info = TorrentFile.load_torrent_file(torrent_file)
+                tracker_url,info_hash,info = TorrentFile.load_torrent_file(file_path)
                 with self.lock:
                     self.torrent_data = {
                         'announce': tracker_url,
                         'info_hash': info_hash,
                         'info': info
                     }
+                with self.left_lock:
+                    self.left = info['file_size']
+                tracker_response = self.search_torrent(info_hash=info_hash,left=len(info['pieces']))
             else:
-                tracker_url, info_hash, file_name = TorrentFile.load_magnet_text(torrent_file)
+                tracker_url, info_hash, file_name, file_size = TorrentFile.load_magnet_text(torrent_file)
+                
+                # Left here doesnt matter ?
+                tracker_response = self.search_torrent(info_hash=info_hash,left=file_size)
+                info = self.ask_peer_info(info_hash, tracker_response['peers'])
 
+                with self.lock:
+                    self.torrent_data = {
+                        'announce': tracker_url,
+                        'info_hash': info_hash,
+                        'info': info
+                    }
+                with self.left_lock:
+                    self.left = info['file_size']
             # asking tracker for the peers that have the info_hash
             # tracker response should have peers -> {peer -> {}, send_freq_list -> {}}
-            tracker_response = self.search_torrent(info_hash=info_hash,left=info['file_size'])
+            # tracker_response = self.search_torrent(info_hash=info_hash,left=len(info['pieces']))
             file_owners = tracker_response['peers']
-            
+
             self.split_file_owners(file_owners=file_owners,info=info,info_hash=info_hash)
             # report to tracker that we have finished the download
             message = Node2Tracker(node_id=self.node_id,
                                mode=config.tracker_requests_mode.OWN,
                                info_hash=info_hash,
                                left=0,
-                               port=self.rcv_socket.getsockname[1])
-        
-            self.send_segment(sock=self.send_socket,
+                               port=self.rcv_socket.getsockname()[1])
+            send_socket = set_socket(generate_random_port())
+            self.send_segment(sock=send_socket,
                           data=message.encode(),
                           addr=tuple(config.constants.TRACKER_ADDR))
-            
+            free_socket(send_socket)
     def get_scrape(self,file):
         '''
         Method to scrape the tracker for swarm statistics
-        
+
         Args:
             file: .torrent or magnet text(not implemented) -> info_hash
         '''
-        _, info_hash, _ = TorrentFile.load_torrent_file(file)
-        
+        file_path = config.directory.node_files_dir + f'node{self.node_id}/' + file
+        _, info_hash, _ = TorrentFile.load_torrent_file(file_path)
         #SEND REQUEST TO TRACKER TO SCRAPE
         scrape_msg = Node2Tracker(node_id=self.node_id,
                                   mode=config.tracker_requests_mode.SCRAPE,
                                   info_hash=info_hash,
                                   left=0,
                                   port=self.rcv_socket.getsockname()[1])
-        self.send_segment(self.send_socket,scrape_msg.encode(),config.constants.TRACKER_ADDR)
-        #WAITING FOR RESPONSE FROM THE TRACKER
-        data,_ = self.rcv_socket.recvfrom(config.constants.BUFFER_SIZE)
-        # THE RESPONSE SHOULD BE:
-        # files -> {file_x -> {complete, dowloaded, incomplete}}
-        tracker_response = Message.decode(data)
+        with socket.socket(socket.AF_INET,socket.SOCK_STREAM) as send_socket:
+            send_socket.connect(tuple(config.constants.TRACKER_ADDR))
+            send_socket.send(scrape_msg.encode())
+            tracker_response = Message.decode(send_socket.recv(config.constants.BUFFER_SIZE))    
         # printing out scrape
         file_info = tracker_response['files'][info_hash]
         file_data = []
         for cat, val in file_info.items():
             file_data.append(f'{cat}: {val}')
-        log_content = f'{info_hash}:\n{"\n".join(file_data)}'
+        log_content = "{0}:\n{1}".format(info_hash,'\n'.join(file_data))
         log(node_id=self.node_id,content=log_content)
         
     def search_torrent(self, info_hash, left) -> dict:
         temp_port = generate_random_port()
         search_sock = set_socket(temp_port)
         # send a tracker request
+        log(self.node_id,f'Sending request to tracker on port {temp_port} for {info_hash}')
         msg = Node2Tracker(node_id=self.node_id,
                            mode = config.tracker_requests_mode.NEED,
                            info_hash=info_hash,
@@ -409,10 +469,9 @@ class Node:
                           data=msg.encode(),
                           addr=tuple(config.constants.TRACKER_ADDR))
         # now we must wait for the tracker response
-        while True:
-            data, addr = search_sock.recvfrom(config.constants.BUFFER_SIZE)
-            tracker_msg = Message.decode(data)
-            return tracker_msg
+        data = search_sock.recv(config.constants.BUFFER_SIZE)
+        tracker_msg = Message.decode(data)
+        return tracker_msg
 
     def fetch_owned_files(self) -> list:
         files = []
@@ -444,14 +503,15 @@ class Node:
                            mode=config.tracker_requests_mode.REGISTER,
                            info_hash='',
                            left=-1,
-                           port=self.rcv_socket.getsockname[1])
-
-        self.send_segment(sock=self.send_socket,
+                           port=self.rcv_socket.getsockname()[1])
+        send_socket = set_socket(generate_random_port())
+        self.send_segment(sock=send_socket,
                           data=Message.encode(msg),
                           addr=tuple(config.constants.TRACKER_ADDR))
-
-        log_content = f"You entered Torrent."
+        free_socket(send_socket)
+        log_content = f"You entered Torrent. Receiving port: {self.rcv_socket.getsockname()[1]}"
         log(node_id=self.node_id, content=log_content)
+        # time.sleep(2)
 
     def inform_tracker_periodically(self, interval: int):
         global next_call
@@ -461,24 +521,24 @@ class Node:
         info_hash = ''
         left = -1
         with self.lock:
-            if self.torrent_data != None:
-                info_hash = self.torrent_data['info_hash']
-                left = len(self.torrent_data['info']['pieces']) - len(self.downloaded_files['info_hash'])
+            with self.left_lock:
+                if self.torrent_data != None and self.left != self.torrent_data['info']['file_size'] and self.left != -1:
+                    info_hash = self.torrent_data['info_hash']
+                    left = self.left
             
         msg = Node2Tracker(node_id=self.node_id,
                            mode=config.tracker_requests_mode.REGISTER,
                            info_hash=info_hash,
                            left=left,
                            port=self.rcv_socket.getsockname()[1])
-
-        self.send_segment(sock=self.send_socket,
+        send_socket = set_socket(generate_random_port())
+        self.send_segment(sock=send_socket,
                           data=msg.encode(),
                           addr=tuple(config.constants.TRACKER_ADDR))
-
-        datetime.datetime.now()
+        free_socket(send_socket)
         next_call = next_call + interval
         Timer(next_call - time.time(), self.inform_tracker_periodically, args=(interval,)).start()
-
+# args.node_id
 def run(args):
     node = Node(node_id=args.node_id,
                 rcv_port=generate_random_port(),
@@ -489,6 +549,7 @@ def run(args):
 
     # We create a thread to periodically informs the tracker to tell it is still in the torrent.
     timer_thread = Thread(target=node.inform_tracker_periodically, args=(config.constants.NODE_TIME_INTERVAL,))
+    timer_thread.setName('informTrackerThread')
     timer_thread.setDaemon(True)
     timer_thread.start()
 
@@ -499,21 +560,30 @@ def run(args):
 
         #################### send mode ####################
         if mode == 'send':
-            node.set_send_mode(file_name=file)
+            node.set_send_mode(torrent=file)
         #################### download mode ####################
         elif mode == 'download':
             t = Thread(target=node.set_download_mode, args=(file,))
+            t.setName('downloading thread')
             t.setDaemon(True)
             t.start()
             
         elif mode == 'scrape':
-            t = Thread(target=node.get_scrape,args=(file))
+            t = Thread(target=node.get_scrape,args=(file,))
             t.setDaemon(True)
             t.start()
-            
+        
+        elif mode == 'create1Tor':
+            file = f"{config.directory.node_files_dir}node{node.node_id}/{file}"
+            torrent_file = TorrentFile(file, True)
+            torrent_data = torrent_file.create_torrent_data()
+            torrent_file.create_torrent_file(node.node_id, torrent_data)
+            log_content = f"Node {node.node_id} has created {torrent_data['info']['file_name']}.torrent"
+            log(node_id=node.node_id,content=log_content)
         #################### exit mode ####################
         elif mode == 'exit':
             node.exit_torrent()
+            # time.sleep(2)
             exit(0)
 
 
