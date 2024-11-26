@@ -19,7 +19,6 @@ def set_socket(port: int) -> socket.socket:
     sock = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)
     sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     sock.bind(('localhost', port))
-    # sock.listen()
     used_ports.append(port)
 
     return sock
