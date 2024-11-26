@@ -124,3 +124,27 @@
 [08:25:56]  Connected by ('127.0.0.1', 53899)
 [08:26:00]  Connected by ('127.0.0.1', 36532)
 [08:26:00]  Node 1 exited torrent intentionally.
+[08:39:05]  ***************** Tracker program started just right now! *****************
+[08:39:15]  Connected by ('127.0.0.1', 10219)
+[08:39:17]  Connected by ('127.0.0.1', 62434)
+[08:39:27]  Node(s) [1] is in the torrent and node(s)[] have left.
+[08:39:35]  Connected by ('127.0.0.1', 20229)
+[08:39:49]  Node(s) [1] is in the torrent and node(s)[] have left.
+[08:39:55]  Connected by ('127.0.0.1', 60836)
+[08:40:11]  Node(s) [1] is in the torrent and node(s)[] have left.
+[08:40:33]  Node(s) [] is in the torrent and node(s)[1] have left.
+[08:41:49]  Connected by ('127.0.0.1', 49826)
+[08:41:51]  Connected by ('127.0.0.1', 6636)
+[08:41:57]  Connected by ('127.0.0.1', 63185)
+[08:41:57]  Node 1 exited torrent intentionally.
+[08:42:02]  Connected by ('127.0.0.1', 23828)
+[08:42:04]  Connected by ('127.0.0.1', 61875)
+[08:42:22]  Connected by ('127.0.0.1', 6587)
+[08:42:23]  Node(s) [1] is in the torrent and node(s)[] have left.
+[08:42:39]  Connected by ('127.0.0.1', 23578)
+[08:42:39]  Node 1 exited torrent intentionally.
+[08:42:43]  Connected by ('127.0.0.1', 49804)
+[08:42:45]  Node(s) [1] is in the torrent and node(s)[] have left.
+[08:42:45]  Connected by ('127.0.0.1', 33698)
+[08:43:07]  Node(s) [1] is in the torrent and node(s)[] have left.
+[08:43:29]  Node(s) [] is in the torrent and node(s)[1] have left.

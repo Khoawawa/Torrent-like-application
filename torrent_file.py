@@ -39,7 +39,7 @@ class TorrentFile:
         torrent_file_content = bencodepy.encode(torrent_data)
         file_name = torrent_data['info']['file_name']
         torrent_file_path = os.path.join(
-            config.directory.peers_dir, f'peer{pid}',
+            config.directory.node_files_dir, f'node{pid}',
             f'{file_name}.torrent'
         )
         with open(torrent_file_path,'wb') as f:
@@ -88,6 +88,9 @@ class TorrentFile:
             return data
 # Testing
 if __name__ == "__main__":
-    torrentFile = TorrentFile('N5-2018.pdf', 54427 * 1024 , 'node_files\\peer1\\N5-2018.pdf', True)
+    file_name = 'file_A.txt'
+    file_path = config.directory.node_files_dir + 'node1/' + file_name
+    file_size = os.path.getsize(file_path)
+    torrentFile = TorrentFile(file_name, file_size, file_path, True)
     torrent_data = torrentFile.create_torrent_data()
     torrentFile.create_torrent_file(1, torrent_data)

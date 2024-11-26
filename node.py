@@ -147,7 +147,7 @@ class Node:
         # torrent_data = torrent.create_torrent_data()
         # torrent.create_torrent_file(self.node_id,torrent_data)
         # info_hash = torrent_data['info_hash']
-        tracker_url,info_hash,info = TorrentFile.load_torrent_file(torrent)
+        tracker_url,info_hash,info = TorrentFile.load_torrent_file(config.directory.node_files_dir + torrent)
         torrent_data = {
             'announce': tracker_url,
             'info_hash': info_hash,
