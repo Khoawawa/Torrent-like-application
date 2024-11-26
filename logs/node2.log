@@ -648,3 +648,122 @@ complete: 1
 incomplete: 0
 [14:46:03]  I informed the tracker that I'm still alive in the torrent!
 [14:46:23]  I informed the tracker that I'm still alive in the torrent!
+[19:18:05]  ***************** Node program started just right now! *****************
+[19:18:05]  You entered Torrent. Receiving port: 62326
+[19:18:05]  I informed the tracker that I'm still alive in the torrent!
+[19:18:25]  I informed the tracker that I'm still alive in the torrent!
+[19:18:45]  I informed the tracker that I'm still alive in the torrent!
+[19:19:03]  You just started to download file_A.txt.torrent. Let's search it in torrent!
+[19:19:03]  Sending request to tracker on port 53829 for d91838522436ecfe7d0595ac62e1a2a32457da2a
+[19:19:03]  Asking for chunks of node 1 at address ['127.0.0.1', 17733]
+[19:19:03]  I sent a request for a chunk of d91838522436ecfe7d0595ac62e1a2a32457da2a for node1
+[19:19:04]  All the chunks of d91838522436ecfe7d0595ac62e1a2a32457da2a has downloaded from neighboring peers. But they must be reassembled!
+[19:19:04]  All the pieces of the d91838522436ecfe7d0595ac62e1a2a32457da2a is now sorted and ready to be reassembled.
+[19:19:04]  file_A.txt has successfully downloaded and saved in my files directory.
+[19:19:05]  I informed the tracker that I'm still alive in the torrent!
+[19:19:25]  I informed the tracker that I'm still alive in the torrent!
+[19:19:43]  You are free now! You are waiting for other nodes' requests!
+[19:19:43]  Listening on port 62326
+[19:19:45]  I informed the tracker that I'm still alive in the torrent!
+[19:20:05]  I informed the tracker that I'm still alive in the torrent!
+[19:20:20]  Connected to ('127.0.0.1', 51080)
+[19:20:20]  The 0/36 has been sent!
+[19:20:20]  The 1/36 has been sent!
+[19:20:20]  The 2/36 has been sent!
+[19:20:20]  The 3/36 has been sent!
+[19:20:20]  The 4/36 has been sent!
+[19:20:20]  The 5/36 has been sent!
+[19:20:20]  The 6/36 has been sent!
+[19:20:20]  The 7/36 has been sent!
+[19:20:20]  The 8/36 has been sent!
+[19:20:20]  The 9/36 has been sent!
+[19:20:20]  The 10/36 has been sent!
+[19:20:20]  The 11/36 has been sent!
+[19:20:20]  The 12/36 has been sent!
+[19:20:20]  The 13/36 has been sent!
+[19:20:20]  The 14/36 has been sent!
+[19:20:20]  The 15/36 has been sent!
+[19:20:20]  The 16/36 has been sent!
+[19:20:20]  The 17/36 has been sent!
+[19:20:20]  The 18/36 has been sent!
+[19:20:20]  The 19/36 has been sent!
+[19:20:20]  The 20/36 has been sent!
+[19:20:20]  The 21/36 has been sent!
+[19:20:20]  The 22/36 has been sent!
+[19:20:20]  The 23/36 has been sent!
+[19:20:20]  The 24/36 has been sent!
+[19:20:20]  The 25/36 has been sent!
+[19:20:20]  The 26/36 has been sent!
+[19:20:20]  The 27/36 has been sent!
+[19:20:20]  The 28/36 has been sent!
+[19:20:20]  The 29/36 has been sent!
+[19:20:20]  The 30/36 has been sent!
+[19:20:20]  The 31/36 has been sent!
+[19:20:20]  The 32/36 has been sent!
+[19:20:20]  The 33/36 has been sent!
+[19:20:20]  The 34/36 has been sent!
+[19:20:20]  The 35/36 has been sent!
+[19:20:20]  The process of sending a chunk to node3 of file file_A.txt has finished!
+[19:20:25]  I informed the tracker that I'm still alive in the torrent!
+[19:20:45]  I informed the tracker that I'm still alive in the torrent!
+[19:21:05]  I informed the tracker that I'm still alive in the torrent!
+[19:21:25]  I informed the tracker that I'm still alive in the torrent!
+[19:21:45]  I informed the tracker that I'm still alive in the torrent!
+[19:22:05]  I informed the tracker that I'm still alive in the torrent!
+[19:22:25]  I informed the tracker that I'm still alive in the torrent!
+[19:22:45]  I informed the tracker that I'm still alive in the torrent!
+[19:23:05]  I informed the tracker that I'm still alive in the torrent!
+[19:23:25]  I informed the tracker that I'm still alive in the torrent!
+[19:23:45]  I informed the tracker that I'm still alive in the torrent!
+[19:24:05]  I informed the tracker that I'm still alive in the torrent!
+[19:24:25]  I informed the tracker that I'm still alive in the torrent!
+[19:24:45]  I informed the tracker that I'm still alive in the torrent!
+[19:25:54]  ***************** Node program started just right now! *****************
+[19:25:54]  You entered Torrent. Receiving port: 50122
+[19:25:54]  I informed the tracker that I'm still alive in the torrent!
+[19:26:14]  I informed the tracker that I'm still alive in the torrent!
+[19:26:34]  I informed the tracker that I'm still alive in the torrent!
+[19:26:35]  You are free now! You are waiting for other nodes' requests!
+[19:26:35]  Listening on port 50122
+[19:26:46]  Connected to ('127.0.0.1', 51237)
+[19:26:46]  The 0/36 has been sent!
+[19:26:46]  The 1/36 has been sent!
+[19:26:46]  The 2/36 has been sent!
+[19:26:46]  The 3/36 has been sent!
+[19:26:46]  The 4/36 has been sent!
+[19:26:46]  The 5/36 has been sent!
+[19:26:46]  The 6/36 has been sent!
+[19:26:46]  The 7/36 has been sent!
+[19:26:46]  The 8/36 has been sent!
+[19:26:46]  The 9/36 has been sent!
+[19:26:46]  The 10/36 has been sent!
+[19:26:46]  The 11/36 has been sent!
+[19:26:46]  The 12/36 has been sent!
+[19:26:46]  The 13/36 has been sent!
+[19:26:46]  The 14/36 has been sent!
+[19:26:46]  The 15/36 has been sent!
+[19:26:46]  The 16/36 has been sent!
+[19:26:46]  The 17/36 has been sent!
+[19:26:46]  The 18/36 has been sent!
+[19:26:46]  The 19/36 has been sent!
+[19:26:46]  The 20/36 has been sent!
+[19:26:46]  The 21/36 has been sent!
+[19:26:46]  The 22/36 has been sent!
+[19:26:46]  The 23/36 has been sent!
+[19:26:46]  The 24/36 has been sent!
+[19:26:46]  The 25/36 has been sent!
+[19:26:46]  The 26/36 has been sent!
+[19:26:46]  The 27/36 has been sent!
+[19:26:46]  The 28/36 has been sent!
+[19:26:46]  The 29/36 has been sent!
+[19:26:46]  The 30/36 has been sent!
+[19:26:46]  The 31/36 has been sent!
+[19:26:46]  The 32/36 has been sent!
+[19:26:46]  The 33/36 has been sent!
+[19:26:46]  The 34/36 has been sent!
+[19:26:46]  The 35/36 has been sent!
+[19:26:46]  The process of sending a chunk to node3 of file file_A.txt has finished!
+[19:26:54]  I informed the tracker that I'm still alive in the torrent!
+[19:27:14]  I informed the tracker that I'm still alive in the torrent!
+[19:27:34]  I informed the tracker that I'm still alive in the torrent!
+[19:27:40]  Receiving Socket was closed: stopping listener

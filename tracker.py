@@ -219,7 +219,7 @@ class Tracker:
         log_content = f"***************** Tracker program started just right now! *****************"
         log(node_id=0, content=log_content, is_tracker=True)
         t = Thread(target=self.listen)
-        t.daemon = True
+        t.setDaemon(True)
         t.start()
         t.join()
 
