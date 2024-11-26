@@ -325,3 +325,122 @@
 [09:37:31]  Connected by ('127.0.0.1', 20267)
 [09:37:31]  Updated info_hash d91838522436ecfe7d0595ac62e1a2a32457da2a for node1
 [09:37:32]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[09:37:47]  Connected by ('127.0.0.1', 15095)
+[09:37:47]  Updated info_hash d91838522436ecfe7d0595ac62e1a2a32457da2a for node2
+[09:37:51]  Connected by ('127.0.0.1', 54456)
+[09:37:51]  Updated info_hash d91838522436ecfe7d0595ac62e1a2a32457da2a for node1
+[09:37:54]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[09:38:07]  Connected by ('127.0.0.1', 33491)
+[09:38:07]  Updated info_hash d91838522436ecfe7d0595ac62e1a2a32457da2a for node2
+[09:38:11]  Connected by ('127.0.0.1', 18973)
+[09:38:11]  Updated info_hash d91838522436ecfe7d0595ac62e1a2a32457da2a for node1
+[09:38:16]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[09:38:20]  Connected by ('127.0.0.1', 32663)
+[09:38:20]  Node 2 exited torrent intentionally.
+[09:38:30]  Connected by ('127.0.0.1', 13873)
+[09:38:30]  Node 1 exited torrent intentionally.
+[09:40:34]  Connected by ('127.0.0.1', 27263)
+[09:40:34]  Connected by ('127.0.0.1', 3497)
+[09:40:45]  Connected by ('127.0.0.1', 38180)
+[09:40:45]  Node 1 owns d91838522436ecfe7d0595ac62e1a2a32457da2a
+[09:40:50]  Node(s) [1] is in the torrent and node(s)[] have left.
+[09:40:54]  Connected by ('127.0.0.1', 8012)
+[09:40:54]  Updated info_hash d91838522436ecfe7d0595ac62e1a2a32457da2a for node1
+[09:41:02]  Connected by ('127.0.0.1', 14917)
+[09:41:02]  Node 1 exited torrent intentionally.
+[09:41:45]  Connected by ('127.0.0.1', 30109)
+[09:41:45]  Connected by ('127.0.0.1', 48401)
+[09:41:54]  Connected by ('127.0.0.1', 40893)
+[09:41:54]  Node 1 owns d91838522436ecfe7d0595ac62e1a2a32457da2a
+[09:41:56]  Node(s) [1] is in the torrent and node(s)[] have left.
+[09:42:03]  Connected by ('127.0.0.1', 27822)
+[09:42:03]  Node 1 exited torrent intentionally.
+[09:46:08]  Connected by ('127.0.0.1', 9900)
+[09:46:08]  Connected by ('127.0.0.1', 38328)
+[09:46:19]  Connected by ('127.0.0.1', 41139)
+[09:46:19]  Node 1 owns d91838522436ecfe7d0595ac62e1a2a32457da2a
+[09:46:20]  Node(s) [1] is in the torrent and node(s)[] have left.
+[09:46:28]  Connected by ('127.0.0.1', 35113)
+[09:46:28]  Updated info_hash d91838522436ecfe7d0595ac62e1a2a32457da2a for node1
+[09:46:40]  Connected by ('127.0.0.1', 62678)
+[09:46:40]  Node 1 exited torrent intentionally.
+[09:50:32]  Connected by ('127.0.0.1', 54899)
+[09:50:32]  Connected by ('127.0.0.1', 8469)
+[09:50:44]  Connected by ('127.0.0.1', 35753)
+[09:50:44]  Node 1 owns d91838522436ecfe7d0595ac62e1a2a32457da2a
+[09:50:44]  Node(s) [1] is in the torrent and node(s)[] have left.
+[09:50:50]  Connected by ('127.0.0.1', 43836)
+[09:50:50]  Node 1 exited torrent intentionally.
+[09:51:40]  Connected by ('127.0.0.1', 54685)
+[09:51:40]  Connected by ('127.0.0.1', 52128)
+[09:51:50]  Node(s) [None] is in the torrent and node(s)[] have left.
+[09:51:52]  Connected by ('127.0.0.1', 46480)
+[09:52:07]  Connected by ('127.0.0.1', 64350)
+[09:52:07]  Node None exited torrent intentionally.
+[09:52:30]  Connected by ('127.0.0.1', 12726)
+[09:52:30]  Connected by ('127.0.0.1', 53920)
+[09:52:34]  Node(s) [None] is in the torrent and node(s)[] have left.
+[09:52:54]  Connected by ('127.0.0.1', 54780)
+[09:52:56]  Node(s) [None] is in the torrent and node(s)[] have left.
+[09:53:18]  Node(s) [] is in the torrent and node(s)[None] have left.
+[09:57:27]  Connected by ('127.0.0.1', 46523)
+[09:57:27]  Connected by ('127.0.0.1', 6938)
+[09:57:32]  Connected by ('127.0.0.1', 37977)
+[09:57:42]  Node(s) [1] is in the torrent and node(s)[] have left.
+[09:57:52]  Connected by ('127.0.0.1', 28884)
+[09:58:04]  Node(s) [1] is in the torrent and node(s)[] have left.
+[09:58:12]  Connected by ('127.0.0.1', 19928)
+[09:58:26]  Node(s) [1] is in the torrent and node(s)[] have left.
+[09:58:32]  Connected by ('127.0.0.1', 34837)
+[09:58:48]  Node(s) [1] is in the torrent and node(s)[] have left.
+[09:58:52]  Connected by ('127.0.0.1', 1236)
+[09:59:10]  Node(s) [1] is in the torrent and node(s)[] have left.
+[09:59:12]  Connected by ('127.0.0.1', 61160)
+[09:59:32]  Connected by ('127.0.0.1', 16525)
+[09:59:32]  Node(s) [1] is in the torrent and node(s)[] have left.
+[09:59:52]  Connected by ('127.0.0.1', 4082)
+[09:59:54]  Node(s) [1] is in the torrent and node(s)[] have left.
+[10:00:12]  Connected by ('127.0.0.1', 32717)
+[10:00:16]  Node(s) [1] is in the torrent and node(s)[] have left.
+[10:00:32]  Connected by ('127.0.0.1', 14917)
+[10:00:38]  Node(s) [1] is in the torrent and node(s)[] have left.
+[10:00:52]  Connected by ('127.0.0.1', 25775)
+[10:01:00]  Node(s) [1] is in the torrent and node(s)[] have left.
+[10:01:12]  Connected by ('127.0.0.1', 2850)
+[10:01:22]  Node(s) [1] is in the torrent and node(s)[] have left.
+[10:01:44]  Node(s) [] is in the torrent and node(s)[1] have left.
+[10:02:15]  Connected by ('127.0.0.1', 36929)
+[10:02:15]  Connected by ('127.0.0.1', 37134)
+[10:02:28]  Node(s) [1] is in the torrent and node(s)[] have left.
+[10:02:28]  Connected by ('127.0.0.1', 10575)
+[10:02:48]  Connected by ('127.0.0.1', 50198)
+[10:02:50]  Node(s) [1] is in the torrent and node(s)[] have left.
+[10:03:08]  Connected by ('127.0.0.1', 45758)
+[10:03:11]  Connected by ('127.0.0.1', 34442)
+[10:03:11]  Node 1 exited torrent intentionally.
+[10:03:29]  Connected by ('127.0.0.1', 34097)
+[10:03:29]  Connected by ('127.0.0.1', 2112)
+[10:03:34]  Node(s) [1] is in the torrent and node(s)[] have left.
+[10:03:42]  Connected by ('127.0.0.1', 20846)
+[10:03:56]  Node(s) [1] is in the torrent and node(s)[] have left.
+[10:03:58]  Connected by ('127.0.0.1', 57779)
+[10:03:58]  Node 1 owns d91838522436ecfe7d0595ac62e1a2a32457da2a
+[10:04:02]  Connected by ('127.0.0.1', 32883)
+[10:04:02]  Updated info_hash d91838522436ecfe7d0595ac62e1a2a32457da2a for node1
+[10:04:18]  Node(s) [1] is in the torrent and node(s)[] have left.
+[10:04:22]  Connected by ('127.0.0.1', 11667)
+[10:04:22]  Updated info_hash d91838522436ecfe7d0595ac62e1a2a32457da2a for node1
+[10:04:27]  Connected by ('127.0.0.1', 20482)
+[10:04:27]  Node 1 exited torrent intentionally.
+[10:11:23]  Connected by ('127.0.0.1', 16585)
+[10:11:23]  Connected by ('127.0.0.1', 49853)
+[10:11:30]  Connected by ('127.0.0.1', 1150)
+[10:11:38]  Node(s) [1] is in the torrent and node(s)[] have left.
+[10:11:50]  Connected by ('127.0.0.1', 19009)
+[10:12:00]  Node(s) [1] is in the torrent and node(s)[] have left.
+[10:12:04]  Connected by ('127.0.0.1', 28270)
+[10:12:04]  Node 1 owns d91838522436ecfe7d0595ac62e1a2a32457da2a
+[10:12:10]  Connected by ('127.0.0.1', 36484)
+[10:12:10]  Updated info_hash d91838522436ecfe7d0595ac62e1a2a32457da2a for node1
+[10:12:21]  Connected by ('127.0.0.1', 35315)
+[10:12:21]  Node 1 exited torrent intentionally.

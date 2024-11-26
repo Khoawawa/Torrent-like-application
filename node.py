@@ -3,11 +3,13 @@ from utils import *
 import os
 import argparse
 from threading import Thread, Timer, Lock
+import threading
 from operator import itemgetter
 import datetime
 import time
 from itertools import groupby
 import mmap
+import errno
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -118,12 +120,22 @@ class Node:
                             dest_addr=addr)
 
     def listen(self):
-        while True:
-            conn,addr = self.rcv_socket.accept()
-            with conn:
-                data = self.rcv_socket.recv(config.constants.BUFFER_SIZE)
-                msg = Message.decode(data)
-                self.handle_requests(msg=msg, addr=addr)
+        try:
+            while True:
+                try:
+                    conn,addr = self.rcv_socket.accept()
+                    with conn:
+                        data = self.rcv_socket.recv(config.constants.BUFFER_SIZE)
+                        msg = Message.decode(data)
+                        self.handle_requests(msg=msg, addr=addr)
+                except socket.error as e:
+                    if e.errno == errno.WSAENOTSOCK:
+                        log_content = "Receiveing Socket was closed: stopping listener"
+                        log(self.node_id, log_content)
+                        break
+        finally:
+            log_content = "Stopped listening to request"
+            log(self.node_id,log_content)
 
     def set_send_mode(self, torrent):
         # if file_name not in self.files:
@@ -176,6 +188,7 @@ class Node:
             log_content = f"You are free now! You are waiting for other nodes' requests!"
             log(node_id=self.node_id, content=log_content)
             t = Thread(target=self.listen)
+            t.setName("sending thread")
             t.setDaemon(True)
             t.start()
 
@@ -461,7 +474,7 @@ class Node:
         free_socket(send_socket)
         log_content = f"You entered Torrent."
         log(node_id=self.node_id, content=log_content)
-        time.sleep(2)
+        # time.sleep(2)
 
     def inform_tracker_periodically(self, interval: int):
         global next_call
@@ -499,6 +512,7 @@ def run(args):
 
     # We create a thread to periodically informs the tracker to tell it is still in the torrent.
     timer_thread = Thread(target=node.inform_tracker_periodically, args=(config.constants.NODE_TIME_INTERVAL,))
+    timer_thread.setName('informTrackerThread')
     timer_thread.setDaemon(True)
     timer_thread.start()
 
@@ -513,6 +527,7 @@ def run(args):
         #################### download mode ####################
         elif mode == 'download':
             t = Thread(target=node.set_download_mode, args=(file,))
+            t.setName('downloading thread')
             t.setDaemon(True)
             t.start()
             
@@ -524,6 +539,7 @@ def run(args):
         #################### exit mode ####################
         elif mode == 'exit':
             node.exit_torrent()
+            # time.sleep(2)
             exit(0)
 
 
