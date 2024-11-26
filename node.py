@@ -192,7 +192,7 @@ class Node:
                 self.left = 0
             log_content = f"You are free now! You are waiting for other nodes' requests!"
             log(node_id=self.node_id, content=log_content)
-            t = Thread(target=self.listen())
+            t = Thread(target=self.listen)
             t.setName("sending thread")
             t.setDaemon(True)
             t.start()

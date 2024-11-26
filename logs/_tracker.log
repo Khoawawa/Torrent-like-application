@@ -2214,3 +2214,26 @@ d0595ac62e1a2a32457da2a for node1
 [14:46:23]  Updated info_hash d91838522436ecfe7d0595ac62e1a2a32457da2a for node1
 [14:46:23]  Connected by ('127.0.0.1', 8781)
 [14:46:36]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[18:35:41]  ***************** Tracker program started just right now! *****************
+[18:35:59]  Connected by ('127.0.0.1', 38865)
+[18:35:59]  Connected by ('127.0.0.1', 63242)
+[18:36:03]  Node(s) [1] is in the torrent and node(s)[] have left.
+[18:36:11]  Connected by ('127.0.0.1', 35623)
+[18:36:11]  Node 1 owns d91838522436ecfe7d0595ac62e1a2a32457da2a
+[18:36:19]  Connected by ('127.0.0.1', 15847)
+[18:36:19]  Updated info_hash d91838522436ecfe7d0595ac62e1a2a32457da2a for node1
+[18:36:25]  Node(s) [1] is in the torrent and node(s)[] have left.
+[18:36:39]  Connected by ('127.0.0.1', 50043)
+[18:36:39]  Updated info_hash d91838522436ecfe7d0595ac62e1a2a32457da2a for node1
+[18:36:47]  Node(s) [1] is in the torrent and node(s)[] have left.
+[18:36:59]  Connected by ('127.0.0.1', 10818)
+[18:36:59]  Updated info_hash d91838522436ecfe7d0595ac62e1a2a32457da2a for node1
+[18:37:09]  Node(s) [1] is in the torrent and node(s)[] have left.
+[18:37:23]  Connected by ('127.0.0.1', 12952)
+[18:37:23]  Connected by ('127.0.0.1', 2497)
+[18:37:30]  Connected by ('127.0.0.1', 47970)
+[18:37:30]  Node 1 owns d91838522436ecfe7d0595ac62e1a2a32457da2a
+[18:37:31]  Node(s) [] is in the torrent and node(s)[1] have left.
+[18:37:43]  Connected by ('127.0.0.1', 42660)
+[18:37:43]  Updated info_hash d91838522436ecfe7d0595ac62e1a2a32457da2a for node1
+[18:37:53]  Node(s) [] is in the torrent and node(s)[1] have left.
