@@ -32,7 +32,10 @@ def free_socket(sock: socket.socket):
     :return:
     '''
     used_ports.remove(sock.getsockname()[1])
-    sock.close()
+    try:
+        sock.close()
+    except Exception as e:
+        print('Error in closing socket')
 
 def generate_random_port() -> int:
     '''

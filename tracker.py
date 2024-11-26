@@ -70,15 +70,23 @@ class Tracker:
                           addr=addr)
 
     def remove_node(self, node_id: int, addr: tuple):
-        entry = {
-            'node_id': node_id,
-            'addr': addr
-        }
+        try:
+            entry = None
+            for node in self.has_informed_tracker:
+                if node[0] == node_id:
+                    entry = {
+                        'node_id': node[0],
+                        'addr': node[1]
+                    }
+            if entry is None:
+                raise Exception()
+        except:
+            print("No entry for {0} was found".format(node_id))
         try:
             self.send_freq_list.pop(node_id)
         except KeyError:
             pass
-        self.has_informed_tracker.pop((node_id, addr))
+        self.has_informed_tracker.pop((entry['node_id'], entry['addr']))
         node_files = self.file_owners_list.copy()
         for nf in node_files:
             if json.dumps(entry) in self.file_owners_list[nf]:
@@ -186,7 +194,7 @@ class Tracker:
         elif mode == config.tracker_requests_mode.UPDATE:
             self.update_db(msg=msg)
         elif mode == config.tracker_requests_mode.REGISTER:
-            self.has_informed_tracker[(msg['node_id'], addr)] = True
+            self.has_informed_tracker[(msg['node_id'], (addr[0],msg['port']))] = True
             self.update_stat(msg=msg,addr=addr)
         elif mode == config.tracker_requests_mode.SCRAPE:
             self.scrape(msg=msg, addr=addr)

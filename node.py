@@ -30,6 +30,7 @@ class Node:
         self.rcv_socket = set_socket(rcv_port)
         self.rcv_socket.listen(5)
         self.send_socket = set_socket(send_port)
+        self.send_port = send_port
         self.files = self.fetch_owned_files()
         self.is_in_send_mode = False    # is thread uploading a file or not
         self.downloaded_files = {}
@@ -156,7 +157,7 @@ class Node:
                                mode=config.tracker_requests_mode.OWN,
                                info_hash=info_hash,
                                left=0,
-                               port=self.rcv_socket.getsockname[1])
+                               port=self.rcv_socket.getsockname()[1])
         send_socket = set_socket(generate_random_port())
         self.send_segment(sock=send_socket,
                           data=message.encode(),
@@ -290,7 +291,7 @@ class Node:
             return
         # sort owners based on their sending frequency
         owners = sorted(owners, key=lambda x: x[1], reverse=True)
-
+            
         to_be_used_owners = owners[:config.constants.MAX_SPLITTNES_RATE]
         #IMPLEMENT LOGIC FOR MULTI FILE OR ONE FILE HERE
         # 1. first ask the size of the file from peers
@@ -366,7 +367,7 @@ class Node:
                                mode=config.tracker_requests_mode.OWN,
                                info_hash=info_hash,
                                left=0,
-                               port=self.rcv_socket.getsockname[1])
+                               port=self.rcv_socket.getsockname()[1])
             send_socket = set_socket(generate_random_port())
             self.send_segment(sock=send_socket,
                           data=message.encode(),
@@ -460,6 +461,7 @@ class Node:
         free_socket(send_socket)
         log_content = f"You entered Torrent."
         log(node_id=self.node_id, content=log_content)
+        time.sleep(2)
 
     def inform_tracker_periodically(self, interval: int):
         global next_call
@@ -477,14 +479,13 @@ class Node:
         msg = Node2Tracker(node_id=self.node_id,
                            mode=config.tracker_requests_mode.REGISTER,
                            info_hash=info_hash,
-                           left=left,
+                           left=left, 
                            port=self.rcv_socket.getsockname()[1])
         send_socket = set_socket(generate_random_port())
         self.send_segment(sock=send_socket,
                           data=msg.encode(),
                           addr=tuple(config.constants.TRACKER_ADDR))
         free_socket(send_socket)
-        
         next_call = next_call + interval
         Timer(next_call - time.time(), self.inform_tracker_periodically, args=(interval,)).start()
 
