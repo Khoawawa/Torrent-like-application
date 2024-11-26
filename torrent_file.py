@@ -117,14 +117,14 @@ class TorrentFile:
             hashed_dict[filename] = hashed_pieces
         
         return hashed_dict
-
-    def load_torrent_file(self, torrent_file_path):
+    @staticmethod
+    def load_torrent_file(torrent_file_path):
         with open(torrent_file_path, 'rb') as file:
             torrent_data = file.read()
 
-        torrent_data = self.decode_utf8(bencodepy.decode(torrent_data))
+        torrent_data = TorrentFile.decode_utf8(bencodepy.decode(torrent_data))
         return torrent_data['announce'], torrent_data['info_hash'], torrent_data['info']
-    
+    @staticmethod
     def load_magnet_text(self, magnet_link):
         parsed = urllib.parse.urlparse(magnet_link)
         query_params = urllib.parse.parse_qs(parsed.query)
@@ -147,26 +147,26 @@ class TorrentFile:
         file_size = query_params.get('xl', [None])[0]
 
         return tracker_url, info_hash, file_name, file_size
-    
-    def decode_utf8(self,data):
+    @staticmethod
+    def decode_utf8(data):
         if isinstance(data, dict):
-            return {self.decode_utf8(key): self.decode_utf8(value) for key, value in data.items()}
+            return {TorrentFile.decode_utf8(key): TorrentFile.decode_utf8(value) for key, value in data.items()}
         elif isinstance(data, list):
-            return [self.decode_utf8(item) for item in data]
+            return [TorrentFile.decode_utf8(item) for item in data]
         elif isinstance(data, bytes):
             return data.decode('utf-8')  # Decode bytes to string
         else:
             return data
 # Testing
-torrentFile = TorrentFile('node_files\\node5\\N5-2018.pdf', True)
-torrent_data = torrentFile.create_torrent_data()
-torrentFile.create_torrent_file(5, torrent_data)
-
-# torrentFile = TorrentFile('node_files\\node5\\ABC', False)
-# # torrentFile = TorrentFile('node_files\\node1', False)
+# torrentFile = TorrentFile('node_files\\node5\\N5-2018.pdf', True)
 # torrent_data = torrentFile.create_torrent_data()
 # torrentFile.create_torrent_file(5, torrent_data)
-# torrentFile.load_torrent_file('node_files\\node5\\ABC.torrent')
-print(torrentFile.create_magnet_text(torrent_data))
-a,b,c,d = torrentFile.load_magnet_text(torrentFile.create_magnet_text(torrent_data))
-print(a,b,c,d)
+
+# # torrentFile = TorrentFile('node_files\\node5\\ABC', False)
+# # # torrentFile = TorrentFile('node_files\\node1', False)
+# # torrent_data = torrentFile.create_torrent_data()
+# # torrentFile.create_torrent_file(5, torrent_data)
+# # torrentFile.load_torrent_file('node_files\\node5\\ABC.torrent')
+# print(torrentFile.create_magnet_text(torrent_data))
+# a,b,c,d = torrentFile.load_magnet_text(torrentFile.create_magnet_text(torrent_data))
+# print(a,b,c,d)
