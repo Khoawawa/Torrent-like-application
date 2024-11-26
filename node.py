@@ -147,7 +147,7 @@ class Node:
         # torrent_data = torrent.create_torrent_data()
         # torrent.create_torrent_file(self.node_id,torrent_data)
         # info_hash = torrent_data['info_hash']
-        tracker_url,info_hash,info = TorrentFile.load_torrent_file(config.directory.node_files_dir + torrent)
+        tracker_url,info_hash,info = TorrentFile.load_torrent_file(config.directory.node_files_dir + f'node{self.node_id}/' + torrent)
         torrent_data = {
             'announce': tracker_url,
             'info_hash': info_hash,
@@ -347,7 +347,7 @@ class Node:
             log_content = f"You just started to download {torrent_file}. Let's search it in torrent!"
             log(node_id=self.node_id, content=log_content)
             # load the torrent file
-            tracker_url,info_hash,info = TorrentFile.load_torrent_file(torrent_file)
+            tracker_url,info_hash,info = TorrentFile.load_torrent_file(file_path)
             with self.lock:
                 self.torrent_data = {
                     'announce': tracker_url,
@@ -471,9 +471,9 @@ class Node:
         info_hash = ''
         left = -1
         with self.lock:
-            if self.torrent_data != None:
-                info_hash = self.torrent_data['info_hash']
-                with self.left_lock:
+            with self.left_lock:
+                if self.torrent_data != None and self.left != self.torrent_data['info']['file_size'] and self.left != -1:
+                    info_hash = self.torrent_data['info_hash']
                     left = self.left
             
         msg = Node2Tracker(node_id=self.node_id,
