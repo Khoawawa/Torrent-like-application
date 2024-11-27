@@ -49,8 +49,9 @@ class TorrentFile:
         }
         else:
             info = {
-                'folder_name': self.file_name,
+                'file_name': self.file_name, # Tui đặt tên cho khớp trên thôi, này folder name
                 'files': self.files,
+                'file_size': sum(file['length'] for file in self.files),
                 'pieces': [piece for pieces in self.pieces.values() for piece in pieces],
                 'piece_size': self.piece_size,
             }
@@ -66,7 +67,7 @@ class TorrentFile:
         if self.file_mode:
             file_name = torrent_data['info']['file_name']
         else:
-            file_name = torrent_data['info']['folder_name']
+            file_name = torrent_data['info']['file_name']
         torrent_file_path = os.path.join(
             config.directory.node_files_dir, f'node{pid}',
             f'{file_name}.torrent'
