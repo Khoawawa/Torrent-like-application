@@ -63,13 +63,13 @@ There are two main modules in BitTorrent, *(i)* node *a.k.a.* peer and *(ii)* tr
 
 1. `tracker.py`:
 ```
-$ python3 tracker.py
+$ python tracker.py
 ```
 2. `node.py`: You can create peers as many as you want. An example of creating two nodes is as follows.
    (Note that each of them must be run in a separate window of your terminal if you are running this project in a single local computer)
 
 ```
-$ python3 node.py -node_id 1
+$ python node.py -node_id 1
 # in another tab of terminal
 $ python3 node.py -node_id 2
 ```

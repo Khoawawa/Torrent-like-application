@@ -158,15 +158,29 @@ class TorrentFile:
         else:
             return data
 # Testing
-# torrentFile = TorrentFile('node_files\\node5\\N5-2018.pdf', True)
-# torrent_data = torrentFile.create_torrent_data()
-# torrentFile.create_torrent_file(5, torrent_data)
+def create_torrent_for_all_nodes(source_node_id=1):
+    # Get source node directory and all its files
+    source_dir = os.path.join(config.directory.node_files_dir, f'node{source_node_id}')
+    source_files = [f for f in os.listdir(source_dir) if os.path.isfile(os.path.join(source_dir, f)) 
+                   and not f.endswith('.torrent')]
+    
+    # Get all node directories
+    base_dir = config.directory.node_files_dir
+    node_dirs = [d for d in os.listdir(base_dir) if os.path.isdir(os.path.join(base_dir, d)) 
+                and d.startswith('node')]
+    
+    # Create torrent files for each file in source node
+    for source_file in source_files:
+        source_file_path = os.path.join(source_dir, source_file)
+        print(f"\nCreating torrent for {source_file}:")
+        
+        # Create torrent file for each node
+        for node_dir in node_dirs:
+            node_id = int(node_dir.replace('node', ''))
+            torrentFile = TorrentFile(source_file_path, True)
+            torrent_data = torrentFile.create_torrent_data()
+            torrentFile.create_torrent_file(node_id, torrent_data)
+            print(f"- Created {source_file}.torrent for {node_dir}")
 
-# # torrentFile = TorrentFile('node_files\\node5\\ABC', False)
-# # # torrentFile = TorrentFile('node_files\\node1', False)
-# # torrent_data = torrentFile.create_torrent_data()
-# # torrentFile.create_torrent_file(5, torrent_data)
-# # torrentFile.load_torrent_file('node_files\\node5\\ABC.torrent')
-# print(torrentFile.create_magnet_text(torrent_data))
-# a,b,c,d = torrentFile.load_magnet_text(torrentFile.create_magnet_text(torrent_data))
-# print(a,b,c,d)
+if __name__ == "__main__":
+    create_torrent_for_all_nodes()
