@@ -10542,3 +10542,23 @@ ed: stopping listener
 [14:19:35]  The process of sending a chunk to node4 of file N5-2018.pdf has finished!
 [14:19:55]  I informed the tracker that I'm still alive in the torrent!
 [14:20:15]  I informed the tracker that I'm still alive in the torrent!
+[15:44:52]  ***************** Node program started just right now! *****************
+[15:44:52]  You entered Torrent. Receiving port: 25058
+[15:44:52]  I informed the tracker that I'm still alive in the torrent!
+[15:45:12]  I informed the tracker that I'm still alive in the torrent!
+[15:45:32]  I informed the tracker that I'm still alive in the torrent!
+[15:46:11]  ***************** Node program started just right now! *****************
+[15:46:11]  You entered Torrent. Receiving port: 10563
+[15:46:11]  I informed the tracker that I'm still alive in the torrent!
+[15:47:55]  ***************** Node program started just right now! *****************
+[15:47:55]  You entered Torrent. Receiving port: 8971
+[15:47:55]  I informed the tracker that I'm still alive in the torrent!
+[15:48:34]  ***************** Node program started just right now! *****************
+[15:48:34]  You entered Torrent. Receiving port: 44575
+[15:48:34]  I informed the tracker that I'm still alive in the torrent!
+[15:48:35]  You are free now! You are waiting for other nodes' requests!
+[15:48:35]  Listening on port 44575
+[15:48:54]  I informed the tracker that I'm still alive in the torrent!
+[15:49:14]  I informed the tracker that I'm still alive in the torrent!
+[15:49:28]  Receiving Socket was closed: stopping listener
+[15:49:28]  You exited the torrent!

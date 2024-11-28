@@ -2700,3 +2700,34 @@ d0595ac62e1a2a32457da2a for node1
 [14:20:13]  Connected by ('127.0.0.1', 64967)
 [14:20:15]  Connected by ('127.0.0.1', 64972)
 [14:20:32]  Node(s) [] is in the torrent and node(s)[1] have left.
+[15:44:48]  ***************** Tracker program started just right now! *****************
+[15:44:52]  Connected by ('127.0.0.1', 48142)
+[15:44:52]  Connected by ('127.0.0.1', 52914)
+[15:45:10]  Node(s) [1] is in the torrent and node(s)[] have left.
+[15:45:12]  Connected by ('127.0.0.1', 52925)
+[15:45:32]  Node(s) [1] is in the torrent and node(s)[] have left.
+[15:45:32]  Connected by ('127.0.0.1', 52931)
+[15:45:54]  Node(s) [1] is in the torrent and node(s)[] have left.
+[15:46:11]  Connected by ('127.0.0.1', 25109)
+[15:46:11]  Connected by ('127.0.0.1', 52963)
+[15:46:16]  Node(s) [] is in the torrent and node(s)[1] have left.
+[15:46:38]  Node(s) [] is in the torrent and node(s)[1] have left.
+[15:47:55]  Connected by ('127.0.0.1', 44539)
+[15:47:55]  Connected by ('127.0.0.1', 53024)
+[15:48:06]  Node(s) [1] is in the torrent and node(s)[] have left.
+[15:48:28]  Node(s) [] is in the torrent and node(s)[1] have left.
+[15:48:34]  Connected by ('127.0.0.1', 46150)
+[15:48:34]  Connected by ('127.0.0.1', 53044)
+[15:48:35]  Connected by ('127.0.0.1', 18796)
+[15:48:35]  Node 1 owns d91838522436ecfe7d0595ac62e1a2a32457da2a
+[15:48:49]  Connected by ('127.0.0.1', 7408)
+[15:48:49]  Connected by ('127.0.0.1', 53051)
+[15:48:50]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[15:48:54]  Connected by ('127.0.0.1', 53053)
+[15:49:09]  Connected by ('127.0.0.1', 53056)
+[15:49:12]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[15:49:14]  Connected by ('127.0.0.1', 53060)
+[15:49:21]  Connected by ('127.0.0.1', 53174)
+[15:49:21]  Node 2 exited torrent intentionally.
+[15:49:28]  Connected by ('127.0.0.1', 25820)
+[15:49:28]  Node 1 exited torrent intentionally.

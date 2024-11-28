@@ -878,3 +878,10 @@ incomplete: 2
 downloaded: 71
 [21:37:58]  I informed the tracker that I'm still alive in the torrent!
 [21:38:15]  You exited the torrent!
+[15:48:49]  ***************** Node program started just right now! *****************
+[15:48:49]  You entered Torrent. Receiving port: 9913
+[15:48:49]  I informed the tracker that I'm still alive in the torrent!
+[15:49:02]  You don't have the file file_A.txt
+[15:49:09]  I informed the tracker that I'm still alive in the torrent!
+[15:49:09]  You don't have the torrent file file_B.txt.torrent
+[15:49:21]  You exited the torrent!

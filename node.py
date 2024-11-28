@@ -182,7 +182,7 @@ class Node:
         # torrent.create_torrent_file(self.node_id,torrent_data)
         # info_hash = torrent_data['info_hash']
         # CHECK IF THE TORRENT EXIST
-        torrent_path = config.constants.node_files_dir + f'node{self.node_id}/' + torrent
+        torrent_path = config.directory.node_files_dir + f'node{self.node_id}/' + torrent
         if not os.path.exists(torrent_path):
             log_content = f'You don\'t have the torrent file {torrent}' 
             log(self.node_id,log_content)
@@ -191,13 +191,13 @@ class Node:
         tracker_url,info_hash,info = TorrentFile.load_torrent_file(config.directory.node_files_dir + f'node{self.node_id}/' + torrent)
        
         # CHECK IF THE FILE EXIST
-        path = config.constants.node_files_dir + f'node{self.node_id}/' + info["file_name"]
+        path = config.directory.node_files_dir + f'node{self.node_id}/' + info["file_name"]
         if not os.path.exists(path):
-            log_content = f'You don\'t have the {"folder" if info["files"] else "file"} {info["file_name"]}'  
+            log_content = f'You don\'t have the {"folder" if "files" in info else "file"} {info["file_name"]}'  
             log(self.node_id, log_content)
             return
 
-        if info["files"]:
+        if "files" in info:
             for file_info in info["files"]:
                 file_path = path + f'/{file_info["file_name"]}'
                 if not os.path.exists(file_path):
