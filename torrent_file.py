@@ -49,9 +49,10 @@ class TorrentFile:
         }
         else:
             info = {
-                'folder_name': self.file_name,
+                'file_name': self.file_name, # Tui đặt tên cho khớp trên thôi, này folder name
                 'files': self.files,
-                'pieces': self.pieces,
+                'file_size': sum(file['length'] for file in self.files),
+                'pieces': [piece for pieces in self.pieces.values() for piece in pieces],
                 'piece_size': self.piece_size,
             }
         info_bencoded = bencodepy.encode(info)
@@ -66,7 +67,7 @@ class TorrentFile:
         if self.file_mode:
             file_name = torrent_data['info']['file_name']
         else:
-            file_name = torrent_data['info']['folder_name']
+            file_name = torrent_data['info']['file_name']
         torrent_file_path = os.path.join(
             config.directory.node_files_dir, f'node{pid}',
             f'{file_name}.torrent'
@@ -158,15 +159,15 @@ class TorrentFile:
         else:
             return data
 # Testing
-torrentFile = TorrentFile('node_files\\node1\\file_A.txt', True)
-torrent_data = torrentFile.create_torrent_data()
+# torrentFile = TorrentFile('node_files\\node1\\file_A.txt', True)
+# torrent_data = torrentFile.create_torrent_data()
 # # torrentFile.create_torrent_file(5, torrent_data)
 
-# # # torrentFile = TorrentFile('node_files\\node5\\ABC', False)
-# # # # torrentFile = TorrentFile('node_files\\node1', False)
-# # # torrent_data = torrentFile.create_torrent_data()
-# # # torrentFile.create_torrent_file(5, torrent_data)
+# torrentFile = TorrentFile('node_files\\node1\\ABC', False)
+# # # # # torrentFile = TorrentFile('node_files\\node1', False)
+# torrent_data = torrentFile.create_torrent_data()
+# torrentFile.create_torrent_file(1, torrent_data)
 # # # torrentFile.load_torrent_file('node_files\\node5\\ABC.torrent')
-print(torrentFile.create_magnet_text(torrent_data))
+# print(torrentFile.create_magnet_text(torrent_data))
 # a,b,c,d = torrentFile.load_magnet_text(torrentFile.create_magnet_text(torrent_data))
 # print(a,b,c,d)

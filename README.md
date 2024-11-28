@@ -71,7 +71,7 @@ $ python tracker.py
 ```
 $ python node.py -node_id 1
 # in another tab of terminal
-$ python3 node.py -node_id 2
+$ python3 node.py -node_id 4
 ```
 As you can see, it takes an ID of the node you want to be created. For simplicity, we assume that nodes have unique IDs.
 
@@ -83,8 +83,9 @@ each node can be in two modes. In other words, there are two functionalities for
   A node can enter this mode by inputting like this:
   ```
   torrent -setMode send <filename>
-  torrent -setMode create1Tor node_files\\node1\\file_A.txt
-  torrent -setMode create1Tor node_files\\node1\\bittorrent.jpg
+  torrent -setMode createTor file_A.txt
+  torrent -setMode createTor node_files\\node1\\bittorrent.jpg
+  torrent -setMode createMag file_A.txt
   torrent -setMode send node_files\node1\bittorrent.jpg.torrent
   ```
   
@@ -97,7 +98,7 @@ Thus, the tracker search that file in the torrent and sort the neighbors which o
   torrent -setMode download <filename>
 
   torrent -setMode download N5-2018.pdf.torrent
-  torrent -setMode download magnet:?xt=urn:btih:042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345
+  torrent -setMode download magnet:?xt=urn:btih:ee0f4768aca12dc552a4f50c1f403560a1880290&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345
   torrent -setMode send N5-2018.pdf.torrent
   torrent -setMode download magnet:?xt=urn:btih:d91838522436ecfe7d0595ac62e1a2a32457da2a&dn=file_A.txt&xl=508971&tr=https://localhost:12345
   ```

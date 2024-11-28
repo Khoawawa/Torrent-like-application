@@ -248,3 +248,459 @@
 [20:09:56]  I informed the tracker that I'm still alive in the torrent!
 [20:10:16]  I informed the tracker that I'm still alive in the torrent!
 [20:10:36]  I informed the tracker that I'm still alive in the torrent!
+[13:33:11]  ***************** Node program started just right now! *****************
+[13:33:11]  You entered Torrent. Receiving port: 24712
+[13:33:11]  I informed the tracker that I'm still alive in the torrent!
+[13:33:31]  I informed the tracker that I'm still alive in the torrent!
+[13:33:31]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[13:33:31]  Sending request to tracker on port 37047 for 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[13:33:31]  Asking for chunks of node 1 at address ['127.0.0.1', 35490]
+[13:33:31]  I sent a request for a chunk of 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca for node1
+[13:33:43]  All the chunks of 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca has downloaded from neighboring peers. But they must be reassembled!
+[13:33:43]  All the pieces of the 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca is now sorted and ready to be reassembled.
+[13:33:43]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[13:33:51]  I informed the tracker that I'm still alive in the torrent!
+[13:33:57]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[13:33:57]  Sending request to tracker on port 38947 for 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[13:33:57]  Asking for chunks of node 1 at address ['127.0.0.1', 35490]
+[13:33:57]  I sent a request for a chunk of 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca for node1
+[13:34:09]  All the chunks of 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca has downloaded from neighboring peers. But they must be reassembled!
+[13:34:09]  All the pieces of the 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca is now sorted and ready to be reassembled.
+[13:34:09]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[13:34:11]  I informed the tracker that I'm still alive in the torrent!
+[13:34:27]  You just started to download magnet:?xt=urn:btih:042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345. Let's search it in torrent!
+[13:34:27]  Sending request to tracker on port 56206 for 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[13:34:31]  I informed the tracker that I'm still alive in the torrent!
+[13:34:42]  ***************** Node program started just right now! *****************
+[13:34:42]  You entered Torrent. Receiving port: 64436
+[13:34:42]  I informed the tracker that I'm still alive in the torrent!
+[13:34:43]  You just started to download magnet:?xt=urn:btih:042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345. Let's search it in torrent!
+[13:34:43]  Sending request to tracker on port 48555 for 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[13:34:55]  You just started to download magnet:?xt=urn:btih:042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345. Let's search it in torrent!
+[13:34:55]  Sending request to tracker on port 25036 for 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[13:35:02]  I informed the tracker that I'm still alive in the torrent!
+[13:35:09]  ***************** Node program started just right now! *****************
+[13:35:09]  You entered Torrent. Receiving port: 28267
+[13:35:09]  I informed the tracker that I'm still alive in the torrent!
+[13:35:11]  You just started to download magnet:?xt=urn:btih:042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345. Let's search it in torrent!
+[13:35:11]  Sending request to tracker on port 62646 for 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[13:35:29]  I informed the tracker that I'm still alive in the torrent!
+[13:35:33]  You just started to download magnet:?xt=urn:btih:042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345. Let's search it in torrent!
+[13:35:33]  Sending request to tracker on port 36085 for 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[13:35:49]  I informed the tracker that I'm still alive in the torrent!
+[13:36:09]  I informed the tracker that I'm still alive in the torrent!
+[13:36:18]  You just started to download magnet:?xt=urn:btih:042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345. Let's search it in torrent!
+[13:36:18]  Sending request to tracker on port 17313 for 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[13:36:29]  I informed the tracker that I'm still alive in the torrent!
+[13:36:47]  ***************** Node program started just right now! *****************
+[13:36:47]  You entered Torrent. Receiving port: 10697
+[13:36:47]  I informed the tracker that I'm still alive in the torrent!
+[13:37:00]  You just started to download magnet:?xt=urn:btih:042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345. Let's search it in torrent!
+[13:37:00]  Sending request to tracker on port 52050 for 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[13:37:00]  Asking for chunks of node 1 at address ['127.0.0.1', 36421]
+[13:37:00]  I sent a request for a chunk of 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca for node1
+[13:37:07]  I informed the tracker that I'm still alive in the torrent!
+[13:37:13]  All the chunks of 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca has downloaded from neighboring peers. But they must be reassembled!
+[13:37:13]  All the pieces of the 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca is now sorted and ready to be reassembled.
+[13:37:13]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[13:37:26]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[13:37:26]  Sending request to tracker on port 24979 for 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[13:37:26]  Asking for chunks of node 1 at address ['127.0.0.1', 36421]
+[13:37:26]  I sent a request for a chunk of 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca for node1
+[13:37:27]  I informed the tracker that I'm still alive in the torrent!
+[13:37:38]  All the chunks of 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca has downloaded from neighboring peers. But they must be reassembled!
+[13:37:38]  All the pieces of the 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca is now sorted and ready to be reassembled.
+[13:37:38]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[13:37:46]  You just started to download magnet:?xt=urn:btih:042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345. Let's search it in torrent!
+[13:37:46]  Sending request to tracker on port 63210 for 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[13:37:47]  I informed the tracker that I'm still alive in the torrent!
+[13:38:04]  You just started to download magnet:?xt=urn:btih:042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345. Let's search it in torrent!
+[13:38:04]  Sending request to tracker on port 9524 for 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[13:38:07]  I informed the tracker that I'm still alive in the torrent!
+[13:38:27]  I informed the tracker that I'm still alive in the torrent!
+[13:38:47]  I informed the tracker that I'm still alive in the torrent!
+[13:39:07]  I informed the tracker that I'm still alive in the torrent!
+[13:39:27]  I informed the tracker that I'm still alive in the torrent!
+[13:39:47]  I informed the tracker that I'm still alive in the torrent!
+[13:40:07]  I informed the tracker that I'm still alive in the torrent!
+[13:40:27]  I informed the tracker that I'm still alive in the torrent!
+[13:40:47]  I informed the tracker that I'm still alive in the torrent!
+[13:41:18]  ***************** Node program started just right now! *****************
+[13:41:18]  You entered Torrent. Receiving port: 29210
+[13:41:18]  I informed the tracker that I'm still alive in the torrent!
+[13:41:23]  You just started to download magnet:?xt=urn:btih:042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345. Let's search it in torrent!
+[13:41:23]  Sending request to tracker on port 11519 for 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[13:41:52]  ***************** Node program started just right now! *****************
+[13:41:52]  You entered Torrent. Receiving port: 59153
+[13:41:52]  I informed the tracker that I'm still alive in the torrent!
+[13:41:56]  You just started to download magnet:?xt=urn:btih:042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345. Let's search it in torrent!
+[13:41:56]  Sending request to tracker on port 25340 for 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[13:41:56]  Asking for chunks of node 1 at address ['127.0.0.1', 23068]
+[13:41:56]  I sent a request for a chunk of 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca for node1
+[13:42:02]  All the chunks of 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca has downloaded from neighboring peers. But they must be reassembled!
+[13:42:02]  All the pieces of the 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca is now sorted and ready to be reassembled.
+[13:42:02]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[13:42:12]  I informed the tracker that I'm still alive in the torrent!
+[13:42:32]  I informed the tracker that I'm still alive in the torrent!
+[13:42:52]  I informed the tracker that I'm still alive in the torrent!
+[13:43:06]  You just started to download magnet:?xt=urn:btih:042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345. Let's search it in torrent!
+[13:43:06]  Sending request to tracker on port 10595 for 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[13:43:12]  I informed the tracker that I'm still alive in the torrent!
+[13:43:32]  I informed the tracker that I'm still alive in the torrent!
+[13:44:09]  ***************** Node program started just right now! *****************
+[13:44:09]  You entered Torrent. Receiving port: 2093
+[13:44:09]  I informed the tracker that I'm still alive in the torrent!
+[13:44:26]  You just started to download magnet:?xt=urn:btih:042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345. Let's search it in torrent!
+[13:44:26]  Sending request to tracker on port 21884 for 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[13:44:26]  Asking for chunks of node 1 at address ['127.0.0.1', 5927]
+[13:44:26]  I sent a request for a chunk of 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca for node1
+[13:44:29]  I informed the tracker that I'm still alive in the torrent!
+[13:44:39]  All the chunks of 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca has downloaded from neighboring peers. But they must be reassembled!
+[13:44:39]  All the pieces of the 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca is now sorted and ready to be reassembled.
+[13:44:39]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[13:44:49]  I informed the tracker that I'm still alive in the torrent!
+[13:44:51]  You just started to download magnet:?xt=urn:btih:042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345. Let's search it in torrent!
+[13:44:51]  Sending request to tracker on port 20278 for 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[13:44:51]  Asking for chunks of node 1 at address ['127.0.0.1', 5927]
+[13:44:51]  I sent a request for a chunk of 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca for node1
+[13:45:03]  All the chunks of 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca has downloaded from neighboring peers. But they must be reassembled!
+[13:45:03]  All the pieces of the 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca is now sorted and ready to be reassembled.
+[13:45:03]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[13:45:09]  I informed the tracker that I'm still alive in the torrent!
+[13:45:10]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[13:45:10]  Sending request to tracker on port 55242 for 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[13:45:11]  Asking for chunks of node 1 at address ['127.0.0.1', 5927]
+[13:45:11]  I sent a request for a chunk of 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca for node1
+[13:45:22]  All the chunks of 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca has downloaded from neighboring peers. But they must be reassembled!
+[13:45:22]  All the pieces of the 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca is now sorted and ready to be reassembled.
+[13:45:23]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[13:45:29]  I informed the tracker that I'm still alive in the torrent!
+[13:45:49]  I informed the tracker that I'm still alive in the torrent!
+[13:46:06]  You just started to download magnet:?xt=urn:btih:042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345. Let's search it in torrent!
+[13:46:06]  Sending request to tracker on port 43644 for 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[13:46:06]  Asking for chunks of node 1 at address ['127.0.0.1', 5927]
+[13:46:06]  I sent a request for a chunk of 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca for node1
+[13:46:09]  I informed the tracker that I'm still alive in the torrent!
+[13:46:18]  All the chunks of 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca has downloaded from neighboring peers. But they must be reassembled!
+[13:46:18]  All the pieces of the 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca is now sorted and ready to be reassembled.
+[13:46:18]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[13:46:29]  I informed the tracker that I'm still alive in the torrent!
+[13:46:49]  I informed the tracker that I'm still alive in the torrent!
+[13:47:09]  I informed the tracker that I'm still alive in the torrent!
+[13:47:29]  I informed the tracker that I'm still alive in the torrent!
+[13:47:49]  I informed the tracker that I'm still alive in the torrent!
+[13:48:09]  I informed the tracker that I'm still alive in the torrent!
+[13:48:29]  I informed the tracker that I'm still alive in the torrent!
+[13:48:49]  I informed the tracker that I'm still alive in the torrent!
+[13:49:09]  I informed the tracker that I'm still alive in the torrent!
+[13:49:29]  I informed the tracker that I'm still alive in the torrent!
+[13:49:49]  I informed the tracker that I'm still alive in the torrent!
+[13:50:09]  I informed the tracker that I'm still alive in the torrent!
+[13:50:29]  I informed the tracker that I'm still alive in the torrent!
+[13:50:49]  I informed the tracker that I'm still alive in the torrent!
+[13:51:09]  I informed the tracker that I'm still alive in the torrent!
+[13:51:29]  I informed the tracker that I'm still alive in the torrent!
+[13:51:49]  I informed the tracker that I'm still alive in the torrent!
+[13:52:09]  I informed the tracker that I'm still alive in the torrent!
+[13:52:29]  I informed the tracker that I'm still alive in the torrent!
+[13:52:49]  I informed the tracker that I'm still alive in the torrent!
+[13:53:09]  I informed the tracker that I'm still alive in the torrent!
+[13:53:29]  I informed the tracker that I'm still alive in the torrent!
+[13:53:49]  I informed the tracker that I'm still alive in the torrent!
+[13:54:09]  I informed the tracker that I'm still alive in the torrent!
+[13:54:29]  I informed the tracker that I'm still alive in the torrent!
+[13:54:49]  I informed the tracker that I'm still alive in the torrent!
+[13:55:09]  I informed the tracker that I'm still alive in the torrent!
+[13:55:29]  I informed the tracker that I'm still alive in the torrent!
+[13:55:49]  I informed the tracker that I'm still alive in the torrent!
+[13:56:09]  I informed the tracker that I'm still alive in the torrent!
+[13:56:29]  I informed the tracker that I'm still alive in the torrent!
+[13:56:49]  I informed the tracker that I'm still alive in the torrent!
+[13:57:09]  I informed the tracker that I'm still alive in the torrent!
+[13:57:29]  I informed the tracker that I'm still alive in the torrent!
+[13:57:49]  I informed the tracker that I'm still alive in the torrent!
+[13:58:09]  I informed the tracker that I'm still alive in the torrent!
+[13:58:29]  I informed the tracker that I'm still alive in the torrent!
+[13:58:49]  I informed the tracker that I'm still alive in the torrent!
+[13:59:09]  I informed the tracker that I'm still alive in the torrent!
+[13:59:29]  I informed the tracker that I'm still alive in the torrent!
+[13:59:49]  I informed the tracker that I'm still alive in the torrent!
+[14:00:09]  I informed the tracker that I'm still alive in the torrent!
+[14:00:29]  I informed the tracker that I'm still alive in the torrent!
+[14:00:49]  I informed the tracker that I'm still alive in the torrent!
+[14:01:09]  I informed the tracker that I'm still alive in the torrent!
+[14:01:29]  I informed the tracker that I'm still alive in the torrent!
+[14:01:49]  I informed the tracker that I'm still alive in the torrent!
+[14:02:09]  I informed the tracker that I'm still alive in the torrent!
+[14:02:29]  I informed the tracker that I'm still alive in the torrent!
+[14:02:49]  I informed the tracker that I'm still alive in the torrent!
+[14:03:09]  I informed the tracker that I'm still alive in the torrent!
+[14:03:29]  I informed the tracker that I'm still alive in the torrent!
+[14:03:49]  I informed the tracker that I'm still alive in the torrent!
+[14:04:09]  I informed the tracker that I'm still alive in the torrent!
+[14:04:29]  I informed the tracker that I'm still alive in the torrent!
+[14:04:49]  I informed the tracker that I'm still alive in the torrent!
+[14:05:09]  I informed the tracker that I'm still alive in the torrent!
+[14:05:29]  I informed the tracker that I'm still alive in the torrent!
+[14:05:49]  I informed the tracker that I'm still alive in the torrent!
+[14:06:09]  I informed the tracker that I'm still alive in the torrent!
+[14:06:29]  I informed the tracker that I'm still alive in the torrent!
+[14:06:49]  I informed the tracker that I'm still alive in the torrent!
+[14:07:09]  I informed the tracker that I'm still alive in the torrent!
+[14:07:29]  I informed the tracker that I'm still alive in the torrent!
+[14:07:49]  I informed the tracker that I'm still alive in the torrent!
+[14:08:09]  I informed the tracker that I'm still alive in the torrent!
+[14:08:29]  I informed the tracker that I'm still alive in the torrent!
+[14:08:49]  I informed the tracker that I'm still alive in the torrent!
+[14:09:09]  I informed the tracker that I'm still alive in the torrent!
+[14:09:29]  I informed the tracker that I'm still alive in the torrent!
+[14:09:49]  I informed the tracker that I'm still alive in the torrent!
+[14:10:09]  I informed the tracker that I'm still alive in the torrent!
+[14:10:29]  I informed the tracker that I'm still alive in the torrent!
+[14:10:49]  I informed the tracker that I'm still alive in the torrent!
+[14:11:09]  I informed the tracker that I'm still alive in the torrent!
+[14:11:29]  I informed the tracker that I'm still alive in the torrent!
+[14:11:49]  I informed the tracker that I'm still alive in the torrent!
+[14:12:09]  I informed the tracker that I'm still alive in the torrent!
+[14:12:29]  I informed the tracker that I'm still alive in the torrent!
+[14:12:49]  I informed the tracker that I'm still alive in the torrent!
+[14:13:09]  I informed the tracker that I'm still alive in the torrent!
+[14:13:29]  I informed the tracker that I'm still alive in the torrent!
+[14:13:49]  I informed the tracker that I'm still alive in the torrent!
+[14:14:09]  I informed the tracker that I'm still alive in the torrent!
+[14:14:29]  I informed the tracker that I'm still alive in the torrent!
+[14:14:49]  I informed the tracker that I'm still alive in the torrent!
+[14:14:57]  You just started to download magnet:?xt=urn:btih:042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345. Let's search it in torrent!
+[14:14:57]  Sending request to tracker on port 53455 for 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[14:14:57]  Asking for chunks of node 1 at address ['127.0.0.1', 5927]
+[14:14:57]  I sent a request for a chunk of 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca for node1
+[14:15:09]  All the chunks of 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca has downloaded from neighboring peers. But they must be reassembled!
+[14:15:09]  All the pieces of the 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca is now sorted and ready to be reassembled.
+[14:15:09]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[14:15:09]  I informed the tracker that I'm still alive in the torrent!
+[14:15:29]  I informed the tracker that I'm still alive in the torrent!
+[14:15:49]  I informed the tracker that I'm still alive in the torrent!
+[14:16:09]  I informed the tracker that I'm still alive in the torrent!
+[14:16:29]  I informed the tracker that I'm still alive in the torrent!
+[14:16:49]  I informed the tracker that I'm still alive in the torrent!
+[14:17:09]  I informed the tracker that I'm still alive in the torrent!
+[14:17:29]  I informed the tracker that I'm still alive in the torrent!
+[14:17:49]  I informed the tracker that I'm still alive in the torrent!
+[14:18:09]  I informed the tracker that I'm still alive in the torrent!
+[14:18:29]  I informed the tracker that I'm still alive in the torrent!
+[14:18:49]  I informed the tracker that I'm still alive in the torrent!
+[14:19:09]  I informed the tracker that I'm still alive in the torrent!
+[14:19:29]  I informed the tracker that I'm still alive in the torrent!
+[14:19:49]  I informed the tracker that I'm still alive in the torrent!
+[14:20:09]  I informed the tracker that I'm still alive in the torrent!
+[14:20:29]  I informed the tracker that I'm still alive in the torrent!
+[14:20:49]  I informed the tracker that I'm still alive in the torrent!
+[14:21:09]  I informed the tracker that I'm still alive in the torrent!
+[14:21:29]  I informed the tracker that I'm still alive in the torrent!
+[14:21:49]  I informed the tracker that I'm still alive in the torrent!
+[14:22:09]  I informed the tracker that I'm still alive in the torrent!
+[14:22:29]  I informed the tracker that I'm still alive in the torrent!
+[14:22:49]  I informed the tracker that I'm still alive in the torrent!
+[14:23:09]  I informed the tracker that I'm still alive in the torrent!
+[14:23:29]  I informed the tracker that I'm still alive in the torrent!
+[14:23:49]  I informed the tracker that I'm still alive in the torrent!
+[14:24:09]  I informed the tracker that I'm still alive in the torrent!
+[14:24:29]  I informed the tracker that I'm still alive in the torrent!
+[14:24:49]  I informed the tracker that I'm still alive in the torrent!
+[14:25:09]  I informed the tracker that I'm still alive in the torrent!
+[14:25:29]  I informed the tracker that I'm still alive in the torrent!
+[14:25:49]  I informed the tracker that I'm still alive in the torrent!
+[14:26:09]  I informed the tracker that I'm still alive in the torrent!
+[14:26:29]  I informed the tracker that I'm still alive in the torrent!
+[14:26:49]  I informed the tracker that I'm still alive in the torrent!
+[14:27:09]  I informed the tracker that I'm still alive in the torrent!
+[14:27:29]  I informed the tracker that I'm still alive in the torrent!
+[14:27:49]  I informed the tracker that I'm still alive in the torrent!
+[14:28:09]  I informed the tracker that I'm still alive in the torrent!
+[14:28:29]  I informed the tracker that I'm still alive in the torrent!
+[14:28:49]  I informed the tracker that I'm still alive in the torrent!
+[14:29:09]  I informed the tracker that I'm still alive in the torrent!
+[14:29:29]  I informed the tracker that I'm still alive in the torrent!
+[14:29:49]  I informed the tracker that I'm still alive in the torrent!
+[14:30:09]  I informed the tracker that I'm still alive in the torrent!
+[14:30:29]  I informed the tracker that I'm still alive in the torrent!
+[14:30:49]  I informed the tracker that I'm still alive in the torrent!
+[14:31:09]  I informed the tracker that I'm still alive in the torrent!
+[14:31:29]  I informed the tracker that I'm still alive in the torrent!
+[14:31:49]  I informed the tracker that I'm still alive in the torrent!
+[14:32:09]  I informed the tracker that I'm still alive in the torrent!
+[14:32:29]  I informed the tracker that I'm still alive in the torrent!
+[14:32:49]  I informed the tracker that I'm still alive in the torrent!
+[14:33:09]  I informed the tracker that I'm still alive in the torrent!
+[14:33:29]  I informed the tracker that I'm still alive in the torrent!
+[14:33:49]  I informed the tracker that I'm still alive in the torrent!
+[14:34:09]  I informed the tracker that I'm still alive in the torrent!
+[14:34:29]  I informed the tracker that I'm still alive in the torrent!
+[14:34:49]  I informed the tracker that I'm still alive in the torrent!
+[14:35:09]  I informed the tracker that I'm still alive in the torrent!
+[14:35:29]  I informed the tracker that I'm still alive in the torrent!
+[14:35:49]  I informed the tracker that I'm still alive in the torrent!
+[14:36:09]  I informed the tracker that I'm still alive in the torrent!
+[14:36:29]  I informed the tracker that I'm still alive in the torrent!
+[14:36:49]  I informed the tracker that I'm still alive in the torrent!
+[14:37:09]  I informed the tracker that I'm still alive in the torrent!
+[14:37:29]  I informed the tracker that I'm still alive in the torrent!
+[14:37:49]  I informed the tracker that I'm still alive in the torrent!
+[14:38:09]  I informed the tracker that I'm still alive in the torrent!
+[14:38:29]  I informed the tracker that I'm still alive in the torrent!
+[14:38:49]  I informed the tracker that I'm still alive in the torrent!
+[14:39:09]  I informed the tracker that I'm still alive in the torrent!
+[14:39:29]  I informed the tracker that I'm still alive in the torrent!
+[10:04:49]  ***************** Node program started just right now! *****************
+[10:04:49]  You entered Torrent. Receiving port: 30426
+[10:04:49]  I informed the tracker that I'm still alive in the torrent!
+[10:04:55]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[10:04:55]  Sending request to tracker on port 14205 for 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[10:04:55]  Asking for chunks of node 1 at address ['127.0.0.1', 37756]
+[10:04:55]  I sent a request for a chunk of 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca for node1
+[10:05:05]  All the chunks of 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca has downloaded from neighboring peers. But they must be reassembled!
+[10:05:05]  All the pieces of the 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca is now sorted and ready to be reassembled.
+[10:05:05]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[10:05:09]  I informed the tracker that I'm still alive in the torrent!
+[10:05:29]  I informed the tracker that I'm still alive in the torrent!
+[10:05:52]  ***************** Node program started just right now! *****************
+[10:05:52]  You entered Torrent. Receiving port: 38227
+[10:05:52]  I informed the tracker that I'm still alive in the torrent!
+[10:06:12]  I informed the tracker that I'm still alive in the torrent!
+[10:06:32]  I informed the tracker that I'm still alive in the torrent!
+[10:06:52]  I informed the tracker that I'm still alive in the torrent!
+[10:07:12]  I informed the tracker that I'm still alive in the torrent!
+[10:07:32]  I informed the tracker that I'm still alive in the torrent!
+[10:07:52]  I informed the tracker that I'm still alive in the torrent!
+[10:08:12]  I informed the tracker that I'm still alive in the torrent!
+[10:08:32]  I informed the tracker that I'm still alive in the torrent!
+[10:08:56]  ***************** Node program started just right now! *****************
+[10:08:56]  You entered Torrent. Receiving port: 14663
+[10:08:56]  I informed the tracker that I'm still alive in the torrent!
+[10:09:00]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[10:09:00]  Sending request to tracker on port 42842 for 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[10:09:00]  No one has 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[10:09:16]  I informed the tracker that I'm still alive in the torrent!
+[10:09:36]  I informed the tracker that I'm still alive in the torrent!
+[10:09:56]  I informed the tracker that I'm still alive in the torrent!
+[10:10:16]  I informed the tracker that I'm still alive in the torrent!
+[10:10:36]  I informed the tracker that I'm still alive in the torrent!
+[10:10:56]  I informed the tracker that I'm still alive in the torrent!
+[10:11:16]  I informed the tracker that I'm still alive in the torrent!
+[10:11:36]  I informed the tracker that I'm still alive in the torrent!
+[10:11:56]  I informed the tracker that I'm still alive in the torrent!
+[10:12:09]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[10:12:09]  Sending request to tracker on port 46694 for 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[10:12:09]  No one has 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[10:12:16]  I informed the tracker that I'm still alive in the torrent!
+[10:12:36]  I informed the tracker that I'm still alive in the torrent!
+[10:12:56]  I informed the tracker that I'm still alive in the torrent!
+[10:13:16]  I informed the tracker that I'm still alive in the torrent!
+[10:13:36]  I informed the tracker that I'm still alive in the torrent!
+[10:13:56]  I informed the tracker that I'm still alive in the torrent!
+[10:14:16]  I informed the tracker that I'm still alive in the torrent!
+[10:14:36]  I informed the tracker that I'm still alive in the torrent!
+[10:14:56]  I informed the tracker that I'm still alive in the torrent!
+[10:15:25]  ***************** Node program started just right now! *****************
+[10:15:25]  You entered Torrent. Receiving port: 5136
+[10:15:25]  I informed the tracker that I'm still alive in the torrent!
+[10:15:40]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[10:15:40]  Sending request to tracker on port 16397 for 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[10:15:40]  No one has 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[10:15:45]  I informed the tracker that I'm still alive in the torrent!
+[10:16:05]  I informed the tracker that I'm still alive in the torrent!
+[10:16:25]  I informed the tracker that I'm still alive in the torrent!
+[10:16:45]  I informed the tracker that I'm still alive in the torrent!
+[10:20:08]  ***************** Node program started just right now! *****************
+[10:20:08]  You entered Torrent. Receiving port: 39898
+[10:20:08]  I informed the tracker that I'm still alive in the torrent!
+[10:20:20]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[10:20:20]  Sending request to tracker on port 60843 for 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[10:20:20]  No one has 042ae6ca3273a77f0c165658c2a5dda1ec6dc2ca
+[10:20:28]  I informed the tracker that I'm still alive in the torrent!
+[10:20:48]  I informed the tracker that I'm still alive in the torrent!
+[10:21:08]  I informed the tracker that I'm still alive in the torrent!
+[10:22:33]  ***************** Node program started just right now! *****************
+[10:22:33]  You entered Torrent. Receiving port: 2726
+[10:22:33]  I informed the tracker that I'm still alive in the torrent!
+[10:22:52]  I informed the tracker that I'm still alive in the torrent!
+[10:23:07]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[10:23:07]  Sending request to tracker on port 29683 for ee0f4768aca12dc552a4f50c1f403560a1880290
+[10:23:07]  Asking for chunks of node 1 at address ['127.0.0.1', 48226]
+[10:23:07]  Asking for chunks of node 1 at address ['127.0.0.1', 41327]
+[10:23:07]  I sent a request for a chunk of ee0f4768aca12dc552a4f50c1f403560a1880290 for node1
+[10:23:07]  I sent a request for a chunk of ee0f4768aca12dc552a4f50c1f403560a1880290 for node1
+[10:23:09]  All the chunks of ee0f4768aca12dc552a4f50c1f403560a1880290 has downloaded from neighboring peers. But they must be reassembled!
+[10:23:09]  All the pieces of the ee0f4768aca12dc552a4f50c1f403560a1880290 is now sorted and ready to be reassembled.
+[10:23:09]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[10:23:12]  I informed the tracker that I'm still alive in the torrent!
+[10:23:27]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[10:23:27]  Sending request to tracker on port 59472 for ee0f4768aca12dc552a4f50c1f403560a1880290
+[10:23:27]  Asking for chunks of node 1 at address ['127.0.0.1', 41327]
+[10:23:27]  Asking for chunks of node 1 at address ['127.0.0.1', 48226]
+[10:23:27]  I sent a request for a chunk of ee0f4768aca12dc552a4f50c1f403560a1880290 for node1
+[10:23:27]  I sent a request for a chunk of ee0f4768aca12dc552a4f50c1f403560a1880290 for node1
+[10:23:29]  All the chunks of ee0f4768aca12dc552a4f50c1f403560a1880290 has downloaded from neighboring peers. But they must be reassembled!
+[10:23:29]  All the pieces of the ee0f4768aca12dc552a4f50c1f403560a1880290 is now sorted and ready to be reassembled.
+[10:23:29]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[10:23:32]  I informed the tracker that I'm still alive in the torrent!
+[10:23:52]  I informed the tracker that I'm still alive in the torrent!
+[10:24:12]  I informed the tracker that I'm still alive in the torrent!
+[10:24:39]  ***************** Node program started just right now! *****************
+[10:24:39]  You entered Torrent. Receiving port: 22156
+[10:24:39]  I informed the tracker that I'm still alive in the torrent!
+[10:24:53]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[10:24:53]  Sending request to tracker on port 58888 for ee0f4768aca12dc552a4f50c1f403560a1880290
+[10:24:53]  Asking for chunks of node 1 at address ['127.0.0.1', 1109]
+[10:24:53]  I sent a request for a chunk of ee0f4768aca12dc552a4f50c1f403560a1880290 for node1
+[10:24:55]  All the chunks of ee0f4768aca12dc552a4f50c1f403560a1880290 has downloaded from neighboring peers. But they must be reassembled!
+[10:24:55]  All the pieces of the ee0f4768aca12dc552a4f50c1f403560a1880290 is now sorted and ready to be reassembled.
+[10:24:55]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[10:24:59]  I informed the tracker that I'm still alive in the torrent!
+[10:25:19]  I informed the tracker that I'm still alive in the torrent!
+[10:25:39]  I informed the tracker that I'm still alive in the torrent!
+[10:25:59]  I informed the tracker that I'm still alive in the torrent!
+[10:26:19]  I informed the tracker that I'm still alive in the torrent!
+[10:26:39]  I informed the tracker that I'm still alive in the torrent!
+[10:26:59]  I informed the tracker that I'm still alive in the torrent!
+[10:27:19]  I informed the tracker that I'm still alive in the torrent!
+[10:27:39]  I informed the tracker that I'm still alive in the torrent!
+[10:27:59]  I informed the tracker that I'm still alive in the torrent!
+[10:28:19]  I informed the tracker that I'm still alive in the torrent!
+[10:28:39]  I informed the tracker that I'm still alive in the torrent!
+[10:28:59]  I informed the tracker that I'm still alive in the torrent!
+[10:29:19]  I informed the tracker that I'm still alive in the torrent!
+[10:29:39]  I informed the tracker that I'm still alive in the torrent!
+[10:29:59]  I informed the tracker that I'm still alive in the torrent!
+[10:30:19]  I informed the tracker that I'm still alive in the torrent!
+[10:30:39]  I informed the tracker that I'm still alive in the torrent!
+[10:30:59]  I informed the tracker that I'm still alive in the torrent!
+[10:31:19]  I informed the tracker that I'm still alive in the torrent!
+[10:31:41]  ***************** Node program started just right now! *****************
+[10:31:41]  You entered Torrent. Receiving port: 5728
+[10:31:41]  I informed the tracker that I'm still alive in the torrent!
+[10:31:52]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[10:31:52]  Sending request to tracker on port 6672 for ee0f4768aca12dc552a4f50c1f403560a1880290
+[10:31:52]  Asking for chunks of node 1 at address ['127.0.0.1', 49203]
+[10:31:52]  I sent a request for a chunk of ee0f4768aca12dc552a4f50c1f403560a1880290 for node1
+[10:32:01]  I informed the tracker that I'm still alive in the torrent!
+[10:32:06]  All the chunks of ee0f4768aca12dc552a4f50c1f403560a1880290 has downloaded from neighboring peers. But they must be reassembled!
+[10:32:06]  All the pieces of the ee0f4768aca12dc552a4f50c1f403560a1880290 is now sorted and ready to be reassembled.
+[10:32:06]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[10:32:21]  I informed the tracker that I'm still alive in the torrent!
+[10:32:41]  I informed the tracker that I'm still alive in the torrent!
+[10:32:46]  You just started to download magnet:?xt=urn:btih:ee0f4768aca12dc552a4f50c1f403560a1880290&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345. Let's search it in torrent!
+[10:32:46]  Sending request to tracker on port 30860 for ee0f4768aca12dc552a4f50c1f403560a1880290
+[10:32:46]  Asking for chunks of node 1 at address ['127.0.0.1', 49203]
+[10:32:46]  I sent a request for a chunk of ee0f4768aca12dc552a4f50c1f403560a1880290 for node1
+[10:33:01]  I informed the tracker that I'm still alive in the torrent!
+[10:33:02]  All the chunks of ee0f4768aca12dc552a4f50c1f403560a1880290 has downloaded from neighboring peers. But they must be reassembled!
+[10:33:02]  All the pieces of the ee0f4768aca12dc552a4f50c1f403560a1880290 is now sorted and ready to be reassembled.
+[10:33:02]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[10:33:21]  I informed the tracker that I'm still alive in the torrent!
+[10:33:41]  I informed the tracker that I'm still alive in the torrent!
+[10:34:01]  I informed the tracker that I'm still alive in the torrent!
+[10:34:21]  I informed the tracker that I'm still alive in the torrent!
+[10:34:41]  I informed the tracker that I'm still alive in the torrent!
+[10:35:01]  I informed the tracker that I'm still alive in the torrent!
+[10:35:21]  I informed the tracker that I'm still alive in the torrent!

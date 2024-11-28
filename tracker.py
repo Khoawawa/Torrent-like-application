@@ -13,27 +13,46 @@ from messages.message import  Message
 from messages.tracker2node import Tracker2Node, TrackerScrape2Node
 from segment import UDPSegment
 from configs import CFG, Config
+from threading import Lock
 config = Config.from_json(CFG)
 
 next_call = time.time()
 
 class Tracker:
     def __init__(self):
+        self.scrape_lock = Lock()
         self.tracker_socket = set_socket(config.constants.TRACKER_ADDR[1])
         self.tracker_socket.listen(5)
         self.file_owners_list = defaultdict(list)
         self.send_freq_list = defaultdict(int)
         self.has_informed_tracker = defaultdict(bool)
-
+        self.scrape = defaultdict(dict)
     def send_segment(self, sock: socket.socket, data: bytes, addr: tuple,):
         sock.sendall(data)
-
-    def add_file_owner(self, msg: dict, addr: tuple):
+    def init_scrape(self,info_hash):
+        if info_hash in self.scrape:
+            return
+        entry = {
+            'complete' : 0,
+            'incomplete' : 0,
+            'downloaded' : 0,
+        }
+        with self.scrape_lock:
+            self.scrape[info_hash] = entry
+            
+    def add_file_owner(self, msg: dict, addr: tuple,is_seed = 1):
         entry = {
             'node_id': msg['node_id'],
             'addr': (addr[0],msg['port']),
-            'left': msg['left']
+            'left': msg['left'],
+            'is_seed': is_seed
         }
+        self.init_scrape(msg['info_hash'])
+        
+        if is_seed == -1:
+            with self.scrape_lock:
+                self.scrape[msg['info_hash']]['incomplete'] += 1
+
         log_content = f"Node {msg['node_id']} owns {msg['info_hash']}"
         log(node_id=0, content=log_content, is_tracker=True)
 
@@ -59,8 +78,9 @@ class Tracker:
         matched_entries = []
         for json_entry in self.file_owners_list[msg['info_hash']]:
             entry = json.loads(json_entry)
-            matched_entries.append((entry, self.send_freq_list[entry['node_id']]))
-        
+            if entry['is_seed'] == 1:
+                matched_entries.append((entry, self.send_freq_list[entry['node_id']]))
+        self.add_file_owner(msg,addr,-1)
         tracker_response = Tracker2Node(node_id = msg['node_id'],
                                         peers = matched_entries)
         self.send_segment(sock=conn_socket,
@@ -87,8 +107,12 @@ class Tracker:
         self.has_informed_tracker.pop((entry['node_id'], entry['addr']))
         node_files = self.file_owners_list.copy()
         for nf in node_files:
-            if json.dumps(entry) in self.file_owners_list[nf]:
-                self.file_owners_list[nf].remove(json.dumps(entry))
+            for json_entry in node_files[nf]:
+                node_entry = json.loads(json_entry)
+                if node_entry['node_id'] == entry['node_id'] and tuple(node_entry['addr']) == entry['addr']:
+                    self.file_owners_list[nf].remove(json.dumps(node_entry))
+                    break
+                    
             if len(self.file_owners_list[nf]) == 0:
                 self.file_owners_list.pop(nf)
 
@@ -135,22 +159,18 @@ class Tracker:
         # saves files' information as a json file
         files_json = open(files_info_path, 'w')
         json.dump(self.file_owners_list, files_json, indent=4, sort_keys=True)
-    def scrape(self,msg,addr,conn_socket):
-        peers = self.file_owners_list[msg['info_hash']]
-        complete = 0
-        incomplete = 0
-        for peer in peers:
-            entry = json.loads(peer)
-            if entry['left'] == 0:
-                complete += 1
+        
+    def get_scrape(self,msg,addr,conn_socket):
+        
+        with self.scrape_lock:
+            if not len(self.scrape[msg['info_hash']]):
+                files = {}
             else:
-                incomplete += 1
-        files = {
-            msg['info_hash']: {
-                'complete' : complete,
-                'incomplete': incomplete
-            }
-        }
+                files = {
+                msg['info_hash'] : self.scrape[msg['info_hash']]
+                }
+        log_content = "returning scrape data to {0}".format(msg['node_id'])
+        log(0,log_content,True)
         msg = TrackerScrape2Node(node_id=msg['node_id'],
                                  files=files)
         
@@ -158,31 +178,23 @@ class Tracker:
                           data=msg.encode(),
                           addr=addr)
         
-    def update_stat(self,msg,addr):
-        info_hash = msg['info_hash']
-        if info_hash == '':
-            return
-        entry_found = False
+    def tell_finish(self,msg,addr):
         updated_list = []
+        
         for json_entry in self.file_owners_list[msg['info_hash']]:
             entry = json.loads(json_entry)
             if entry['node_id'] == msg['node_id']:
-                if msg['left'] != -1: 
-                    entry['left'] = msg['left']
-                    entry_found = True
+                with self.scrape_lock:
+                    self.scrape[msg['info_hash']]['downloaded'] += entry['left']
+                    self.scrape[msg['info_hash']]['complete'] -= 1
+                    self.scrape[msg['info_hash']]['incomplete'] += 1
+                entry['left'] = 0
+                entry['is_seeder'] = 0
             updated_list.append(json.dumps(entry))
             
-        if not entry_found:
-            self.add_file_owner(msg,addr)
-            return
+        self.file_owners_list[msg['info_hash']] = list(set(updated_list))
         
-        log_content = f"Updated info_hash {info_hash} for node{msg['node_id']}"
-        log(0,log_content,is_tracker=True)
-        
-        self.file_owners_list[info_hash] = list(set(updated_list))
         self.save_db_as_json()
-        
-         
             
     def handle_node_request(self, data: bytes, addr: tuple, conn_socket):
         msg = Message.decode(data)
@@ -195,9 +207,10 @@ class Tracker:
             self.update_db(msg=msg)
         elif mode == config.tracker_requests_mode.REGISTER:
             self.has_informed_tracker[(msg['node_id'], (addr[0],msg['port']))] = True
-            self.update_stat(msg=msg,addr=addr)
         elif mode == config.tracker_requests_mode.SCRAPE:
-            self.scrape(msg=msg, addr=addr,conn_socket=conn_socket)
+            self.get_scrape(msg=msg, addr=addr,conn_socket=conn_socket)
+        elif mode == config.tracker_requests_mode.FIN:
+            self.tell_finish(msg=msg,addr=addr)
         elif mode == config.tracker_requests_mode.EXIT:
             self.remove_node(node_id=msg['node_id'], addr=addr)
             log_content = f"Node {msg['node_id']} exited torrent intentionally."
@@ -219,7 +232,7 @@ class Tracker:
         log_content = f"***************** Tracker program started just right now! *****************"
         log(node_id=0, content=log_content, is_tracker=True)
         t = Thread(target=self.listen)
-        t.daemon = True
+        t.setDaemon(True)
         t.start()
         t.join()
 

@@ -11,8 +11,8 @@ CFG = {
         "AVAILABLE_PORTS_RANGE": (1024, 65535), # range of available ports on the local computer
         "TRACKER_ADDR": ('localhost', 12345),
         "MAX_UDP_SEGMENT_DATA_SIZE": 65527,
-        "BUFFER_SIZE": 9216,        # MACOSX UDP MTU is 9216
-        "CHUNK_PIECES_SIZE": 9216 - 2000, # Each chunk pieces(segments of UDP) must be lower than UDP buffer size
+        "BUFFER_SIZE": 8192,        # MACOSX UDP MTU is 9216
+        "CHUNK_PIECES_SIZE": 8192 - 2000, # Each chunk pieces(segments of UDP) must be lower than UDP buffer size
         "MAX_SPLITTNES_RATE": 3,    # number of neighboring peers which the node take chunks of a file in parallel
         "NODE_TIME_INTERVAL": 20,        # the interval time that each node periodically informs the tracker (in seconds)
         "TRACKER_TIME_INTERVAL": 22      #the interval time that the tracker periodically checks which nodes are in the torrent (in seconds)
@@ -23,7 +23,8 @@ CFG = {
         "NEED": 2,      # tells the torrent that it needs a file, so the file must be searched in torrent
         "UPDATE": 3,    # tells tracker that it's upload freq rate must be incremented)
         "SCRAPE": 4,
-        "EXIT": 5       # tells the tracker that it left the torrent
+        "FIN": 5,
+        "EXIT": 6       # tells the tracker that it left the torrent
     }
 }
 
