@@ -101,6 +101,7 @@ Thus, the tracker search that file in the torrent and sort the neighbors which o
   torrent -setMode download magnet:?xt=urn:btih:ee0f4768aca12dc552a4f50c1f403560a1880290&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345
   torrent -setMode send N5-2018.pdf.torrent
   torrent -setMode download magnet:?xt=urn:btih:d91838522436ecfe7d0595ac62e1a2a32457da2a&dn=file_A.txt&xl=508971&tr=https://localhost:12345
+  
   ```
 - **exit - (Optional mode):**
 An optional mode named **exit** has also implemented which is used for letting tracker know that a node has left the
