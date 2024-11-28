@@ -81,7 +81,8 @@ class Node:
             folder_path = f"{config.directory.node_files_dir}node{self.node_id}/{folder_name}"
             
             for file_info in self.torrent_data['info']['files']:
-                file_path = os.path.join(folder_path, file_info['file_name'])
+                file_name = file_info['file_name']
+                file_path = os.path.join(folder_path, file_name)
                 chunk_pieces = self.split_file_to_chunks(file_path=file_path, rng=rng)
                 
                 for idx, p in enumerate(chunk_pieces):
@@ -90,16 +91,17 @@ class Node:
                                      info_hash=info_hash,
                                      range=rng,
                                      idx=idx,
-                                     chunk=p)
+                                     chunk=p,
+                                     file_name=file_name)
                     
                     encoded_msg = msg.encode()
                     msg_length = len(encoded_msg)
                     length_prefix = struct.pack("!I", msg_length)
                     conn_socket.sendall(length_prefix + encoded_msg)
                     
-                    log_content = f"The {idx}/{len(chunk_pieces)} of {file_info['file_name']} has been sent!"
+                    log_content = f"The {idx}/{len(chunk_pieces)} of {file_name} has been sent!"
                     log(node_id=self.node_id, content=log_content)
-        else:  # Single file mode - existing code
+        else:  # Single file mode
             file_name = self.torrent_data['info']['file_name']
             file_path = f"{config.directory.node_files_dir}node{self.node_id}/{file_name}"
             chunk_pieces = self.split_file_to_chunks(file_path=file_path, rng=rng)
@@ -110,7 +112,8 @@ class Node:
                                  info_hash=info_hash,
                                  range=rng,
                                  idx=idx,
-                                 chunk=p)
+                                 chunk=p,
+                                 file_name=file_name)
                 
                 encoded_msg = msg.encode()
                 msg_length = len(encoded_msg)
@@ -230,79 +233,123 @@ class Node:
             t.setDaemon(True)
             t.start()
 
-    def receive_chunk(self, info_hash, range: tuple, file_owner: tuple):
+    def receive_chunk(self, info_hash, chunk_range: tuple, file_owner: tuple):
         '''
         Method to receive chunk (a range of pieces) from an owner
         
         Args:
             info_hash: id of torrent file
-            range: location of the chunk in the file
+            chunk_range: location of the chunk in the file
             file_owner: a tuple where:
                 - [0]: peer info -> {node_id,addr,left}
                 - [1]: freq_list
         '''
         dest_node = file_owner[0]
-        # we set idx of ChunkSharing to -1, because we want to tell it that we
-        # need the chunk from it
-        # SENDING A MESSAGE TO REQUEST A CHUNK FROM THE OWNER
-        msg = ChunkSharing(src_node_id=self.node_id,
-                           dest_node_id=dest_node["node_id"],
-                           info_hash=info_hash,
-                           range=range)
+        max_retries = 3
+        retry_delay = 2  # seconds
         
-        # temp_port = generate_random_port()
-        temp_sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-        temp_sock.connect(tuple(dest_node['addr']))
-        temp_sock.settimeout(10)
-        temp_sock.sendall(msg.encode())
-        log_content = "Asking for chunks of node {0} at address {1}".format(dest_node['node_id'],dest_node['addr'])
-        log(node_id=self.node_id, content=log_content)
-        log_content = "I sent a request for a chunk of {0} for node{1}".format(info_hash, dest_node["node_id"])
-        log(node_id=self.node_id, content=log_content)
-        piece_size = self.torrent_data['info']['piece_size']
-        #WAITING FOR THE OWNER TO ANSWER BACK WITH THE CHUNKS BYTE
-        i = 0
-        while True:
-            length_data = temp_sock.recv(4)
-            if not length_data:
-                log_content = f'Idx{i}: No data received! Closing connection'
-                log(node_id=self.node_id,content=log_content)
-                return
-            
-            msg_length = struct.unpack("!I",length_data)[0]
-            
-            message = b""
-            while len(message) < msg_length:
-                chunk = temp_sock.recv(min(msg_length - len(message), config.constants.BUFFER_SIZE))
-                if not chunk:
-                    log_content = f"Idx {i}: Connection closed before receiving full message."
-                    log(node_id=self.node_id, content=log_content)
-                    return
-                message += chunk 
-            # log_content = f"Idx {i}: I have just received a data of {sys.getsizeof(message)} bytes"
-            # log(node_id=self.node_id, content=log_content)    
-            msg = Message.decode(message)
+        for attempt in range(max_retries):
+            try:
+                # SENDING A MESSAGE TO REQUEST A CHUNK FROM THE OWNER
+                msg = ChunkSharing(src_node_id=self.node_id,
+                                 dest_node_id=dest_node["node_id"],
+                                 info_hash=info_hash,
+                                 range=chunk_range)
                 
-            if msg["idx"] == -1: # end of the file
-                # free_socket(temp_sock)
-                temp_sock.close()
-                return
+                temp_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                temp_sock.settimeout(10)
+                
+                log_content = f"Attempt {attempt + 1}/{max_retries}: Connecting to node {dest_node['node_id']} at address {dest_node['addr']}"
+                log(node_id=self.node_id, content=log_content)
+                
+                temp_sock.connect(tuple(dest_node['addr']))
+                temp_sock.sendall(msg.encode())
+                
+                log_content = f"Successfully connected and sent request for chunks to node {dest_node['node_id']}"
+                log(node_id=self.node_id, content=log_content)
+                
+                piece_size = self.torrent_data['info']['piece_size']
+                i = 0
+                
+                while True:
+                    try:
+                        length_data = temp_sock.recv(4)
+                        if not length_data:
+                            log_content = f'Idx{i}: No data received! Closing connection'
+                            log(node_id=self.node_id, content=log_content)
+                            break
+                        
+                        msg_length = struct.unpack("!I", length_data)[0]
+                        
+                        message = b""
+                        while len(message) < msg_length:
+                            chunk = temp_sock.recv(min(msg_length - len(message), config.constants.BUFFER_SIZE))
+                            if not chunk:
+                                log_content = f"Idx {i}: Connection closed before receiving full message."
+                                log(node_id=self.node_id, content=log_content)
+                                raise ConnectionError("Incomplete message received")
+                            message += chunk
+                            
+                        msg = Message.decode(message)
+                        
+                        if msg["idx"] == -1:  # end of the file
+                            temp_sock.close()
+                            return
+                        
+                        i += 1
+                        self.downloaded_files[info_hash].append(msg)
+                        
+                    except socket.timeout:
+                        log_content = f"Timeout while receiving data from node {dest_node['node_id']}"
+                        log(node_id=self.node_id, content=log_content)
+                        raise
+                    
+                # If we get here successfully, break the retry loop
+                break
+                
+            except (ConnectionRefusedError, socket.timeout, ConnectionError) as e:
+                log_content = f"Attempt {attempt + 1}/{max_retries} failed: {str(e)}"
+                log(node_id=self.node_id, content=log_content)
+                
+                if attempt < max_retries - 1:
+                    log_content = f"Retrying in {retry_delay} seconds..."
+                    log(node_id=self.node_id, content=log_content)
+                    time.sleep(retry_delay)
+                    continue
+                else:
+                    log_content = f"Failed to connect to node {dest_node['node_id']} after {max_retries} attempts"
+                    log(node_id=self.node_id, content=log_content)
+                    raise
             
-            i+=1
-            self.downloaded_files[info_hash].append(msg)
+            finally:
+                try:
+                    temp_sock.close()
+                except:
+                    pass
 
-    def sort_downloaded_chunks(self, info_hash) -> list:
-        sort_result_by_range = sorted(self.downloaded_files[info_hash],
-                                      key=itemgetter("range"))
-        group_by_range = groupby(sort_result_by_range,
-                                 key=lambda i: i["range"])
-        sorted_downloaded_chunks = []
-        for _, value in group_by_range:
-            value_sorted_by_idx = sorted(list(value),
-                                         key=itemgetter("idx"))
-            sorted_downloaded_chunks.append(value_sorted_by_idx)
-
-        return sorted_downloaded_chunks
+    def sort_downloaded_chunks(self, info_hash) -> dict:
+        # Đầu tiên nhóm các chunk theo file_name
+        chunks_by_file = {}
+        for chunk in self.downloaded_files[info_hash]:
+            file_name = chunk["file_name"]
+            if file_name not in chunks_by_file:
+                chunks_by_file[file_name] = []
+            chunks_by_file[file_name].append(chunk)
+        
+        # Sau đó sort từng file theo range và idx
+        sorted_result = {}
+        for file_name, chunks in chunks_by_file.items():
+            sort_result_by_range = sorted(chunks, key=itemgetter("range"))
+            group_by_range = groupby(sort_result_by_range, key=lambda i: i["range"])
+            sorted_chunks = []
+            
+            for _, value in group_by_range:
+                value_sorted_by_idx = sorted(list(value), key=itemgetter("idx"))
+                sorted_chunks.append(value_sorted_by_idx)
+            
+            sorted_result[file_name] = sorted_chunks
+        
+        return sorted_result
 
     def split_file_owners(self, file_owners: list, info: dict, info_hash):
         owners = []
@@ -326,35 +373,36 @@ class Node:
             folder_path = f"{config.directory.node_files_dir}node{self.node_id}/{info['file_name']}"
             os.makedirs(folder_path, exist_ok=True)
             
-            # Download each file in the folder
-            for file_info in info['files']:
-                file_size = file_info['length']
-                step = file_size / len(to_be_used_owners)
-                chunks_ranges = [(round(step*i), round(step*(i+1))) for i in range(len(to_be_used_owners))]
-                
-                self.downloaded_files[info_hash] = []
-                neighboring_peers_threads = []
-                
-                for idx, obj in enumerate(to_be_used_owners):
-                    t = Thread(target=self.receive_chunk, args=(info_hash, chunks_ranges[idx], obj))
-                    t.setDaemon(True)
-                    t.start()
-                    neighboring_peers_threads.append(t)
-                
-                for t in neighboring_peers_threads:
-                    t.join()
-                    
-                # Sort and reassemble the file
-                sorted_chunks = self.sort_downloaded_chunks(info_hash=info_hash)
+            # Calculate chunks_ranges based on total size of all files
+            total_size = sum(file_info['length'] for file_info in info['files'])
+            step = total_size / len(to_be_used_owners)
+            chunks_ranges = [(round(step*i), round(step*(i+1))) for i in range(len(to_be_used_owners))]
+            
+            # Download all files
+            self.downloaded_files[info_hash] = []
+            neighboring_peers_threads = []
+            
+            for idx, obj in enumerate(to_be_used_owners):
+                t = Thread(target=self.receive_chunk, args=(info_hash, chunks_ranges[idx], obj))
+                t.setDaemon(True)
+                t.start()
+                neighboring_peers_threads.append(t)
+            
+            for t in neighboring_peers_threads:
+                t.join()
+            
+            # Sort chunks by file and reassemble each file
+            sorted_chunks_by_file = self.sort_downloaded_chunks(info_hash=info_hash)
+            
+            for file_name, sorted_chunks in sorted_chunks_by_file.items():
                 total_file = []
-                file_path = os.path.join(folder_path, file_info['file_name'])
-                
                 for chunk in sorted_chunks:
                     for piece in chunk:
                         total_file.append(piece["chunk"])
                 
+                file_path = os.path.join(folder_path, file_name)
                 self.reassemble_file(chunks=total_file, file_path=file_path)
-                log_content = f"{file_info['file_name']} has been downloaded to {folder_path}"
+                log_content = f"{file_name} has been downloaded to {folder_path}"
                 log(node_id=self.node_id, content=log_content)
                 
         else:  # Single file mode - existing code
