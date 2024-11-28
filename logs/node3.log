@@ -43,3 +43,28 @@
 [19:26:59]  I informed the tracker that I'm still alive in the torrent!
 [19:27:19]  I informed the tracker that I'm still alive in the torrent!
 [19:27:26]  You exited the torrent!
+[17:52:52]  ***************** Node program started just right now! *****************
+[17:52:52]  You entered Torrent. Receiving port: 55267
+[17:52:52]  I informed the tracker that I'm still alive in the torrent!
+[17:53:10]  You just started to download file_A.txt.torrent. Let's search it in torrent!
+[17:53:10]  Sending request to tracker for d91838522436ecfe7d0595ac62e1a2a32457da2a
+[17:53:10]  Asking for chunks of node 1 at address ['10.9.1.190', 52268]
+[17:53:10]  I sent a request for a chunk of d91838522436ecfe7d0595ac62e1a2a32457da2a for node1
+[17:53:11]  All the chunks of d91838522436ecfe7d0595ac62e1a2a32457da2a has downloaded from neighboring peers. But they must be reassembled!
+[17:53:11]  All the pieces of the d91838522436ecfe7d0595ac62e1a2a32457da2a is now sorted and ready to be reassembled.
+[17:53:11]  file_A.txt has successfully downloaded and saved in my files directory.
+[17:53:12]  I informed the tracker that I'm still alive in the torrent!
+[17:53:27]  You just started to download file_A.txt.torrent. Let's search it in torrent!
+[17:53:27]  Sending request to tracker for d91838522436ecfe7d0595ac62e1a2a32457da2a
+[17:53:27]  Asking for chunks of node 1 at address ['10.9.1.190', 52268]
+[17:53:27]  Asking for chunks of node 2 at address ['10.9.1.190', 52280]
+[17:53:27]  I sent a request for a chunk of d91838522436ecfe7d0595ac62e1a2a32457da2a for node1
+[17:53:27]  I sent a request for a chunk of d91838522436ecfe7d0595ac62e1a2a32457da2a for node2
+[17:53:28]  All the chunks of d91838522436ecfe7d0595ac62e1a2a32457da2a has downloaded from neighboring peers. But they must be reassembled!
+[17:53:28]  All the pieces of the d91838522436ecfe7d0595ac62e1a2a32457da2a is now sorted and ready to be reassembled.
+[17:53:28]  file_A.txt has successfully downloaded and saved in my files directory.
+[17:53:32]  I informed the tracker that I'm still alive in the torrent!
+[17:53:52]  I informed the tracker that I'm still alive in the torrent!
+[17:54:12]  I informed the tracker that I'm still alive in the torrent!
+[17:54:32]  I informed the tracker that I'm still alive in the torrent!
+[17:54:52]  I informed the tracker that I'm still alive in the torrent!

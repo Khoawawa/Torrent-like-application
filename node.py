@@ -27,7 +27,7 @@ from torrent_file import TorrentFile
 next_call = time.time()
 
 class Node:
-    def __init__(self, node_id: int, rcv_port: int, send_port: int):
+    def __init__(self, node_id: int):
         #id of node
         self.node_id = node_id
         # listening socket of node
@@ -37,7 +37,6 @@ class Node:
         self.rcv_socket.bind((socket.gethostbyname(socket.gethostname()),0))
         self.rcv_socket.listen(5)
 
-        self.send_socket = set_socket(send_port)
         self.files = self.fetch_owned_files()
         self.is_in_send_mode = False    # is thread uploading a file or not
         self.downloaded_files = {}
@@ -525,11 +524,11 @@ class Node:
                            info_hash="",
                            left=-1,
                            port=self.rcv_socket.getsockname()[1])
-        self.send_segment(sock=self.send_socket,
-                          data=Message.encode(msg),
-                          addr=tuple(config.constants.TRACKER_ADDR))
-        free_socket(self.send_socket)
-        free_socket(self.rcv_socket)
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as send_socket:
+            send_socket.connect(tuple(config.constants.TRACKER_ADDR))
+            send_socket.sendall(msg.encode())
+
+        self.rcv_socket.close()
 
         log_content = f"You exited the torrent!"
         log(node_id=self.node_id, content=log_content)
@@ -566,9 +565,7 @@ class Node:
         Timer(next_call - time.time(), self.inform_tracker_periodically, args=(interval,)).start()
 # args.node_id
 def run(args):
-    node = Node(node_id=args.node_id,
-                rcv_port=generate_random_port(),
-                send_port=generate_random_port())
+    node = Node(node_id=args.node_id)
     log_content = f"***************** Node program started just right now! *****************"
     log(node_id=node.node_id, content=log_content)
     node.enter_torrent()
