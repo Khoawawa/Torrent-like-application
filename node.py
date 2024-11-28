@@ -41,6 +41,7 @@ class Node:
         
 
     def send_segment(self, sock: socket.socket, data: bytes, addr: tuple):
+        print(addr)
         sock.connect(addr)
         sock.sendall(data)
 
@@ -537,11 +538,10 @@ class Node:
                            info_hash='',
                            left=-1,
                            port=self.rcv_socket.getsockname()[1])
-        send_socket = set_socket(generate_random_port())
-        self.send_segment(sock=send_socket,
-                          data=Message.encode(msg),
-                          addr=tuple(config.constants.TRACKER_ADDR))
-        free_socket(send_socket)
+        with socket.socket(socket.AF_INET,socket.SOCK_STREAM) as send_socket:
+            send_socket.connect(tuple(config.constants.TRACKER_ADDR))
+            send_socket.sendall(msg.encode())
+
         log_content = f"You entered Torrent. Receiving port: {self.rcv_socket.getsockname()[1]}"
         log(node_id=self.node_id, content=log_content)
         # time.sleep(2)

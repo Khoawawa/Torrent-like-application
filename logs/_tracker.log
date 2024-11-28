@@ -2731,3 +2731,16 @@ d0595ac62e1a2a32457da2a for node1
 [15:49:21]  Node 2 exited torrent intentionally.
 [15:49:28]  Connected by ('127.0.0.1', 25820)
 [15:49:28]  Node 1 exited torrent intentionally.
+[16:02:59]  ***************** Tracker program started just right now! *****************
+[16:07:31]  ***************** Tracker program started just right now! *****************
+[16:16:37]  Connected by ('10.9.1.75', 53546)
+[16:20:47]  Connected by ('10.9.1.75', 53659)
+[16:20:47]  Connected by ('10.9.1.75', 53660)
+[16:21:05]  Node(s) [1] is in the torrent and node(s)[] have left.
+[16:21:07]  Connected by ('10.9.1.75', 53667)
+[16:21:27]  Node(s) [1] is in the torrent and node(s)[] have left.
+[16:21:27]  Connected by ('10.9.1.75', 53669)
+[16:21:47]  Connected by ('10.9.1.75', 53671)
+[16:21:49]  Node(s) [1] is in the torrent and node(s)[] have left.
+[16:22:07]  Connected by ('10.9.1.75', 53678)
+[16:22:11]  Node(s) [1] is in the torrent and node(s)[] have left.

@@ -21,8 +21,9 @@ next_call = time.time()
 class Tracker:
     def __init__(self):
         self.scrape_lock = Lock()
-        self.tracker_socket = set_socket(config.constants.TRACKER_ADDR[1])
+        self.tracker_socket = set_socket(config.constants.TRACKER_ADDR[1],config.constants.TRACKER_ADDR[0])
         self.tracker_socket.listen(5)
+        print(self.tracker_socket.getsockname())
         self.file_owners_list = defaultdict(list)
         self.send_freq_list = defaultdict(int)
         self.has_informed_tracker = defaultdict(bool)
