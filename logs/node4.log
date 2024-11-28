@@ -1,0 +1,454 @@
+[11:07:55]  ***************** Node program started just right now! *****************
+[11:07:55]  You entered Torrent. Receiving port: 56634
+[11:07:55]  I informed the tracker that I'm still alive in the torrent!
+[11:08:10]  You just started to download magnet:?xt=urn:btih:ee0f4768aca12dc552a4f50c1f403560a1880290&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345. Let's search it in torrent!
+[11:08:10]  Sending request to tracker on port 21408 for ee0f4768aca12dc552a4f50c1f403560a1880290
+[11:08:10]  Asking for chunks of node 1 at address ['127.0.0.1', 10336]
+[11:08:10]  I sent a request for a chunk of ee0f4768aca12dc552a4f50c1f403560a1880290 for node1
+[11:08:14]  I informed the tracker that I'm still alive in the torrent!
+[11:08:24]  All the chunks of ee0f4768aca12dc552a4f50c1f403560a1880290 has downloaded from neighboring peers. But they must be reassembled!
+[11:08:24]  All the pieces of the ee0f4768aca12dc552a4f50c1f403560a1880290 is now sorted and ready to be reassembled.
+[11:08:24]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[11:08:34]  I informed the tracker that I'm still alive in the torrent!
+[11:09:06]  ***************** Node program started just right now! *****************
+[11:09:06]  You entered Torrent. Receiving port: 47141
+[11:09:06]  I informed the tracker that I'm still alive in the torrent!
+[11:09:16]  You just started to download magnet:?xt=urn:btih:ee0f4768aca12dc552a4f50c1f403560a1880290&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345. Let's search it in torrent!
+[11:09:16]  Sending request to tracker on port 57448 for ee0f4768aca12dc552a4f50c1f403560a1880290
+[11:09:16]  Asking for chunks of node 1 at address ['127.0.0.1', 24227]
+[11:09:16]  I sent a request for a chunk of ee0f4768aca12dc552a4f50c1f403560a1880290 for node1
+[11:09:26]  I informed the tracker that I'm still alive in the torrent!
+[11:09:29]  All the chunks of ee0f4768aca12dc552a4f50c1f403560a1880290 has downloaded from neighboring peers. But they must be reassembled!
+[11:09:29]  All the pieces of the ee0f4768aca12dc552a4f50c1f403560a1880290 is now sorted and ready to be reassembled.
+[11:09:29]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[11:09:46]  I informed the tracker that I'm still alive in the torrent!
+[11:10:06]  I informed the tracker that I'm still alive in the torrent!
+[11:10:26]  I informed the tracker that I'm still alive in the torrent!
+[11:10:46]  I informed the tracker that I'm still alive in the torrent!
+[11:11:06]  I informed the tracker that I'm still alive in the torrent!
+[11:11:26]  I informed the tracker that I'm still alive in the torrent!
+[11:11:29]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[11:11:29]  Sending request to tracker on port 64731 for ee0f4768aca12dc552a4f50c1f403560a1880290
+[11:11:29]  Asking for chunks of node 1 at address ['127.0.0.1', 24227]
+[11:11:29]  Asking for chunks of node 1 at address ['127.0.0.1', 12094]
+[11:11:29]  I sent a request for a chunk of ee0f4768aca12dc552a4f50c1f403560a1880290 for node1
+[11:11:29]  I sent a request for a chunk of ee0f4768aca12dc552a4f50c1f403560a1880290 for node1
+[11:11:38]  All the chunks of ee0f4768aca12dc552a4f50c1f403560a1880290 has downloaded from neighboring peers. But they must be reassembled!
+[11:11:38]  All the pieces of the ee0f4768aca12dc552a4f50c1f403560a1880290 is now sorted and ready to be reassembled.
+[11:11:38]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[11:11:46]  I informed the tracker that I'm still alive in the torrent!
+[11:12:06]  I informed the tracker that I'm still alive in the torrent!
+[11:12:26]  I informed the tracker that I'm still alive in the torrent!
+[11:12:46]  I informed the tracker that I'm still alive in the torrent!
+[11:13:06]  I informed the tracker that I'm still alive in the torrent!
+[11:13:26]  I informed the tracker that I'm still alive in the torrent!
+[11:13:46]  I informed the tracker that I'm still alive in the torrent!
+[11:14:06]  I informed the tracker that I'm still alive in the torrent!
+[11:14:26]  I informed the tracker that I'm still alive in the torrent!
+[11:14:46]  I informed the tracker that I'm still alive in the torrent!
+[11:15:06]  I informed the tracker that I'm still alive in the torrent!
+[11:15:26]  I informed the tracker that I'm still alive in the torrent!
+[11:15:46]  I informed the tracker that I'm still alive in the torrent!
+[11:16:06]  I informed the tracker that I'm still alive in the torrent!
+[11:16:26]  I informed the tracker that I'm still alive in the torrent!
+[11:16:46]  I informed the tracker that I'm still alive in the torrent!
+[11:17:06]  I informed the tracker that I'm still alive in the torrent!
+[11:17:26]  I informed the tracker that I'm still alive in the torrent!
+[11:17:46]  I informed the tracker that I'm still alive in the torrent!
+[11:18:06]  I informed the tracker that I'm still alive in the torrent!
+[11:18:26]  I informed the tracker that I'm still alive in the torrent!
+[11:18:46]  I informed the tracker that I'm still alive in the torrent!
+[11:19:06]  I informed the tracker that I'm still alive in the torrent!
+[11:19:26]  I informed the tracker that I'm still alive in the torrent!
+[11:19:46]  I informed the tracker that I'm still alive in the torrent!
+[11:20:06]  I informed the tracker that I'm still alive in the torrent!
+[11:20:26]  I informed the tracker that I'm still alive in the torrent!
+[11:20:46]  I informed the tracker that I'm still alive in the torrent!
+[11:21:06]  I informed the tracker that I'm still alive in the torrent!
+[11:21:26]  I informed the tracker that I'm still alive in the torrent!
+[11:21:46]  I informed the tracker that I'm still alive in the torrent!
+[11:22:06]  I informed the tracker that I'm still alive in the torrent!
+[11:22:26]  I informed the tracker that I'm still alive in the torrent!
+[11:22:46]  I informed the tracker that I'm still alive in the torrent!
+[11:23:06]  I informed the tracker that I'm still alive in the torrent!
+[11:23:26]  I informed the tracker that I'm still alive in the torrent!
+[11:23:46]  I informed the tracker that I'm still alive in the torrent!
+[11:24:06]  I informed the tracker that I'm still alive in the torrent!
+[11:24:26]  I informed the tracker that I'm still alive in the torrent!
+[11:24:46]  I informed the tracker that I'm still alive in the torrent!
+[11:25:06]  I informed the tracker that I'm still alive in the torrent!
+[11:25:26]  I informed the tracker that I'm still alive in the torrent!
+[11:25:46]  I informed the tracker that I'm still alive in the torrent!
+[11:26:06]  I informed the tracker that I'm still alive in the torrent!
+[11:26:26]  I informed the tracker that I'm still alive in the torrent!
+[11:26:46]  I informed the tracker that I'm still alive in the torrent!
+[11:27:06]  I informed the tracker that I'm still alive in the torrent!
+[11:27:26]  I informed the tracker that I'm still alive in the torrent!
+[11:27:46]  I informed the tracker that I'm still alive in the torrent!
+[11:28:06]  I informed the tracker that I'm still alive in the torrent!
+[11:28:26]  I informed the tracker that I'm still alive in the torrent!
+[11:28:46]  I informed the tracker that I'm still alive in the torrent!
+[11:29:06]  I informed the tracker that I'm still alive in the torrent!
+[11:29:26]  I informed the tracker that I'm still alive in the torrent!
+[11:29:46]  I informed the tracker that I'm still alive in the torrent!
+[11:30:06]  I informed the tracker that I'm still alive in the torrent!
+[11:30:26]  I informed the tracker that I'm still alive in the torrent!
+[11:30:46]  I informed the tracker that I'm still alive in the torrent!
+[11:31:06]  I informed the tracker that I'm still alive in the torrent!
+[11:31:26]  I informed the tracker that I'm still alive in the torrent!
+[11:31:46]  I informed the tracker that I'm still alive in the torrent!
+[11:35:00]  ***************** Node program started just right now! *****************
+[11:35:00]  You entered Torrent. Receiving port: 23274
+[11:35:00]  I informed the tracker that I'm still alive in the torrent!
+[11:35:16]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[11:35:16]  Sending request to tracker on port 1132 for ee0f4768aca12dc552a4f50c1f403560a1880290
+[11:35:16]  Asking for chunks of node 1 at address ['127.0.0.1', 39056]
+[11:35:16]  I sent a request for a chunk of ee0f4768aca12dc552a4f50c1f403560a1880290 for node1
+[11:35:20]  I informed the tracker that I'm still alive in the torrent!
+[11:35:29]  All the chunks of ee0f4768aca12dc552a4f50c1f403560a1880290 has downloaded from neighboring peers. But they must be reassembled!
+[11:35:29]  All the pieces of the ee0f4768aca12dc552a4f50c1f403560a1880290 is now sorted and ready to be reassembled.
+[11:35:30]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[11:35:40]  I informed the tracker that I'm still alive in the torrent!
+[11:35:48]  You just started to download magnet:?xt=urn:btih:ee0f4768aca12dc552a4f50c1f403560a1880290&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345. Let's search it in torrent!
+[11:35:48]  Sending request to tracker on port 55445 for ee0f4768aca12dc552a4f50c1f403560a1880290
+[11:35:48]  Asking for chunks of node 1 at address ['127.0.0.1', 39056]
+[11:35:48]  I sent a request for a chunk of ee0f4768aca12dc552a4f50c1f403560a1880290 for node1
+[11:36:00]  I informed the tracker that I'm still alive in the torrent!
+[11:36:01]  All the chunks of ee0f4768aca12dc552a4f50c1f403560a1880290 has downloaded from neighboring peers. But they must be reassembled!
+[11:36:01]  All the pieces of the ee0f4768aca12dc552a4f50c1f403560a1880290 is now sorted and ready to be reassembled.
+[11:36:01]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[11:36:20]  I informed the tracker that I'm still alive in the torrent!
+[11:36:34]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[11:36:34]  Sending request to tracker on port 7776 for ee0f4768aca12dc552a4f50c1f403560a1880290
+[11:36:34]  Asking for chunks of node 1 at address ['127.0.0.1', 39056]
+[11:36:34]  I sent a request for a chunk of ee0f4768aca12dc552a4f50c1f403560a1880290 for node1
+[11:36:40]  I informed the tracker that I'm still alive in the torrent!
+[11:36:46]  All the chunks of ee0f4768aca12dc552a4f50c1f403560a1880290 has downloaded from neighboring peers. But they must be reassembled!
+[11:36:46]  All the pieces of the ee0f4768aca12dc552a4f50c1f403560a1880290 is now sorted and ready to be reassembled.
+[11:36:46]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[11:37:00]  I informed the tracker that I'm still alive in the torrent!
+[11:37:20]  I informed the tracker that I'm still alive in the torrent!
+[11:37:40]  I informed the tracker that I'm still alive in the torrent!
+[11:38:00]  I informed the tracker that I'm still alive in the torrent!
+[11:38:20]  I informed the tracker that I'm still alive in the torrent!
+[11:38:40]  I informed the tracker that I'm still alive in the torrent!
+[11:39:00]  I informed the tracker that I'm still alive in the torrent!
+[11:39:20]  I informed the tracker that I'm still alive in the torrent!
+[11:39:40]  I informed the tracker that I'm still alive in the torrent!
+[11:40:00]  I informed the tracker that I'm still alive in the torrent!
+[11:40:20]  I informed the tracker that I'm still alive in the torrent!
+[11:40:40]  I informed the tracker that I'm still alive in the torrent!
+[11:41:00]  I informed the tracker that I'm still alive in the torrent!
+[11:41:20]  I informed the tracker that I'm still alive in the torrent!
+[11:41:40]  I informed the tracker that I'm still alive in the torrent!
+[11:42:00]  I informed the tracker that I'm still alive in the torrent!
+[11:42:20]  I informed the tracker that I'm still alive in the torrent!
+[11:42:38]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[11:42:38]  Sending request to tracker on port 36836 for ee0f4768aca12dc552a4f50c1f403560a1880290
+[11:42:38]  Asking for chunks of node 1 at address ['127.0.0.1', 39056]
+[11:42:38]  I sent a request for a chunk of ee0f4768aca12dc552a4f50c1f403560a1880290 for node1
+[11:42:40]  I informed the tracker that I'm still alive in the torrent!
+[11:42:51]  All the chunks of ee0f4768aca12dc552a4f50c1f403560a1880290 has downloaded from neighboring peers. But they must be reassembled!
+[11:42:52]  All the pieces of the ee0f4768aca12dc552a4f50c1f403560a1880290 is now sorted and ready to be reassembled.
+[11:42:52]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[11:43:00]  I informed the tracker that I'm still alive in the torrent!
+[11:43:20]  I informed the tracker that I'm still alive in the torrent!
+[11:43:40]  I informed the tracker that I'm still alive in the torrent!
+[11:44:00]  I informed the tracker that I'm still alive in the torrent!
+[11:44:20]  I informed the tracker that I'm still alive in the torrent!
+[11:44:40]  I informed the tracker that I'm still alive in the torrent!
+[11:45:00]  I informed the tracker that I'm still alive in the torrent!
+[11:45:20]  I informed the tracker that I'm still alive in the torrent!
+[11:45:40]  I informed the tracker that I'm still alive in the torrent!
+[11:46:00]  I informed the tracker that I'm still alive in the torrent!
+[11:46:20]  I informed the tracker that I'm still alive in the torrent!
+[11:46:40]  I informed the tracker that I'm still alive in the torrent!
+[11:47:00]  I informed the tracker that I'm still alive in the torrent!
+[11:47:20]  I informed the tracker that I'm still alive in the torrent!
+[11:47:40]  I informed the tracker that I'm still alive in the torrent!
+[11:48:00]  I informed the tracker that I'm still alive in the torrent!
+[11:48:20]  I informed the tracker that I'm still alive in the torrent!
+[11:48:40]  I informed the tracker that I'm still alive in the torrent!
+[11:49:00]  I informed the tracker that I'm still alive in the torrent!
+[11:49:20]  I informed the tracker that I'm still alive in the torrent!
+[11:49:40]  I informed the tracker that I'm still alive in the torrent!
+[11:50:00]  I informed the tracker that I'm still alive in the torrent!
+[11:50:20]  I informed the tracker that I'm still alive in the torrent!
+[11:50:40]  I informed the tracker that I'm still alive in the torrent!
+[11:51:00]  I informed the tracker that I'm still alive in the torrent!
+[11:51:20]  I informed the tracker that I'm still alive in the torrent!
+[11:51:40]  I informed the tracker that I'm still alive in the torrent!
+[11:52:00]  I informed the tracker that I'm still alive in the torrent!
+[11:52:20]  I informed the tracker that I'm still alive in the torrent!
+[11:52:40]  I informed the tracker that I'm still alive in the torrent!
+[11:53:00]  I informed the tracker that I'm still alive in the torrent!
+[11:53:20]  I informed the tracker that I'm still alive in the torrent!
+[11:53:40]  I informed the tracker that I'm still alive in the torrent!
+[11:54:00]  I informed the tracker that I'm still alive in the torrent!
+[11:54:20]  I informed the tracker that I'm still alive in the torrent!
+[11:54:40]  I informed the tracker that I'm still alive in the torrent!
+[11:55:00]  I informed the tracker that I'm still alive in the torrent!
+[11:55:20]  I informed the tracker that I'm still alive in the torrent!
+[11:55:40]  I informed the tracker that I'm still alive in the torrent!
+[11:56:00]  I informed the tracker that I'm still alive in the torrent!
+[11:56:20]  I informed the tracker that I'm still alive in the torrent!
+[11:56:40]  I informed the tracker that I'm still alive in the torrent!
+[11:57:00]  I informed the tracker that I'm still alive in the torrent!
+[11:57:20]  I informed the tracker that I'm still alive in the torrent!
+[11:57:40]  I informed the tracker that I'm still alive in the torrent!
+[11:58:00]  I informed the tracker that I'm still alive in the torrent!
+[11:58:20]  I informed the tracker that I'm still alive in the torrent!
+[11:58:40]  I informed the tracker that I'm still alive in the torrent!
+[11:59:00]  I informed the tracker that I'm still alive in the torrent!
+[11:59:20]  I informed the tracker that I'm still alive in the torrent!
+[11:59:40]  I informed the tracker that I'm still alive in the torrent!
+[12:00:00]  I informed the tracker that I'm still alive in the torrent!
+[12:00:20]  I informed the tracker that I'm still alive in the torrent!
+[12:00:40]  I informed the tracker that I'm still alive in the torrent!
+[12:01:00]  I informed the tracker that I'm still alive in the torrent!
+[12:01:20]  I informed the tracker that I'm still alive in the torrent!
+[12:01:40]  I informed the tracker that I'm still alive in the torrent!
+[12:02:00]  I informed the tracker that I'm still alive in the torrent!
+[12:02:20]  I informed the tracker that I'm still alive in the torrent!
+[12:02:40]  I informed the tracker that I'm still alive in the torrent!
+[12:03:00]  I informed the tracker that I'm still alive in the torrent!
+[12:03:20]  I informed the tracker that I'm still alive in the torrent!
+[12:03:40]  I informed the tracker that I'm still alive in the torrent!
+[12:04:00]  I informed the tracker that I'm still alive in the torrent!
+[12:04:20]  I informed the tracker that I'm still alive in the torrent!
+[12:04:40]  I informed the tracker that I'm still alive in the torrent!
+[12:05:00]  I informed the tracker that I'm still alive in the torrent!
+[12:05:20]  I informed the tracker that I'm still alive in the torrent!
+[12:05:40]  I informed the tracker that I'm still alive in the torrent!
+[12:06:00]  I informed the tracker that I'm still alive in the torrent!
+[12:06:20]  I informed the tracker that I'm still alive in the torrent!
+[12:06:40]  I informed the tracker that I'm still alive in the torrent!
+[12:07:00]  I informed the tracker that I'm still alive in the torrent!
+[12:07:20]  I informed the tracker that I'm still alive in the torrent!
+[12:07:40]  I informed the tracker that I'm still alive in the torrent!
+[12:08:00]  I informed the tracker that I'm still alive in the torrent!
+[12:08:20]  I informed the tracker that I'm still alive in the torrent!
+[12:08:40]  I informed the tracker that I'm still alive in the torrent!
+[12:09:00]  I informed the tracker that I'm still alive in the torrent!
+[12:09:20]  I informed the tracker that I'm still alive in the torrent!
+[12:09:40]  I informed the tracker that I'm still alive in the torrent!
+[12:10:00]  I informed the tracker that I'm still alive in the torrent!
+[12:10:20]  I informed the tracker that I'm still alive in the torrent!
+[12:10:40]  I informed the tracker that I'm still alive in the torrent!
+[12:11:00]  I informed the tracker that I'm still alive in the torrent!
+[12:11:20]  I informed the tracker that I'm still alive in the torrent!
+[12:11:40]  I informed the tracker that I'm still alive in the torrent!
+[12:12:00]  I informed the tracker that I'm still alive in the torrent!
+[12:12:20]  I informed the tracker that I'm still alive in the torrent!
+[12:12:40]  I informed the tracker that I'm still alive in the torrent!
+[12:13:00]  I informed the tracker that I'm still alive in the torrent!
+[12:13:20]  I informed the tracker that I'm still alive in the torrent!
+[12:13:40]  I informed the tracker that I'm still alive in the torrent!
+[12:14:00]  I informed the tracker that I'm still alive in the torrent!
+[12:14:20]  I informed the tracker that I'm still alive in the torrent!
+[12:14:40]  I informed the tracker that I'm still alive in the torrent!
+[12:15:00]  I informed the tracker that I'm still alive in the torrent!
+[12:15:20]  I informed the tracker that I'm still alive in the torrent!
+[12:15:40]  I informed the tracker that I'm still alive in the torrent!
+[12:16:00]  I informed the tracker that I'm still alive in the torrent!
+[12:16:20]  I informed the tracker that I'm still alive in the torrent!
+[12:16:40]  I informed the tracker that I'm still alive in the torrent!
+[12:17:00]  I informed the tracker that I'm still alive in the torrent!
+[12:17:20]  I informed the tracker that I'm still alive in the torrent!
+[12:17:40]  I informed the tracker that I'm still alive in the torrent!
+[12:18:00]  I informed the tracker that I'm still alive in the torrent!
+[12:18:20]  I informed the tracker that I'm still alive in the torrent!
+[12:18:40]  I informed the tracker that I'm still alive in the torrent!
+[12:19:00]  I informed the tracker that I'm still alive in the torrent!
+[12:19:20]  I informed the tracker that I'm still alive in the torrent!
+[12:19:40]  I informed the tracker that I'm still alive in the torrent!
+[12:20:00]  I informed the tracker that I'm still alive in the torrent!
+[12:20:20]  I informed the tracker that I'm still alive in the torrent!
+[12:20:40]  I informed the tracker that I'm still alive in the torrent!
+[12:21:00]  I informed the tracker that I'm still alive in the torrent!
+[12:21:20]  I informed the tracker that I'm still alive in the torrent!
+[12:21:40]  I informed the tracker that I'm still alive in the torrent!
+[12:22:00]  I informed the tracker that I'm still alive in the torrent!
+[12:22:20]  I informed the tracker that I'm still alive in the torrent!
+[12:22:40]  I informed the tracker that I'm still alive in the torrent!
+[12:23:00]  I informed the tracker that I'm still alive in the torrent!
+[12:23:20]  I informed the tracker that I'm still alive in the torrent!
+[12:23:40]  I informed the tracker that I'm still alive in the torrent!
+[12:24:00]  I informed the tracker that I'm still alive in the torrent!
+[12:24:20]  I informed the tracker that I'm still alive in the torrent!
+[12:24:40]  I informed the tracker that I'm still alive in the torrent!
+[12:25:00]  I informed the tracker that I'm still alive in the torrent!
+[12:25:20]  I informed the tracker that I'm still alive in the torrent!
+[12:25:40]  I informed the tracker that I'm still alive in the torrent!
+[12:26:00]  I informed the tracker that I'm still alive in the torrent!
+[12:26:20]  I informed the tracker that I'm still alive in the torrent!
+[12:26:40]  I informed the tracker that I'm still alive in the torrent!
+[12:27:00]  I informed the tracker that I'm still alive in the torrent!
+[12:27:20]  I informed the tracker that I'm still alive in the torrent!
+[12:27:40]  I informed the tracker that I'm still alive in the torrent!
+[12:28:00]  I informed the tracker that I'm still alive in the torrent!
+[12:28:20]  I informed the tracker that I'm still alive in the torrent!
+[12:28:40]  I informed the tracker that I'm still alive in the torrent!
+[12:29:00]  I informed the tracker that I'm still alive in the torrent!
+[12:29:20]  I informed the tracker that I'm still alive in the torrent!
+[12:29:40]  I informed the tracker that I'm still alive in the torrent!
+[12:30:00]  I informed the tracker that I'm still alive in the torrent!
+[12:30:20]  I informed the tracker that I'm still alive in the torrent!
+[12:30:40]  I informed the tracker that I'm still alive in the torrent!
+[12:31:00]  I informed the tracker that I'm still alive in the torrent!
+[12:31:20]  I informed the tracker that I'm still alive in the torrent!
+[12:31:40]  I informed the tracker that I'm still alive in the torrent!
+[12:32:00]  I informed the tracker that I'm still alive in the torrent!
+[12:32:20]  I informed the tracker that I'm still alive in the torrent!
+[12:32:40]  I informed the tracker that I'm still alive in the torrent!
+[12:33:00]  I informed the tracker that I'm still alive in the torrent!
+[12:33:20]  I informed the tracker that I'm still alive in the torrent!
+[12:33:40]  I informed the tracker that I'm still alive in the torrent!
+[12:34:00]  I informed the tracker that I'm still alive in the torrent!
+[12:34:20]  I informed the tracker that I'm still alive in the torrent!
+[12:34:40]  I informed the tracker that I'm still alive in the torrent!
+[12:35:00]  I informed the tracker that I'm still alive in the torrent!
+[12:35:20]  I informed the tracker that I'm still alive in the torrent!
+[12:35:40]  I informed the tracker that I'm still alive in the torrent!
+[12:36:00]  I informed the tracker that I'm still alive in the torrent!
+[12:36:20]  I informed the tracker that I'm still alive in the torrent!
+[12:36:40]  I informed the tracker that I'm still alive in the torrent!
+[12:37:00]  I informed the tracker that I'm still alive in the torrent!
+[12:37:20]  I informed the tracker that I'm still alive in the torrent!
+[12:37:40]  I informed the tracker that I'm still alive in the torrent!
+[12:38:00]  I informed the tracker that I'm still alive in the torrent!
+[12:38:20]  I informed the tracker that I'm still alive in the torrent!
+[12:38:40]  I informed the tracker that I'm still alive in the torrent!
+[12:39:00]  I informed the tracker that I'm still alive in the torrent!
+[12:39:20]  I informed the tracker that I'm still alive in the torrent!
+[12:39:40]  I informed the tracker that I'm still alive in the torrent!
+[12:40:00]  I informed the tracker that I'm still alive in the torrent!
+[12:40:20]  I informed the tracker that I'm still alive in the torrent!
+[12:40:40]  I informed the tracker that I'm still alive in the torrent!
+[12:41:00]  I informed the tracker that I'm still alive in the torrent!
+[12:41:20]  I informed the tracker that I'm still alive in the torrent!
+[12:41:40]  I informed the tracker that I'm still alive in the torrent!
+[12:42:00]  I informed the tracker that I'm still alive in the torrent!
+[12:42:20]  I informed the tracker that I'm still alive in the torrent!
+[12:42:40]  I informed the tracker that I'm still alive in the torrent!
+[12:43:00]  I informed the tracker that I'm still alive in the torrent!
+[12:43:20]  I informed the tracker that I'm still alive in the torrent!
+[12:43:40]  I informed the tracker that I'm still alive in the torrent!
+[12:44:00]  I informed the tracker that I'm still alive in the torrent!
+[12:44:20]  I informed the tracker that I'm still alive in the torrent!
+[12:44:40]  I informed the tracker that I'm still alive in the torrent!
+[12:45:00]  I informed the tracker that I'm still alive in the torrent!
+[12:45:20]  I informed the tracker that I'm still alive in the torrent!
+[12:45:40]  I informed the tracker that I'm still alive in the torrent!
+[12:46:00]  I informed the tracker that I'm still alive in the torrent!
+[12:46:20]  I informed the tracker that I'm still alive in the torrent!
+[12:46:40]  I informed the tracker that I'm still alive in the torrent!
+[12:47:00]  I informed the tracker that I'm still alive in the torrent!
+[12:47:20]  I informed the tracker that I'm still alive in the torrent!
+[12:47:40]  I informed the tracker that I'm still alive in the torrent!
+[12:48:00]  I informed the tracker that I'm still alive in the torrent!
+[12:48:20]  I informed the tracker that I'm still alive in the torrent!
+[12:48:40]  I informed the tracker that I'm still alive in the torrent!
+[12:49:00]  I informed the tracker that I'm still alive in the torrent!
+[12:49:20]  I informed the tracker that I'm still alive in the torrent!
+[12:49:40]  I informed the tracker that I'm still alive in the torrent!
+[12:50:00]  I informed the tracker that I'm still alive in the torrent!
+[12:50:20]  I informed the tracker that I'm still alive in the torrent!
+[12:50:40]  I informed the tracker that I'm still alive in the torrent!
+[12:51:00]  I informed the tracker that I'm still alive in the torrent!
+[12:51:20]  I informed the tracker that I'm still alive in the torrent!
+[12:51:40]  I informed the tracker that I'm still alive in the torrent!
+[12:52:00]  I informed the tracker that I'm still alive in the torrent!
+[12:52:20]  I informed the tracker that I'm still alive in the torrent!
+[12:52:40]  I informed the tracker that I'm still alive in the torrent!
+[12:53:00]  I informed the tracker that I'm still alive in the torrent!
+[12:53:20]  I informed the tracker that I'm still alive in the torrent!
+[12:53:40]  I informed the tracker that I'm still alive in the torrent!
+[12:54:00]  I informed the tracker that I'm still alive in the torrent!
+[12:54:20]  I informed the tracker that I'm still alive in the torrent!
+[12:54:40]  I informed the tracker that I'm still alive in the torrent!
+[12:55:00]  I informed the tracker that I'm still alive in the torrent!
+[12:55:20]  I informed the tracker that I'm still alive in the torrent!
+[12:55:40]  I informed the tracker that I'm still alive in the torrent!
+[12:56:00]  I informed the tracker that I'm still alive in the torrent!
+[12:56:20]  I informed the tracker that I'm still alive in the torrent!
+[12:56:37]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[12:56:37]  Sending request to tracker on port 23407 for ee0f4768aca12dc552a4f50c1f403560a1880290
+[12:56:37]  Asking for chunks of node 1 at address ['127.0.0.1', 39056]
+[12:56:37]  I sent a request for a chunk of ee0f4768aca12dc552a4f50c1f403560a1880290 for node1
+[12:56:40]  I informed the tracker that I'm still alive in the torrent!
+[12:56:52]  All the chunks of ee0f4768aca12dc552a4f50c1f403560a1880290 has downloaded from neighboring peers. But they must be reassembled!
+[12:56:52]  All the pieces of the ee0f4768aca12dc552a4f50c1f403560a1880290 is now sorted and ready to be reassembled.
+[12:56:53]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[12:57:00]  I informed the tracker that I'm still alive in the torrent!
+[12:57:20]  I informed the tracker that I'm still alive in the torrent!
+[12:57:40]  I informed the tracker that I'm still alive in the torrent!
+[12:58:00]  I informed the tracker that I'm still alive in the torrent!
+[12:58:20]  I informed the tracker that I'm still alive in the torrent!
+[12:58:40]  I informed the tracker that I'm still alive in the torrent!
+[12:59:25]  ***************** Node program started just right now! *****************
+[12:59:25]  You entered Torrent. Receiving port: 40401
+[12:59:25]  I informed the tracker that I'm still alive in the torrent!
+[12:59:29]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[12:59:29]  Sending request to tracker on port 2864 for ee0f4768aca12dc552a4f50c1f403560a1880290
+[12:59:29]  Asking for chunks of node 1 at address ['127.0.0.1', 18034]
+[12:59:29]  I sent a request for a chunk of ee0f4768aca12dc552a4f50c1f403560a1880290 for node1
+[12:59:43]  All the chunks of ee0f4768aca12dc552a4f50c1f403560a1880290 has downloaded from neighboring peers. But they must be reassembled!
+[12:59:43]  All the pieces of the ee0f4768aca12dc552a4f50c1f403560a1880290 is now sorted and ready to be reassembled.
+[12:59:43]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[12:59:45]  I informed the tracker that I'm still alive in the torrent!
+[13:00:05]  I informed the tracker that I'm still alive in the torrent!
+[13:00:17]  You just started to download magnet:?xt=urn:btih:ee0f4768aca12dc552a4f50c1f403560a1880290&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345. Let's search it in torrent!
+[13:00:17]  Sending request to tracker on port 40744 for ee0f4768aca12dc552a4f50c1f403560a1880290
+[13:00:17]  Asking for chunks of node 1 at address ['127.0.0.1', 18034]
+[13:00:17]  I sent a request for a chunk of ee0f4768aca12dc552a4f50c1f403560a1880290 for node1
+[13:00:25]  I informed the tracker that I'm still alive in the torrent!
+[13:00:30]  All the chunks of ee0f4768aca12dc552a4f50c1f403560a1880290 has downloaded from neighboring peers. But they must be reassembled!
+[13:00:30]  All the pieces of the ee0f4768aca12dc552a4f50c1f403560a1880290 is now sorted and ready to be reassembled.
+[13:00:30]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[13:00:45]  I informed the tracker that I'm still alive in the torrent!
+[13:01:05]  I informed the tracker that I'm still alive in the torrent!
+[13:01:25]  I informed the tracker that I'm still alive in the torrent!
+[13:01:45]  I informed the tracker that I'm still alive in the torrent!
+[13:03:08]  ***************** Node program started just right now! *****************
+[13:03:08]  You entered Torrent. Receiving port: 1167
+[13:03:08]  I informed the tracker that I'm still alive in the torrent!
+[13:03:19]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[13:03:19]  Sending request to tracker on port 7902 for ee0f4768aca12dc552a4f50c1f403560a1880290
+[13:03:19]  Asking for chunks of node 1 at address ['127.0.0.1', 28333]
+[13:03:19]  I sent a request for a chunk of ee0f4768aca12dc552a4f50c1f403560a1880290 for node1
+[13:03:28]  I informed the tracker that I'm still alive in the torrent!
+[13:03:32]  All the chunks of ee0f4768aca12dc552a4f50c1f403560a1880290 has downloaded from neighboring peers. But they must be reassembled!
+[13:03:32]  All the pieces of the ee0f4768aca12dc552a4f50c1f403560a1880290 is now sorted and ready to be reassembled.
+[13:03:32]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[13:03:48]  I informed the tracker that I'm still alive in the torrent!
+[13:04:08]  I informed the tracker that I'm still alive in the torrent!
+[13:04:28]  I informed the tracker that I'm still alive in the torrent!
+[13:05:04]  ***************** Node program started just right now! *****************
+[13:05:04]  You entered Torrent. Receiving port: 42618
+[13:05:04]  I informed the tracker that I'm still alive in the torrent!
+[13:05:24]  I informed the tracker that I'm still alive in the torrent!
+[13:05:44]  You just started to download magnet:?xt=urn:btih:ee0f4768aca12dc552a4f50c1f403560a1880290&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345. Let's search it in torrent!
+[13:05:44]  Sending request to tracker on port 13720 for ee0f4768aca12dc552a4f50c1f403560a1880290
+[13:05:44]  I informed the tracker that I'm still alive in the torrent!
+[13:05:44]  Asking for chunks of node 1 at address ['127.0.0.1', 62869]
+[13:05:44]  I sent a request for a chunk of ee0f4768aca12dc552a4f50c1f403560a1880290 for node1
+[13:05:57]  All the chunks of ee0f4768aca12dc552a4f50c1f403560a1880290 has downloaded from neighboring peers. But they must be reassembled!
+[13:05:57]  All the pieces of the ee0f4768aca12dc552a4f50c1f403560a1880290 is now sorted and ready to be reassembled.
+[13:05:57]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[13:06:04]  I informed the tracker that I'm still alive in the torrent!
+[13:06:24]  I informed the tracker that I'm still alive in the torrent!
+[13:06:44]  I informed the tracker that I'm still alive in the torrent!
+[13:07:24]  ***************** Node program started just right now! *****************
+[13:07:24]  You entered Torrent. Receiving port: 38196
+[13:07:24]  I informed the tracker that I'm still alive in the torrent!
+[13:07:41]  You just started to download magnet:?xt=urn:btih:ee0f4768aca12dc552a4f50c1f403560a1880290&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345. Let's search it in torrent!
+[13:07:41]  Sending request to tracker on port 18259 for ee0f4768aca12dc552a4f50c1f403560a1880290
+[13:07:41]  Asking for chunks of node 1 at address ['127.0.0.1', 8912]
+[13:07:41]  I sent a request for a chunk of ee0f4768aca12dc552a4f50c1f403560a1880290 for node1
+[13:07:44]  I informed the tracker that I'm still alive in the torrent!
+[13:07:54]  All the chunks of ee0f4768aca12dc552a4f50c1f403560a1880290 has downloaded from neighboring peers. But they must be reassembled!
+[13:07:54]  All the pieces of the ee0f4768aca12dc552a4f50c1f403560a1880290 is now sorted and ready to be reassembled.
+[13:07:54]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[13:08:04]  I informed the tracker that I'm still alive in the torrent!
+[13:08:24]  I informed the tracker that I'm still alive in the torrent!

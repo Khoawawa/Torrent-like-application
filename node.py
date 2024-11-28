@@ -402,9 +402,8 @@ class Node:
                 tracker_response = self.search_torrent(info_hash=info_hash,left=len(info['pieces']))
             else:
                 tracker_url, info_hash, file_name, file_size = TorrentFile.load_magnet_text(torrent_file)
-                
                 # Left here doesnt matter ?
-                tracker_response = self.search_torrent(info_hash=info_hash,left=file_size)
+                tracker_response = self.search_torrent(info_hash=info_hash,left=int(file_size))
                 info = self.ask_peer_info(info_hash, tracker_response['peers'])
 
                 self.torrent_data = {
@@ -439,6 +438,7 @@ class Node:
         '''
         file_path = config.directory.node_files_dir + f'node{self.node_id}/' + file
         _, info_hash, _ = TorrentFile.load_torrent_file(file_path)
+        
         #SEND REQUEST TO TRACKER TO SCRAPE
         scrape_msg = Node2Tracker(node_id=self.node_id,
                                   mode=config.tracker_requests_mode.SCRAPE,
@@ -576,19 +576,27 @@ def run(args):
         
         elif mode == 'createTor':
             file = f"{config.directory.node_files_dir}node{node.node_id}/{file}"
-            torrent_file = TorrentFile(file, True)
-            torrent_data = torrent_file.create_torrent_data()
-            torrent_file.create_torrent_file(node.node_id, torrent_data)
-            log_content = f"Node {node.node_id} has created {torrent_data['info']['file_name']}.torrent"
-            log(node_id=node.node_id,content=log_content)
+            if not os.path.isfile(file):
+                log_content = f"Error: File '{file}' does not exist in node {node.node_id}'s directory."
+                log(node_id=node.node_id,content=log_content)
+            else:
+                torrent_file = TorrentFile(file, True)
+                torrent_data = torrent_file.create_torrent_data()
+                torrent_file.create_torrent_file(node.node_id, torrent_data)
+                log_content = f"Node {node.node_id} has created {torrent_data['info']['file_name']}.torrent"
+                log(node_id=node.node_id,content=log_content)
 
         elif mode == 'createMag':
             file = f"{config.directory.node_files_dir}node{node.node_id}/{file}"
-            torrent_file = TorrentFile(file, True)
-            torrent_data = torrent_file.create_torrent_data()
-            magnet_text = torrent_file.create_magnet_text(torrent_data)
-            log_content = f"Node {node.node_id} has created magnet text {magnet_text}"
-            log(node_id=node.node_id,content=log_content)
+            if not os.path.isfile(file):
+                log_content = f"Error: File '{file}' does not exist in node {node.node_id}'s directory."
+                log(node_id=node.node_id,content=log_content)
+            else:
+                torrent_file = TorrentFile(file, True)
+                torrent_data = torrent_file.create_torrent_data()
+                magnet_text = torrent_file.create_magnet_text(torrent_data)
+                log_content = f"Node {node.node_id} has created magnet text {magnet_text}"
+                log(node_id=node.node_id,content=log_content)
 
         elif mode == 'scrape':
             t = Thread(target=node.get_scrape,args=(file,))

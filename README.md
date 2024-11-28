@@ -83,9 +83,9 @@ each node can be in two modes. In other words, there are two functionalities for
   A node can enter this mode by inputting like this:
   ```
   torrent -setMode send <filename>
-  torrent -setMode createTor file_A.txt
+  torrent -setMode createTor file_B.txt
   torrent -setMode createTor node_files\\node1\\bittorrent.jpg
-  torrent -setMode createMag file_A.txt
+  torrent -setMode createMag file_B.txt
   torrent -setMode send node_files\node1\bittorrent.jpg.torrent
   ```
   
