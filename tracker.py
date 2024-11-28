@@ -37,8 +37,7 @@ class Tracker:
             'incomplete' : 0,
             'downloaded' : 0,
         }
-        with self.scrape_lock:
-            self.scrape[info_hash] = entry
+        self.scrape[info_hash] = entry
             
     def add_file_owner(self, msg: dict, addr: tuple,is_seed = 1):
         entry = {
@@ -47,10 +46,9 @@ class Tracker:
             'left': msg['left'],
             'is_seed': is_seed
         }
-        self.init_scrape(msg['info_hash'])
-        
-        if is_seed == -1:
-            with self.scrape_lock:
+        with self.scrape_lock:
+            self.init_scrape(msg['info_hash'])
+            if is_seed == -1:
                 self.scrape[msg['info_hash']]['incomplete'] += 1
 
         log_content = f"Node {msg['node_id']} owns {msg['info_hash']}"
@@ -186,8 +184,8 @@ class Tracker:
             if entry['node_id'] == msg['node_id']:
                 with self.scrape_lock:
                     self.scrape[msg['info_hash']]['downloaded'] += entry['left']
-                    self.scrape[msg['info_hash']]['complete'] -= 1
-                    self.scrape[msg['info_hash']]['incomplete'] += 1
+                    self.scrape[msg['info_hash']]['complete'] += 1
+                    self.scrape[msg['info_hash']]['incomplete'] -= 1
                 entry['left'] = 0
                 entry['is_seeder'] = 0
             updated_list.append(json.dumps(entry))

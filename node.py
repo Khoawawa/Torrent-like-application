@@ -353,7 +353,7 @@ class Node:
             # tracker response should have peers -> {peer -> {}, send_freq_list -> {}}
             tracker_response = self.search_torrent(info_hash=info_hash,left=len(info['pieces']))
             file_owners = tracker_response['peers']
-            
+            print(file_owners)
             self.split_file_owners(file_owners=file_owners,info=info,info_hash=info_hash)
             # inform tracker that I have finish downloading
             msg = Node2Tracker(node_id=self.node_id,
