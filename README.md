@@ -63,15 +63,15 @@ There are two main modules in BitTorrent, *(i)* node *a.k.a.* peer and *(ii)* tr
 
 1. `tracker.py`:
 ```
-$ python3 tracker.py
+$ python tracker.py
 ```
 2. `node.py`: You can create peers as many as you want. An example of creating two nodes is as follows.
    (Note that each of them must be run in a separate window of your terminal if you are running this project in a single local computer)
 
 ```
-$ python3 node.py -node_id 1
+$ python node.py -node_id 1
 # in another tab of terminal
-$ python3 node.py -node_id 2
+$ python3 node.py -node_id 4
 ```
 As you can see, it takes an ID of the node you want to be created. For simplicity, we assume that nodes have unique IDs.
 
@@ -83,6 +83,10 @@ each node can be in two modes. In other words, there are two functionalities for
   A node can enter this mode by inputting like this:
   ```
   torrent -setMode send <filename>
+  torrent -setMode createTor N5-2018.pdf
+  torrent -setMode createTor node_files\\node1\\bittorrent.jpg
+  torrent -setMode createMag N5-2018.pdf
+  torrent -setMode send node_files\node1\bittorrent.jpg.torrent
   ```
   
 - **download:** If node *i* wants to download a file, it must first informs the trackers that it needs this file.
@@ -92,6 +96,12 @@ Thus, the tracker search that file in the torrent and sort the neighbors which o
   conduct a UDP connection for getting a chunk of file from that peer.
   ```
   torrent -setMode download <filename>
+
+  torrent -setMode download N5-2018.pdf.torrent
+  torrent -setMode download magnet:?xt=urn:btih:ee0f4768aca12dc552a4f50c1f403560a1880290&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345
+  torrent -setMode send N5-2018.pdf.torrent
+  torrent -setMode download magnet:?xt=urn:btih:d91838522436ecfe7d0595ac62e1a2a32457da2a&dn=file_A.txt&xl=508971&tr=https://localhost:12345
+  
   ```
 - **exit - (Optional mode):**
 An optional mode named **exit** has also implemented which is used for letting tracker know that a node has left the

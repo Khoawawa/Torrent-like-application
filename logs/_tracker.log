@@ -2658,3 +2658,45 @@ d0595ac62e1a2a32457da2a for node1
 [21:38:16]  Node(s) [1] is in the torrent and node(s)[] have left.
 [21:38:21]  Connected by ('127.0.0.1', 14909)
 [21:38:21]  Node 1 exited torrent intentionally.
+[14:14:18]  ***************** Tracker program started just right now! *****************
+[14:17:09]  Connected by ('127.0.0.1', 1815)
+[14:17:09]  Connected by ('127.0.0.1', 64827)
+[14:17:13]  Connected by ('127.0.0.1', 34632)
+[14:17:13]  Connected by ('127.0.0.1', 64829)
+[14:17:14]  Node(s) [1, 4] is in the torrent and node(s)[] have left.
+[14:17:29]  Connected by ('127.0.0.1', 64842)
+[14:17:33]  Connected by ('127.0.0.1', 64848)
+[14:17:35]  Connected by ('127.0.0.1', 61896)
+[14:17:35]  Connected by ('127.0.0.1', 64849)
+[14:17:36]  Node(s) [1, 4] is in the torrent and node(s)[] have left.
+[14:17:53]  Connected by ('127.0.0.1', 64864)
+[14:17:55]  Connected by ('127.0.0.1', 64865)
+[14:17:58]  Node(s) [] is in the torrent and node(s)[1] have left.
+[14:18:13]  Connected by ('127.0.0.1', 64871)
+[14:18:15]  Connected by ('127.0.0.1', 64873)
+[14:18:20]  Node(s) [] is in the torrent and node(s)[1] have left.
+[14:18:33]  Connected by ('127.0.0.1', 64881)
+[14:18:35]  Connected by ('127.0.0.1', 64882)
+[14:18:42]  Node(s) [] is in the torrent and node(s)[1] have left.
+[14:18:53]  Connected by ('127.0.0.1', 64896)
+[14:18:55]  Connected by ('127.0.0.1', 64897)
+[14:19:04]  Node(s) [] is in the torrent and node(s)[1] have left.
+[14:19:13]  Connected by ('127.0.0.1', 64913)
+[14:19:15]  Connected by ('127.0.0.1', 64915)
+[14:19:17]  Connected by ('127.0.0.1', 54419)
+[14:19:17]  Node 1 owns ee0f4768aca12dc552a4f50c1f403560a1880290
+[14:19:25]  Connected by ('127.0.0.1', 30331)
+[14:19:25]  Node4 is searching for ee0f4768aca12dc552a4f50c1f403560a1880290
+[14:19:25]  Node 4 owns ee0f4768aca12dc552a4f50c1f403560a1880290
+[14:19:26]  Node(s) [] is in the torrent and node(s)[1] have left.
+[14:19:33]  Connected by ('127.0.0.1', 64943)
+[14:19:35]  Connected by ('127.0.0.1', 64945)
+[14:19:35]  Connected by ('127.0.0.1', 64946)
+[14:19:35]  Connected by ('127.0.0.1', 64947)
+[14:19:48]  Node(s) [] is in the torrent and node(s)[1] have left.
+[14:19:53]  Connected by ('127.0.0.1', 64962)
+[14:19:55]  Connected by ('127.0.0.1', 64963)
+[14:20:10]  Node(s) [] is in the torrent and node(s)[1] have left.
+[14:20:13]  Connected by ('127.0.0.1', 64967)
+[14:20:15]  Connected by ('127.0.0.1', 64972)
+[14:20:32]  Node(s) [] is in the torrent and node(s)[1] have left.

@@ -1,0 +1,19 @@
+[14:17:13]  ***************** Node program started just right now! *****************
+[14:17:13]  You entered Torrent. Receiving port: 22458
+[14:17:13]  I informed the tracker that I'm still alive in the torrent!
+[14:17:33]  I informed the tracker that I'm still alive in the torrent!
+[14:17:53]  I informed the tracker that I'm still alive in the torrent!
+[14:18:13]  I informed the tracker that I'm still alive in the torrent!
+[14:18:33]  I informed the tracker that I'm still alive in the torrent!
+[14:18:53]  I informed the tracker that I'm still alive in the torrent!
+[14:19:13]  I informed the tracker that I'm still alive in the torrent!
+[14:19:25]  You just started to download magnet:?xt=urn:btih:ee0f4768aca12dc552a4f50c1f403560a1880290&dn=N5-2018.pdf&xl=55733031&tr=https://localhost:12345. Let's search it in torrent!
+[14:19:25]  Sending request to tracker on port 30331 for ee0f4768aca12dc552a4f50c1f403560a1880290
+[14:19:25]  Asking for chunks of node 1 at address ['127.0.0.1', 47177]
+[14:19:25]  I sent a request for a chunk of ee0f4768aca12dc552a4f50c1f403560a1880290 for node1
+[14:19:33]  I informed the tracker that I'm still alive in the torrent!
+[14:19:35]  All the chunks of ee0f4768aca12dc552a4f50c1f403560a1880290 has downloaded from neighboring peers. But they must be reassembled!
+[14:19:35]  All the pieces of the ee0f4768aca12dc552a4f50c1f403560a1880290 is now sorted and ready to be reassembled.
+[14:19:35]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[14:19:53]  I informed the tracker that I'm still alive in the torrent!
+[14:20:13]  I informed the tracker that I'm still alive in the torrent!
