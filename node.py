@@ -31,14 +31,18 @@ class Node:
         #id of node
         self.node_id = node_id
         # listening socket of node
-        self.rcv_socket = set_socket(rcv_port)
+        
+        self.rcv_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+        self.rcv_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        self.rcv_socket.bind((socket.gethostbyname(socket.gethostname()),0))
         self.rcv_socket.listen(5)
+
         self.send_socket = set_socket(send_port)
         self.files = self.fetch_owned_files()
         self.is_in_send_mode = False    # is thread uploading a file or not
         self.downloaded_files = {}
         self.torrent_data = None
-        
+        print(self.rcv_socket.getsockname())
 
     def send_segment(self, sock: socket.socket, data: bytes, addr: tuple):
         print(addr)
@@ -218,11 +222,9 @@ class Node:
                                info_hash=info_hash,
                                left=0,
                                port=self.rcv_socket.getsockname()[1])
-        send_socket = set_socket(generate_random_port())
-        self.send_segment(sock=send_socket,
-                          data=message.encode(),
-                          addr=tuple(config.constants.TRACKER_ADDR))
-        free_socket(send_socket)
+        with socket.socket(socket.AF_INET,socket.SOCK_STREAM) as send_socket:
+            send_socket.connect(tuple(config.constants.TRACKER_ADDR))
+            send_socket.sendall(message.encode())
         if self.is_in_send_mode:    # has been already in send(upload) mode
             log_content = f"Some other node also requested a file from you! But you are already in ~(upload) mode!"
             log(node_id=self.node_id, content=log_content)
@@ -258,6 +260,7 @@ class Node:
                            range=range)
         
         # temp_port = generate_random_port()
+        print(tuple(dest_node['addr']))
         temp_sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
         temp_sock.connect(tuple(dest_node['addr']))
         temp_sock.settimeout(10)
@@ -489,21 +492,20 @@ class Node:
         log(node_id=self.node_id,content=log_content)
         
     def search_torrent(self, info_hash, left) -> dict:
-        temp_port = generate_random_port()
-        search_sock = set_socket(temp_port)
         # send a tracker request
-        log(self.node_id,f'Sending request to tracker on port {temp_port} for {info_hash}')
+        log(self.node_id,f'Sending request to tracker for {info_hash}')
         msg = Node2Tracker(node_id=self.node_id,
                            mode = config.tracker_requests_mode.NEED,
                            info_hash=info_hash,
                            left = left,
-                           port = temp_port)
+                           port = self.rcv_socket.getsockname()[1])
         
-        self.send_segment(sock=search_sock,
-                          data=msg.encode(),
-                          addr=tuple(config.constants.TRACKER_ADDR))
-        # now we must wait for the tracker response
-        data = search_sock.recv(config.constants.BUFFER_SIZE)
+        with socket.socket(socket.AF_INET,socket.SOCK_STREAM) as search_sock:
+            search_sock.connect(tuple(config.constants.TRACKER_ADDR))
+            search_sock.sendall(msg.encode())
+            # now we must wait for the tracker response
+            data = search_sock.recv(config.constants.BUFFER_SIZE)
+            
         tracker_msg = Message.decode(data)
         return tracker_msg
 
@@ -558,10 +560,8 @@ class Node:
                            left=-1,
                            port=self.rcv_socket.getsockname()[1])
         with socket.socket(socket.AF_INET,socket.SOCK_STREAM) as send_socket:
-        # send_socket = set_socket(generate_random_port())
-            self.send_segment(sock=send_socket,
-                          data=msg.encode(),
-                          addr=tuple(config.constants.TRACKER_ADDR))
+            send_socket.connect(tuple(config.constants.TRACKER_ADDR))
+            send_socket.sendall(msg.encode())
         next_call = next_call + interval
         Timer(next_call - time.time(), self.inform_tracker_periodically, args=(interval,)).start()
 # args.node_id

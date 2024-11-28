@@ -887,3 +887,88 @@ downloaded: 71
 [15:49:21]  You exited the torrent!
 [16:02:21]  ***************** Node program started just right now! *****************
 [16:02:56]  ***************** Node program started just right now! *****************
+[17:42:00]  ***************** Node program started just right now! *****************
+[17:42:00]  You entered Torrent. Receiving port: 56643
+[17:42:00]  I informed the tracker that I'm still alive in the torrent!
+[17:42:13]  You just started to download file_A.txt.torrent. Let's search it in torrent!
+[17:42:13]  Sending request to tracker for d91838522436ecfe7d0595ac62e1a2a32457da2a
+[17:42:15]  All the chunks of d91838522436ecfe7d0595ac62e1a2a32457da2a has downloaded from neighboring peers. But they must be reassembled!
+[17:42:15]  All the pieces of the d91838522436ecfe7d0595ac62e1a2a32457da2a is now sorted and ready to be reassembled.
+[17:42:15]  file_A.txt has successfully downloaded and saved in my files directory.
+[17:42:20]  I informed the tracker that I'm still alive in the torrent!
+[17:42:40]  I informed the tracker that I'm still alive in the torrent!
+[17:42:55]  ***************** Node program started just right now! *****************
+[17:42:55]  You entered Torrent. Receiving port: 43749
+[17:42:55]  I informed the tracker that I'm still alive in the torrent!
+[17:42:57]  You just started to download file_A.txt.torrent. Let's search it in torrent!
+[17:42:57]  Sending request to tracker for d91838522436ecfe7d0595ac62e1a2a32457da2a
+[17:42:59]  All the chunks of d91838522436ecfe7d0595ac62e1a2a32457da2a has downloaded from neighboring peers. But they must be reassembled!
+[17:42:59]  All the pieces of the d91838522436ecfe7d0595ac62e1a2a32457da2a is now sorted and ready to be reassembled.
+[17:42:59]  file_A.txt has successfully downloaded and saved in my files directory.
+[17:43:15]  I informed the tracker that I'm still alive in the torrent!
+[17:43:35]  I informed the tracker that I'm still alive in the torrent!
+[17:43:55]  I informed the tracker that I'm still alive in the torrent!
+[17:44:15]  I informed the tracker that I'm still alive in the torrent!
+[17:44:35]  I informed the tracker that I'm still alive in the torrent!
+[17:44:55]  I informed the tracker that I'm still alive in the torrent!
+[17:51:51]  ***************** Node program started just right now! *****************
+[17:51:51]  You entered Torrent. Receiving port: 52280
+[17:51:51]  I informed the tracker that I'm still alive in the torrent!
+[17:51:53]  You just started to download file_A.txt.torrent. Let's search it in torrent!
+[17:51:53]  Sending request to tracker for d91838522436ecfe7d0595ac62e1a2a32457da2a
+[17:51:53]  Asking for chunks of node 1 at address ['10.9.1.190', 52268]
+[17:51:53]  I sent a request for a chunk of d91838522436ecfe7d0595ac62e1a2a32457da2a for node1
+[17:51:53]  All the chunks of d91838522436ecfe7d0595ac62e1a2a32457da2a has downloaded from neighboring peers. But they must be reassembled!
+[17:51:53]  All the pieces of the d91838522436ecfe7d0595ac62e1a2a32457da2a is now sorted and ready to be reassembled.
+[17:51:53]  file_A.txt has successfully downloaded and saved in my files directory.
+[17:52:11]  I informed the tracker that I'm still alive in the torrent!
+[17:52:31]  I informed the tracker that I'm still alive in the torrent!
+[17:52:51]  I informed the tracker that I'm still alive in the torrent!
+[17:53:11]  I informed the tracker that I'm still alive in the torrent!
+[17:53:18]  You are free now! You are waiting for other nodes' requests!
+[17:53:18]  Listening on port 52280
+[17:53:22]  Connected to ('10.9.1.75', 55303)
+[17:53:22]  The 0/42 has been sent!
+[17:53:22]  The 1/42 has been sent!
+[17:53:22]  The 2/42 has been sent!
+[17:53:22]  The 3/42 has been sent!
+[17:53:22]  The 4/42 has been sent!
+[17:53:22]  The 5/42 has been sent!
+[17:53:22]  The 6/42 has been sent!
+[17:53:22]  The 7/42 has been sent!
+[17:53:22]  The 8/42 has been sent!
+[17:53:22]  The 9/42 has been sent!
+[17:53:22]  The 10/42 has been sent!
+[17:53:22]  The 11/42 has been sent!
+[17:53:22]  The 12/42 has been sent!
+[17:53:22]  The 13/42 has been sent!
+[17:53:22]  The 14/42 has been sent!
+[17:53:22]  The 15/42 has been sent!
+[17:53:22]  The 16/42 has been sent!
+[17:53:22]  The 17/42 has been sent!
+[17:53:22]  The 18/42 has been sent!
+[17:53:22]  The 19/42 has been sent!
+[17:53:22]  The 20/42 has been sent!
+[17:53:22]  The 21/42 has been sent!
+[17:53:22]  The 22/42 has been sent!
+[17:53:22]  The 23/42 has been sent!
+[17:53:22]  The 24/42 has been sent!
+[17:53:22]  The 25/42 has been sent!
+[17:53:22]  The 26/42 has been sent!
+[17:53:22]  The 27/42 has been sent!
+[17:53:22]  The 28/42 has been sent!
+[17:53:22]  The 29/42 has been sent!
+[17:53:22]  The 30/42 has been sent!
+[17:53:22]  The 31/42 has been sent!
+[17:53:22]  The 32/42 has been sent!
+[17:53:22]  The 33/42 has been sent!
+[17:53:22]  The 34/42 has been sent!
+[17:53:22]  The 35/42 has been sent!
+[17:53:22]  The 36/42 has been sent!
+[17:53:22]  The 37/42 has been sent!
+[17:53:22]  The 38/42 has been sent!
+[17:53:22]  The 39/42 has been sent!
+[17:53:22]  The 40/42 has been sent!
+[17:53:22]  The 41/42 has been sent!
+[17:53:22]  The process of sending a chunk to node3 of file file_A.txt has finished!
+[17:53:31]  I informed the tracker that I'm still alive in the torrent!

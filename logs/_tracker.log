@@ -2744,3 +2744,108 @@ d0595ac62e1a2a32457da2a for node1
 [16:21:49]  Node(s) [1] is in the torrent and node(s)[] have left.
 [16:22:07]  Connected by ('10.9.1.75', 53678)
 [16:22:11]  Node(s) [1] is in the torrent and node(s)[] have left.
+[16:46:14]  ***************** Tracker program started just right now! *****************
+[16:50:35]  ***************** Tracker program started just right now! *****************
+[16:53:59]  ***************** Tracker program started just right now! *****************
+[16:56:30]  ***************** Tracker program started just right now! *****************
+[16:57:28]  ***************** Tracker program started just right now! *****************
+[16:57:51]  Connected by ('10.9.1.75', 54393)
+[16:57:51]  Connected by ('10.9.1.75', 54394)
+[16:58:11]  Connected by ('10.9.1.75', 54396)
+[16:58:12]  Node(s) [1] is in the torrent and node(s)[] have left.
+[16:58:31]  Connected by ('10.9.1.75', 54399)
+[16:58:34]  Node(s) [1] is in the torrent and node(s)[] have left.
+[16:58:56]  Node(s) [] is in the torrent and node(s)[1] have left.
+[17:21:11]  ***************** Tracker program started just right now! *****************
+[17:35:04]  ***************** Tracker program started just right now! *****************
+[17:35:28]  Connected by ('10.9.1.190', 51232)
+[17:35:28]  Connected by ('10.9.1.190', 51233)
+[17:35:48]  Node(s) [1] is in the torrent and node(s)[] have left.
+[17:36:10]  Node(s) [] is in the torrent and node(s)[1] have left.
+[17:38:04]  ***************** Tracker program started just right now! *****************
+[17:38:36]  Connected by ('10.9.1.190', 51386)
+[17:38:36]  Connected by ('10.9.1.190', 51387)
+[17:38:48]  Node(s) [1] is in the torrent and node(s)[] have left.
+[17:38:48]  Connected by ('10.9.1.190', 51398)
+[17:38:48]  Connected by ('10.9.1.190', 51399)
+[17:39:10]  Node(s) [] is in the torrent and node(s)[1] have left.
+[17:39:32]  Node(s) [] is in the torrent and node(s)[1] have left.
+[17:41:28]  Connected by ('10.9.1.190', 51611)
+[17:41:28]  Connected by ('10.9.1.190', 51612)
+[17:41:44]  Node(s) [1] is in the torrent and node(s)[] have left.
+[17:41:44]  Connected by ('10.9.1.190', 51624)
+[17:41:44]  Node 1 owns d91838522436ecfe7d0595ac62e1a2a32457da2a
+[17:41:48]  Connected by ('10.9.1.190', 51629)
+[17:42:06]  Node(s) [1] is in the torrent and node(s)[] have left.
+[17:42:06]  Connected by ('10.9.1.190', 51645)
+[17:42:06]  Connected by ('10.9.1.190', 51646)
+[17:42:08]  Connected by ('10.9.1.190', 51649)
+[17:42:19]  Connected by ('10.9.1.190', 51659)
+[17:42:19]  Node2 is searching for d91838522436ecfe7d0595ac62e1a2a32457da2a
+[17:42:19]  Node 2 owns d91838522436ecfe7d0595ac62e1a2a32457da2a
+[17:42:21]  Connected by ('10.9.1.190', 51661)
+[17:42:26]  Connected by ('10.9.1.190', 51667)
+[17:42:28]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[17:42:28]  Connected by ('10.9.1.190', 51670)
+[17:42:46]  Connected by ('10.9.1.190', 51684)
+[17:42:48]  Connected by ('10.9.1.190', 51687)
+[17:42:50]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[17:43:00]  Connected by ('10.9.1.190', 51699)
+[17:43:00]  Connected by ('10.9.1.190', 51700)
+[17:43:02]  Connected by ('10.9.1.190', 51703)
+[17:43:02]  Node2 is searching for d91838522436ecfe7d0595ac62e1a2a32457da2a
+[17:43:02]  Node 2 owns d91838522436ecfe7d0595ac62e1a2a32457da2a
+[17:43:05]  Connected by ('10.9.1.190', 51707)
+[17:43:08]  Connected by ('10.9.1.190', 51713)
+[17:43:12]  Node(s) [1] is in the torrent and node(s)[2] have left.
+[17:43:20]  Connected by ('10.9.1.190', 51725)
+[17:43:28]  Connected by ('10.9.1.190', 51735)
+[17:43:34]  Node(s) [1] is in the torrent and node(s)[2] have left.
+[17:43:40]  Connected by ('10.9.1.190', 51748)
+[17:43:48]  Connected by ('10.9.1.190', 51755)
+[17:43:56]  Node(s) [1] is in the torrent and node(s)[2] have left.
+[17:44:00]  Connected by ('10.9.1.190', 51769)
+[17:44:08]  Connected by ('10.9.1.190', 51777)
+[17:44:18]  Node(s) [1] is in the torrent and node(s)[2] have left.
+[17:44:20]  Connected by ('10.9.1.190', 51788)
+[17:44:28]  Connected by ('10.9.1.190', 51795)
+[17:44:40]  Node(s) [1] is in the torrent and node(s)[2] have left.
+[17:44:40]  Connected by ('10.9.1.190', 51806)
+[17:44:48]  Connected by ('10.9.1.190', 51813)
+[17:45:00]  Connected by ('10.9.1.190', 51824)
+[17:45:02]  Node(s) [1] is in the torrent and node(s)[2] have left.
+[17:45:08]  Connected by ('10.9.1.190', 51833)
+[17:45:17]  Connected by ('10.9.1.190', 51842)
+[17:45:17]  Connected by ('10.9.1.190', 51843)
+[17:45:18]  Connected by ('10.9.1.190', 51846)
+[17:45:18]  Node 1 owns d91838522436ecfe7d0595ac62e1a2a32457da2a
+[17:45:24]  Node(s) [1] is in the torrent and node(s)[2] have left.
+[17:45:37]  Connected by ('10.9.1.190', 51861)
+[17:45:46]  Node(s) [] is in the torrent and node(s)[1] have left.
+[17:45:57]  Connected by ('10.9.1.190', 51920)
+[17:46:01]  Connected by ('10.9.1.190', 51927)
+[17:46:01]  Connected by ('10.9.1.190', 51928)
+[17:46:08]  Node(s) [] is in the torrent and node(s)[1] have left.
+[17:46:21]  Connected by ('10.9.1.190', 51948)
+[17:46:30]  Node(s) [] is in the torrent and node(s)[1] have left.
+[17:46:41]  Connected by ('10.9.1.190', 51967)
+[17:46:52]  Node(s) [] is in the torrent and node(s)[1] have left.
+[17:47:01]  Connected by ('10.9.1.190', 51986)
+[17:47:14]  Node(s) [] is in the torrent and node(s)[1] have left.
+[17:47:21]  Connected by ('10.9.1.190', 52006)
+[17:47:36]  Node(s) [] is in the torrent and node(s)[1] have left.
+[17:47:41]  Connected by ('10.9.1.190', 52028)
+[17:47:58]  Node(s) [] is in the torrent and node(s)[1] have left.
+[17:48:01]  Connected by ('10.9.1.190', 52050)
+[17:48:20]  Node(s) [] is in the torrent and node(s)[1] have left.
+[17:48:21]  Connected by ('10.9.1.190', 52068)
+[17:48:41]  Connected by ('10.9.1.190', 52098)
+[17:48:42]  Node(s) [] is in the torrent and node(s)[1] have left.
+[17:49:04]  Node(s) [] is in the torrent and node(s)[1] have left.
+[17:49:26]  Node(s) [] is in the torrent and node(s)[1] have left.
+[17:51:50]  Connected by ('10.9.1.190', 52269)
+[17:51:50]  Connected by ('10.9.1.190', 52270)
+[17:51:52]  Connected by ('10.9.1.190', 52273)
+[17:51:52]  Node 1 owns d91838522436ecfe7d0595ac62e1a2a32457da2a
+[17:51:57]  Connected by ('10.9.1.190', 52281)
+[17:51:57]  Connected by ('10.9.1.190', 52282)

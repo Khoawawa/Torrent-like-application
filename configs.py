@@ -9,7 +9,7 @@ CFG = {
     },
     "constants": {
         "AVAILABLE_PORTS_RANGE": (1024, 65535), # range of available ports on the local computer
-        "TRACKER_ADDR": ('113.172.121.1', 12345),
+        "TRACKER_ADDR": ('10.9.1.75', 12345),
         "MAX_UDP_SEGMENT_DATA_SIZE": 65527,
         "BUFFER_SIZE": 8192,        # MACOSX UDP MTU is 9216
         "CHUNK_PIECES_SIZE": 8192 - 2000, # Each chunk pieces(segments of UDP) must be lower than UDP buffer size

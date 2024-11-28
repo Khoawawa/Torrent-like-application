@@ -20,8 +20,10 @@ next_call = time.time()
 
 class Tracker:
     def __init__(self):
+        hostname = socket.gethostname()
+        ip = socket.gethostbyname(hostname)
         self.scrape_lock = Lock()
-        self.tracker_socket = set_socket(config.constants.TRACKER_ADDR[1],config.constants.TRACKER_ADDR[0])
+        self.tracker_socket = set_socket(config.constants.TRACKER_ADDR[1],ip)
         self.tracker_socket.listen(5)
         print(self.tracker_socket.getsockname())
         self.file_owners_list = defaultdict(list)
@@ -119,6 +121,7 @@ class Tracker:
 
     def check_nodes_periodically(self, interval: int):
         global next_call
+        print(f'I am on addr{self.tracker_socket.getsockname()}')
         alive_nodes_ids = set()
         dead_nodes_ids = set()
         try:
