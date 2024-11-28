@@ -87,11 +87,19 @@ class TorrentFile:
         )
         return magnet_link
 
-    def split_file_to_piece(self, file_path: str, file_size):
-        with open(file_path, "r+b") as f:
-            mm = mmap.mmap(f.fileno(), 0)[0: file_size]
-            # we divide each chunk to a fixed-size pieces to be transferable
-            return [mm[p: p + self.piece_size] for p in range(0, file_size, self.piece_size)]
+    def split_file_to_piece(self, file_path, file_size):
+        with open(file_path, 'rb') as f:
+            content = f.read()
+        return [content[p: p + self.piece_size] for p in range(0, len(content), self.piece_size)]
+
+    def _is_binary_file(self, file_path):
+        textchars = bytearray({7,8,9,10,12,13,27} | set(range(0x20, 0x100)) - {0x7f})
+        try:
+            with open(file_path, 'rb') as f:
+                header = f.read(1024)
+                return bool(header.translate(None, textchars))
+        except:
+            return True
 
     def split_files_in_folder(self, folder_path):
         file_pieces = {}
@@ -159,12 +167,12 @@ class TorrentFile:
         else:
             return data
 # Testing
-# torrentFile = TorrentFile('node_files\\node1\\file_A.txt', True)
-# torrent_data = torrentFile.create_torrent_data()
-# # torrentFile.create_torrent_file(5, torrent_data)
+torrentFile = TorrentFile('node_files\\node1\\N5-2018.pdf', True)
+torrent_data = torrentFile.create_torrent_data()
+torrentFile.create_torrent_file(1, torrent_data)
 
-torrentFile = TorrentFile('node_files\\node1\\ABC', False)
-# # # # torrentFile = TorrentFile('node_files\\node1', False)
+torrentFile = TorrentFile('node_files\\node1\\a_b_c', False)
+# torrentFile = TorrentFile('node_files\\node1', False)
 torrent_data = torrentFile.create_torrent_data()
 torrentFile.create_torrent_file(1, torrent_data)
 # # # torrentFile.load_torrent_file('node_files\\node5\\ABC.torrent')

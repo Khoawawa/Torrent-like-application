@@ -2417,3 +2417,571 @@ d0595ac62e1a2a32457da2a for node1
 [19:27:34]  Updated info_hash d91838522436ecfe7d0595ac62e1a2a32457da2a for node2
 [19:27:40]  Connected by ('127.0.0.1', 58044)
 [19:27:40]  Node 2 exited torrent intentionally.
+[09:34:59]  ***************** Tracker program started just right now! *****************
+[09:35:05]  Connected by ('127.0.0.1', 47378)
+[09:35:05]  Connected by ('127.0.0.1', 64838)
+[09:35:11]  Connected by ('127.0.0.1', 49488)
+[09:35:11]  Connected by ('127.0.0.1', 64889)
+[09:35:21]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[09:36:40]  ***************** Tracker program started just right now! *****************
+[09:36:44]  Connected by ('127.0.0.1', 36706)
+[09:36:44]  Connected by ('127.0.0.1', 50073)
+[09:36:55]  Connected by ('127.0.0.1', 36590)
+[09:36:55]  Node 1 owns 92abf8f80a1ac88adec7629f110ed69f1eda0cc2
+[09:37:02]  Node(s) [1] is in the torrent and node(s)[] have left.
+[09:37:04]  Connected by ('127.0.0.1', 50331)
+[09:37:08]  Connected by ('127.0.0.1', 13403)
+[09:37:08]  Connected by ('127.0.0.1', 50370)
+[09:37:24]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[09:37:24]  Connected by ('127.0.0.1', 50565)
+[09:37:28]  Connected by ('127.0.0.1', 50602)
+[09:37:33]  Connected by ('127.0.0.1', 15138)
+[09:37:33]  Node2 is searching for 92abf8f80a1ac88adec7629f110ed69f1eda0cc2
+[09:37:33]  Node 2 owns 92abf8f80a1ac88adec7629f110ed69f1eda0cc2
+[09:37:33]  Connected by ('127.0.0.1', 50653)
+[09:37:33]  Connected by ('127.0.0.1', 50654)
+[09:37:44]  Connected by ('127.0.0.1', 50735)
+[09:37:46]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[09:37:48]  Connected by ('127.0.0.1', 50758)
+[09:38:04]  Connected by ('127.0.0.1', 50858)
+[09:38:08]  Connected by ('127.0.0.1', 50889)
+[09:38:08]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[09:38:22]  Connected by ('127.0.0.1', 56408)
+[09:38:22]  Connected by ('127.0.0.1', 50996)
+[09:38:30]  Node(s) [] is in the torrent and node(s)[1] have left.
+[09:38:35]  Connected by ('127.0.0.1', 3913)
+[09:38:35]  Connected by ('127.0.0.1', 51176)
+[09:38:45]  Connected by ('127.0.0.1', 37514)
+[09:38:45]  Node 1 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[09:38:49]  Connected by ('127.0.0.1', 63383)
+[09:38:49]  Connected by ('127.0.0.1', 51352)
+[09:38:52]  Node(s) [] is in the torrent and node(s)[1] have left.
+[09:38:55]  Connected by ('127.0.0.1', 51405)
+[09:39:09]  Connected by ('127.0.0.1', 51601)
+[09:39:13]  Connected by ('127.0.0.1', 63785)
+[09:39:13]  Node2 is searching for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[09:39:13]  Node 2 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[09:39:13]  Connected by ('127.0.0.1', 51629)
+[09:39:14]  Node(s) [] is in the torrent and node(s)[1] have left.
+[09:39:15]  Connected by ('127.0.0.1', 51651)
+[09:39:29]  Connected by ('127.0.0.1', 51850)
+[09:39:35]  Connected by ('127.0.0.1', 51926)
+[09:39:36]  Node(s) [] is in the torrent and node(s)[1] have left.
+[09:39:49]  Connected by ('127.0.0.1', 52106)
+[09:39:55]  Connected by ('127.0.0.1', 52140)
+[09:39:58]  Node(s) [] is in the torrent and node(s)[1] have left.
+[09:40:09]  Connected by ('127.0.0.1', 52245)
+[09:40:15]  Connected by ('127.0.0.1', 52272)
+[09:40:20]  Node(s) [] is in the torrent and node(s)[1] have left.
+[09:40:29]  Connected by ('127.0.0.1', 52357)
+[09:40:35]  Connected by ('127.0.0.1', 52387)
+[09:40:42]  Node(s) [] is in the torrent and node(s)[1] have left.
+[09:40:49]  Connected by ('127.0.0.1', 52512)
+[09:40:55]  Connected by ('127.0.0.1', 52578)
+[09:41:04]  Node(s) [] is in the torrent and node(s)[1] have left.
+[09:41:09]  Connected by ('127.0.0.1', 52732)
+[09:41:15]  Connected by ('127.0.0.1', 52756)
+[09:41:26]  Node(s) [] is in the torrent and node(s)[1] have left.
+[09:41:29]  Connected by ('127.0.0.1', 52849)
+[09:41:35]  Connected by ('127.0.0.1', 52872)
+[09:41:48]  Node(s) [] is in the torrent and node(s)[1] have left.
+[09:41:49]  Connected by ('127.0.0.1', 53028)
+[09:41:55]  Connected by ('127.0.0.1', 53076)
+[09:42:09]  Connected by ('127.0.0.1', 53190)
+[09:42:10]  Node(s) [] is in the torrent and node(s)[1] have left.
+[09:42:15]  Connected by ('127.0.0.1', 53237)
+[09:42:29]  Connected by ('127.0.0.1', 53320)
+[09:42:32]  Node(s) [] is in the torrent and node(s)[1] have left.
+[09:42:35]  Connected by ('127.0.0.1', 53343)
+[09:42:49]  Connected by ('127.0.0.1', 53432)
+[09:42:54]  Node(s) [] is in the torrent and node(s)[1] have left.
+[09:42:55]  Connected by ('127.0.0.1', 53490)
+[09:43:09]  Connected by ('127.0.0.1', 53615)
+[09:43:15]  Connected by ('127.0.0.1', 53660)
+[09:43:16]  Node(s) [] is in the torrent and node(s)[1] have left.
+[09:43:29]  Connected by ('127.0.0.1', 53764)
+[10:01:13]  ***************** Tracker program started just right now! *****************
+[10:01:19]  Connected by ('127.0.0.1', 2511)
+[10:01:19]  Connected by ('127.0.0.1', 52870)
+[10:01:32]  Connected by ('127.0.0.1', 13580)
+[10:01:32]  Node 1 owns 92abf8f80a1ac88adec7629f110ed69f1eda0cc2
+[10:01:35]  Node(s) [1] is in the torrent and node(s)[] have left.
+[10:01:39]  Connected by ('127.0.0.1', 53138)
+[10:01:56]  Connected by ('127.0.0.1', 53356)
+[10:01:56]  Connected by ('127.0.0.1', 53341)
+[10:01:57]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:01:59]  Connected by ('127.0.0.1', 53365)
+[10:02:06]  Connected by ('127.0.0.1', 45248)
+[10:02:06]  Node2 is searching for 92abf8f80a1ac88adec7629f110ed69f1eda0cc2
+[10:02:06]  Node 2 owns 92abf8f80a1ac88adec7629f110ed69f1eda0cc2
+[10:02:06]  Connected by ('127.0.0.1', 53437)
+[10:02:06]  Connected by ('127.0.0.1', 53438)
+[10:02:16]  Connected by ('127.0.0.1', 53546)
+[10:02:19]  Connected by ('127.0.0.1', 53582)
+[10:02:19]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:02:26]  Connected by ('127.0.0.1', 15294)
+[10:02:26]  Node 1 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:02:36]  Connected by ('127.0.0.1', 53732)
+[10:02:39]  Connected by ('127.0.0.1', 53752)
+[10:02:41]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:02:41]  Connected by ('127.0.0.1', 4666)
+[10:02:41]  Node2 is searching for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:02:41]  Node 2 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:02:41]  Connected by ('127.0.0.1', 53768)
+[10:02:41]  Connected by ('127.0.0.1', 53770)
+[10:02:41]  Connected by ('127.0.0.1', 53772)
+[10:02:41]  Connected by ('127.0.0.1', 53773)
+[10:02:56]  Connected by ('127.0.0.1', 53870)
+[10:02:59]  Connected by ('127.0.0.1', 53895)
+[10:03:03]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:03:16]  Connected by ('127.0.0.1', 54056)
+[10:03:19]  Connected by ('127.0.0.1', 54075)
+[10:03:25]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:03:36]  Connected by ('127.0.0.1', 54242)
+[10:03:39]  Connected by ('127.0.0.1', 54274)
+[10:03:47]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:03:56]  Connected by ('127.0.0.1', 54428)
+[10:03:59]  Connected by ('127.0.0.1', 54468)
+[10:04:09]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:04:16]  Connected by ('127.0.0.1', 54619)
+[10:04:19]  Connected by ('127.0.0.1', 54648)
+[10:04:31]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:04:36]  Connected by ('127.0.0.1', 54819)
+[10:04:39]  Connected by ('127.0.0.1', 54897)
+[10:04:53]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:04:56]  Connected by ('127.0.0.1', 55061)
+[10:04:59]  Connected by ('127.0.0.1', 55087)
+[10:05:15]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:05:16]  Connected by ('127.0.0.1', 55264)
+[10:05:19]  Connected by ('127.0.0.1', 55302)
+[10:05:36]  Connected by ('127.0.0.1', 55475)
+[10:05:37]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:05:39]  Connected by ('127.0.0.1', 55507)
+[10:05:56]  Connected by ('127.0.0.1', 55681)
+[10:05:59]  Connected by ('127.0.0.1', 55736)
+[10:05:59]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:06:16]  Connected by ('127.0.0.1', 55979)
+[10:06:19]  Connected by ('127.0.0.1', 56026)
+[10:06:21]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:06:36]  Connected by ('127.0.0.1', 56294)
+[10:06:39]  Connected by ('127.0.0.1', 56329)
+[10:06:43]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:06:56]  Connected by ('127.0.0.1', 56577)
+[10:06:59]  Connected by ('127.0.0.1', 56605)
+[10:07:05]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:07:16]  Connected by ('127.0.0.1', 56777)
+[10:07:19]  Connected by ('127.0.0.1', 56796)
+[10:07:27]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:09:24]  ***************** Tracker program started just right now! *****************
+[10:09:29]  Connected by ('127.0.0.1', 32959)
+[10:09:29]  Connected by ('127.0.0.1', 57924)
+[10:09:34]  Connected by ('127.0.0.1', 61005)
+[10:09:34]  Connected by ('127.0.0.1', 57953)
+[10:09:43]  Connected by ('127.0.0.1', 19988)
+[10:09:43]  Node 1 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:09:46]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:09:49]  Connected by ('127.0.0.1', 58047)
+[10:09:54]  Connected by ('127.0.0.1', 58080)
+[10:09:56]  Connected by ('127.0.0.1', 33182)
+[10:09:56]  Node2 is searching for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:09:56]  Node 2 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:10:08]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:10:09]  Connected by ('127.0.0.1', 58164)
+[10:10:14]  Connected by ('127.0.0.1', 58185)
+[10:10:26]  Connected by ('127.0.0.1', 58261)
+[10:10:29]  Connected by ('127.0.0.1', 58274)
+[10:10:30]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:10:34]  Connected by ('127.0.0.1', 58297)
+[10:10:49]  Connected by ('127.0.0.1', 58485)
+[10:10:52]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:10:54]  Connected by ('127.0.0.1', 58542)
+[10:11:09]  Connected by ('127.0.0.1', 58705)
+[10:11:14]  Connected by ('127.0.0.1', 58751)
+[10:11:14]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:11:29]  Connected by ('127.0.0.1', 58867)
+[10:11:34]  Connected by ('127.0.0.1', 58891)
+[10:11:36]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:11:49]  Connected by ('127.0.0.1', 59055)
+[10:11:54]  Connected by ('127.0.0.1', 59094)
+[10:11:58]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:12:09]  Connected by ('127.0.0.1', 59208)
+[10:12:14]  Connected by ('127.0.0.1', 59259)
+[10:12:20]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:12:29]  Connected by ('127.0.0.1', 59366)
+[10:12:34]  Connected by ('127.0.0.1', 59407)
+[10:12:42]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:12:49]  Connected by ('127.0.0.1', 59486)
+[10:12:54]  Connected by ('127.0.0.1', 59507)
+[10:13:04]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:13:09]  Connected by ('127.0.0.1', 59600)
+[10:13:14]  Connected by ('127.0.0.1', 59634)
+[10:13:26]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:13:29]  Connected by ('127.0.0.1', 59777)
+[10:13:34]  Connected by ('127.0.0.1', 59820)
+[10:13:48]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:13:49]  Connected by ('127.0.0.1', 59988)
+[10:14:25]  ***************** Tracker program started just right now! *****************
+[10:14:29]  Connected by ('127.0.0.1', 61457)
+[10:14:29]  Connected by ('127.0.0.1', 60399)
+[10:14:36]  Connected by ('127.0.0.1', 59297)
+[10:14:36]  Node 1 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:14:41]  Connected by ('127.0.0.1', 57944)
+[10:14:41]  Connected by ('127.0.0.1', 60494)
+[10:14:47]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:14:49]  Connected by ('127.0.0.1', 60541)
+[10:15:01]  Connected by ('127.0.0.1', 60627)
+[10:15:03]  Connected by ('127.0.0.1', 30493)
+[10:15:03]  Node2 is searching for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:15:03]  Node 2 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:15:03]  Connected by ('127.0.0.1', 60631)
+[10:15:03]  Connected by ('127.0.0.1', 60633)
+[10:15:03]  Connected by ('127.0.0.1', 60635)
+[10:15:03]  Connected by ('127.0.0.1', 60636)
+[10:15:09]  Connected by ('127.0.0.1', 60676)
+[10:15:09]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:15:21]  Connected by ('127.0.0.1', 60729)
+[10:15:29]  Connected by ('127.0.0.1', 60781)
+[10:15:31]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:15:41]  Connected by ('127.0.0.1', 60890)
+[10:15:49]  Connected by ('127.0.0.1', 60939)
+[10:15:53]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:16:01]  Connected by ('127.0.0.1', 61036)
+[10:16:09]  Connected by ('127.0.0.1', 61123)
+[10:16:15]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:16:21]  Connected by ('127.0.0.1', 61229)
+[10:16:29]  Connected by ('127.0.0.1', 61349)
+[10:16:37]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:16:49]  Connected by ('127.0.0.1', 61594)
+[10:16:59]  Node(s) [1] is in the torrent and node(s)[2] have left.
+[10:17:09]  Connected by ('127.0.0.1', 61868)
+[10:17:21]  Node(s) [1] is in the torrent and node(s)[] have left.
+[10:17:29]  Connected by ('127.0.0.1', 62078)
+[10:17:43]  Node(s) [1] is in the torrent and node(s)[] have left.
+[10:17:49]  Connected by ('127.0.0.1', 62220)
+[10:18:05]  Node(s) [1] is in the torrent and node(s)[] have left.
+[10:18:09]  Connected by ('127.0.0.1', 62394)
+[10:18:27]  Node(s) [1] is in the torrent and node(s)[] have left.
+[10:18:29]  Connected by ('127.0.0.1', 62601)
+[10:18:47]  Connected by ('127.0.0.1', 15418)
+[10:18:47]  Connected by ('127.0.0.1', 62813)
+[10:18:49]  Node(s) [1] is in the torrent and node(s)[] have left.
+[10:18:51]  Connected by ('127.0.0.1', 42895)
+[10:18:51]  Node 1 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:18:54]  Connected by ('127.0.0.1', 8076)
+[10:18:54]  Connected by ('127.0.0.1', 62870)
+[10:18:56]  Connected by ('127.0.0.1', 24105)
+[10:18:56]  Node2 is searching for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:18:56]  Node 2 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:18:56]  Connected by ('127.0.0.1', 62908)
+[10:18:58]  Connected by ('127.0.0.1', 62962)
+[10:19:00]  Connected by ('127.0.0.1', 62996)
+[10:19:02]  Connected by ('127.0.0.1', 63029)
+[10:19:07]  Connected by ('127.0.0.1', 63094)
+[10:19:11]  Node(s) [] is in the torrent and node(s)[1] have left.
+[10:19:14]  Connected by ('127.0.0.1', 63233)
+[10:19:33]  Node(s) [] is in the torrent and node(s)[1] have left.
+[10:19:55]  Node(s) [2] is in the torrent and node(s)[] have left.
+[10:20:06]  ***************** Tracker program started just right now! *****************
+[10:20:19]  ***************** Tracker program started just right now! *****************
+[10:20:24]  Connected by ('127.0.0.1', 5962)
+[10:20:24]  Connected by ('127.0.0.1', 64181)
+[10:20:28]  Connected by ('127.0.0.1', 15770)
+[10:20:28]  Connected by ('127.0.0.1', 64235)
+[10:20:41]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:20:42]  Connected by ('127.0.0.1', 8346)
+[10:20:42]  Node 1 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:20:44]  Connected by ('127.0.0.1', 64463)
+[10:20:48]  Connected by ('127.0.0.1', 64484)
+[10:21:01]  Connected by ('127.0.0.1', 2894)
+[10:21:01]  Node2 is searching for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:21:01]  Node 2 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:21:01]  Connected by ('127.0.0.1', 64539)
+[10:21:01]  Connected by ('127.0.0.1', 64541)
+[10:21:01]  Connected by ('127.0.0.1', 64543)
+[10:21:01]  Connected by ('127.0.0.1', 64544)
+[10:21:03]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:21:04]  Connected by ('127.0.0.1', 64572)
+[10:21:08]  Connected by ('127.0.0.1', 64595)
+[10:21:24]  Connected by ('127.0.0.1', 64802)
+[10:21:25]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:21:28]  Connected by ('127.0.0.1', 64849)
+[10:21:44]  Connected by ('127.0.0.1', 65061)
+[10:21:47]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:21:48]  Connected by ('127.0.0.1', 65118)
+[10:22:04]  Connected by ('127.0.0.1', 65360)
+[10:22:08]  Connected by ('127.0.0.1', 65437)
+[10:22:09]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:22:24]  Connected by ('127.0.0.1', 49358)
+[10:22:28]  Connected by ('127.0.0.1', 49683)
+[10:22:31]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:22:49]  Connected by ('127.0.0.1', 21833)
+[10:22:49]  Connected by ('127.0.0.1', 50267)
+[10:22:53]  Connected by ('127.0.0.1', 44982)
+[10:22:53]  Node 1 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:22:53]  Node(s) [] is in the torrent and node(s)[1] have left.
+[10:23:01]  Connected by ('127.0.0.1', 26995)
+[10:23:01]  Connected by ('127.0.0.1', 50431)
+[10:23:03]  Connected by ('127.0.0.1', 17583)
+[10:23:03]  Node2 is searching for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:23:03]  Node 2 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:23:09]  Connected by ('127.0.0.1', 50538)
+[10:23:09]  Connected by ('127.0.0.1', 50539)
+[10:23:15]  Node(s) [] is in the torrent and node(s)[1] have left.
+[10:23:21]  Connected by ('127.0.0.1', 50677)
+[10:23:29]  Connected by ('127.0.0.1', 50730)
+[10:23:37]  Node(s) [] is in the torrent and node(s)[1] have left.
+[10:23:41]  Connected by ('127.0.0.1', 50870)
+[10:23:49]  Connected by ('127.0.0.1', 50968)
+[10:23:59]  Node(s) [] is in the torrent and node(s)[1] have left.
+[10:24:01]  Connected by ('127.0.0.1', 51126)
+[10:24:09]  Connected by ('127.0.0.1', 51239)
+[10:24:21]  Node(s) [] is in the torrent and node(s)[1] have left.
+[10:24:21]  Connected by ('127.0.0.1', 51422)
+[10:24:34]  Connected by ('127.0.0.1', 37504)
+[10:24:34]  Connected by ('127.0.0.1', 51622)
+[10:24:36]  Connected by ('127.0.0.1', 16085)
+[10:24:36]  Node 1 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:24:43]  Node(s) [] is in the torrent and node(s)[1] have left.
+[10:24:45]  Connected by ('127.0.0.1', 15428)
+[10:24:45]  Connected by ('127.0.0.1', 51769)
+[10:24:47]  Connected by ('127.0.0.1', 26633)
+[10:24:47]  Node2 is searching for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:24:47]  Node 2 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:24:54]  Connected by ('127.0.0.1', 51903)
+[10:24:54]  Connected by ('127.0.0.1', 51916)
+[10:43:30]  ***************** Tracker program started just right now! *****************
+[10:43:37]  ***************** Tracker program started just right now! *****************
+[10:43:43]  Connected by ('127.0.0.1', 52019)
+[10:43:43]  Connected by ('127.0.0.1', 52272)
+[10:43:55]  Connected by ('127.0.0.1', 16980)
+[10:43:55]  Node 1 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:43:59]  Node(s) [1] is in the torrent and node(s)[] have left.
+[10:44:03]  Connected by ('127.0.0.1', 52465)
+[10:44:05]  Connected by ('127.0.0.1', 44344)
+[10:44:05]  Connected by ('127.0.0.1', 52482)
+[10:44:21]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:44:23]  Connected by ('127.0.0.1', 52695)
+[10:44:25]  Connected by ('127.0.0.1', 52714)
+[10:44:34]  Connected by ('127.0.0.1', 8058)
+[10:44:34]  Node2 is searching for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:44:34]  Node 2 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:44:34]  Connected by ('127.0.0.1', 52845)
+[10:44:34]  Connected by ('127.0.0.1', 52847)
+[10:44:34]  Connected by ('127.0.0.1', 52849)
+[10:44:34]  Connected by ('127.0.0.1', 52850)
+[10:44:43]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:44:43]  Connected by ('127.0.0.1', 52978)
+[10:44:45]  Connected by ('127.0.0.1', 52987)
+[10:45:03]  Connected by ('127.0.0.1', 53274)
+[10:45:05]  Connected by ('127.0.0.1', 53302)
+[10:45:05]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:45:23]  Connected by ('127.0.0.1', 53638)
+[10:45:25]  Connected by ('127.0.0.1', 53651)
+[10:45:27]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:45:43]  Connected by ('127.0.0.1', 53790)
+[10:45:45]  Connected by ('127.0.0.1', 53798)
+[10:45:49]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:46:03]  Connected by ('127.0.0.1', 54051)
+[10:46:05]  Connected by ('127.0.0.1', 54076)
+[10:46:11]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:46:23]  Connected by ('127.0.0.1', 54361)
+[10:46:33]  Node(s) [1] is in the torrent and node(s)[2] have left.
+[10:46:43]  Connected by ('127.0.0.1', 54669)
+[10:46:55]  Node(s) [1] is in the torrent and node(s)[] have left.
+[10:47:03]  Connected by ('127.0.0.1', 54921)
+[10:47:17]  Node(s) [1] is in the torrent and node(s)[] have left.
+[10:47:24]  Connected by ('127.0.0.1', 61316)
+[10:47:24]  Connected by ('127.0.0.1', 55212)
+[10:47:39]  Node(s) [] is in the torrent and node(s)[1] have left.
+[10:47:58]  Connected by ('127.0.0.1', 59966)
+[10:47:58]  Connected by ('127.0.0.1', 55536)
+[10:48:01]  Node(s) [] is in the torrent and node(s)[1] have left.
+[10:48:02]  Connected by ('127.0.0.1', 24431)
+[10:48:02]  Node 1 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:48:06]  Connected by ('127.0.0.1', 23806)
+[10:48:06]  Connected by ('127.0.0.1', 55629)
+[10:48:09]  Connected by ('127.0.0.1', 34420)
+[10:48:09]  Node2 is searching for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:48:09]  Node 2 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:48:09]  Connected by ('127.0.0.1', 55674)
+[10:48:11]  Connected by ('127.0.0.1', 55696)
+[10:48:13]  Connected by ('127.0.0.1', 55728)
+[10:48:15]  Connected by ('127.0.0.1', 55749)
+[10:48:18]  Connected by ('127.0.0.1', 55811)
+[10:48:23]  Node(s) [] is in the torrent and node(s)[1] have left.
+[10:48:26]  Connected by ('127.0.0.1', 55916)
+[10:48:38]  Connected by ('127.0.0.1', 56129)
+[10:48:45]  Node(s) [] is in the torrent and node(s)[1] have left.
+[10:48:46]  Connected by ('127.0.0.1', 56240)
+[10:48:58]  Connected by ('127.0.0.1', 56407)
+[10:49:06]  Connected by ('127.0.0.1', 56475)
+[10:49:07]  Node(s) [] is in the torrent and node(s)[1] have left.
+[10:49:18]  Connected by ('127.0.0.1', 56616)
+[10:49:26]  Connected by ('127.0.0.1', 56719)
+[10:49:29]  Node(s) [] is in the torrent and node(s)[1] have left.
+[10:49:38]  Connected by ('127.0.0.1', 56921)
+[10:49:46]  Connected by ('127.0.0.1', 57007)
+[10:49:51]  Node(s) [] is in the torrent and node(s)[1] have left.
+[10:49:58]  Connected by ('127.0.0.1', 57105)
+[10:50:06]  Connected by ('127.0.0.1', 57199)
+[10:50:13]  Node(s) [] is in the torrent and node(s)[1] have left.
+[10:50:18]  Connected by ('127.0.0.1', 57322)
+[10:50:26]  Connected by ('127.0.0.1', 57383)
+[10:50:35]  Node(s) [] is in the torrent and node(s)[1] have left.
+[10:50:38]  Connected by ('127.0.0.1', 57572)
+[10:50:46]  Connected by ('127.0.0.1', 57664)
+[10:50:57]  Node(s) [] is in the torrent and node(s)[1] have left.
+[10:50:58]  Connected by ('127.0.0.1', 57826)
+[10:51:06]  Connected by ('127.0.0.1', 57928)
+[10:51:18]  Connected by ('127.0.0.1', 58083)
+[10:51:19]  Node(s) [] is in the torrent and node(s)[1] have left.
+[10:51:26]  Connected by ('127.0.0.1', 58254)
+[10:52:27]  ***************** Tracker program started just right now! *****************
+[10:52:33]  Connected by ('127.0.0.1', 25231)
+[10:52:33]  Connected by ('127.0.0.1', 59216)
+[10:52:45]  Connected by ('127.0.0.1', 1379)
+[10:52:45]  Connected by ('127.0.0.1', 59471)
+[10:52:49]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:52:53]  Connected by ('127.0.0.1', 59601)
+[10:53:01]  Connected by ('127.0.0.1', 51227)
+[10:53:01]  Node 1 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:53:05]  Connected by ('127.0.0.1', 59847)
+[10:53:11]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:53:13]  Connected by ('127.0.0.1', 59976)
+[10:53:25]  Connected by ('127.0.0.1', 60163)
+[10:53:33]  Connected by ('127.0.0.1', 60279)
+[10:53:33]  Connected by ('127.0.0.1', 10791)
+[10:53:33]  Node2 is searching for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:53:33]  Node 2 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:53:33]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:53:34]  Connected by ('127.0.0.1', 60290)
+[10:53:34]  Connected by ('127.0.0.1', 60292)
+[10:53:34]  Connected by ('127.0.0.1', 60294)
+[10:53:34]  Connected by ('127.0.0.1', 60295)
+[10:53:45]  Connected by ('127.0.0.1', 60454)
+[10:53:53]  Connected by ('127.0.0.1', 60552)
+[10:53:55]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:54:05]  Connected by ('127.0.0.1', 60694)
+[10:54:13]  Connected by ('127.0.0.1', 60822)
+[10:54:17]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:54:25]  Connected by ('127.0.0.1', 60958)
+[10:54:33]  Connected by ('127.0.0.1', 61075)
+[10:54:39]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:54:45]  Connected by ('127.0.0.1', 61221)
+[10:54:53]  Connected by ('127.0.0.1', 61383)
+[10:55:01]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:55:05]  Connected by ('127.0.0.1', 61565)
+[10:55:13]  Connected by ('127.0.0.1', 61726)
+[10:55:23]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:55:25]  Connected by ('127.0.0.1', 61910)
+[10:55:33]  Connected by ('127.0.0.1', 62035)
+[10:55:45]  Connected by ('127.0.0.1', 62218)
+[10:55:45]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:55:53]  Connected by ('127.0.0.1', 62366)
+[10:56:05]  Connected by ('127.0.0.1', 62567)
+[10:56:07]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:56:13]  Connected by ('127.0.0.1', 62736)
+[10:56:25]  Connected by ('127.0.0.1', 62970)
+[10:56:29]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:56:33]  Connected by ('127.0.0.1', 63109)
+[10:56:45]  Connected by ('127.0.0.1', 63261)
+[10:56:51]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:56:53]  Connected by ('127.0.0.1', 63397)
+[10:57:05]  Connected by ('127.0.0.1', 63573)
+[10:57:13]  Connected by ('127.0.0.1', 63761)
+[10:57:13]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:57:25]  Connected by ('127.0.0.1', 63959)
+[10:57:33]  Connected by ('127.0.0.1', 64078)
+[10:57:35]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:57:45]  Connected by ('127.0.0.1', 64286)
+[10:57:53]  Connected by ('127.0.0.1', 64435)
+[10:57:57]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[10:58:05]  Connected by ('127.0.0.1', 64660)
+[10:58:13]  Connected by ('127.0.0.1', 64866)
+[10:58:19]  Node(s) [1, 2] is in the torrent and node(s)[] have left.
+[19:41:05]  ***************** Tracker program started just right now! *****************
+[19:41:25]  Connected by ('127.0.0.1', 45908)
+[19:41:25]  Connected by ('127.0.0.1', 63842)
+[19:41:27]  Node(s) [1] is in the torrent and node(s)[] have left.
+[19:41:43]  Connected by ('127.0.0.1', 52632)
+[19:41:43]  Connected by ('127.0.0.1', 64059)
+[19:41:46]  Connected by ('127.0.0.1', 1908)
+[19:41:46]  Connected by ('127.0.0.1', 64084)
+[19:41:49]  Connected by ('127.0.0.1', 50866)
+[19:41:49]  Node 1 owns 92abf8f80a1ac88adec7629f110ed69f1eda0cc2
+[19:41:49]  Node(s) [] is in the torrent and node(s)[1] have left.
+[19:41:54]  Connected by ('127.0.0.1', 28401)
+[19:41:54]  Connected by ('127.0.0.1', 64181)
+[19:42:06]  Connected by ('127.0.0.1', 64281)
+[19:42:11]  Node(s) [] is in the torrent and node(s)[1] have left.
+[19:42:14]  Connected by ('127.0.0.1', 64313)
+[19:42:15]  Connected by ('127.0.0.1', 9267)
+[19:42:15]  Node2 is searching for 92abf8f80a1ac88adec7629f110ed69f1eda0cc2
+[19:42:15]  Node 2 owns 92abf8f80a1ac88adec7629f110ed69f1eda0cc2
+[19:42:15]  Connected by ('127.0.0.1', 64317)
+[19:42:21]  Connected by ('127.0.0.1', 25225)
+[19:42:21]  Node2 is searching for 92abf8f80a1ac88adec7629f110ed69f1eda0cc2
+[19:42:21]  Node 2 owns 92abf8f80a1ac88adec7629f110ed69f1eda0cc2
+[19:42:21]  Connected by ('127.0.0.1', 64365)
+[19:42:26]  Connected by ('127.0.0.1', 64446)
+[19:42:33]  Node(s) [] is in the torrent and node(s)[1] have left.
+[19:42:34]  Connected by ('127.0.0.1', 6872)
+[19:42:34]  Node 1 owns 92abf8f80a1ac88adec7629f110ed69f1eda0cc2
+[19:42:37]  Connected by ('127.0.0.1', 47166)
+[19:42:37]  Connected by ('127.0.0.1', 64516)
+[19:42:38]  Connected by ('127.0.0.1', 16888)
+[19:42:38]  Node2 is searching for 92abf8f80a1ac88adec7629f110ed69f1eda0cc2
+[19:42:38]  Node 2 owns 92abf8f80a1ac88adec7629f110ed69f1eda0cc2
+[19:42:38]  Connected by ('127.0.0.1', 64530)
+[19:42:38]  Connected by ('127.0.0.1', 64531)
+[19:42:46]  Connected by ('127.0.0.1', 64622)
+[19:42:52]  Connected by ('127.0.0.1', 10863)
+[19:42:52]  Node 1 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[19:42:55]  Node(s) [] is in the torrent and node(s)[1] have left.
+[19:42:57]  Connected by ('127.0.0.1', 64725)
+[19:43:06]  Connected by ('127.0.0.1', 64829)
+[19:43:12]  Connected by ('127.0.0.1', 48554)
+[19:43:12]  Node2 is searching for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[19:43:12]  Node 2 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[19:43:12]  Connected by ('127.0.0.1', 64861)
+[19:43:13]  Connected by ('127.0.0.1', 49427)
+[19:43:13]  Node2 is searching for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[19:43:13]  Node 2 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[19:43:13]  Connected by ('127.0.0.1', 64881)
+[19:43:16]  Connected by ('127.0.0.1', 43510)
+[19:43:16]  Node 1 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[19:43:17]  Connected by ('127.0.0.1', 64920)
+[19:43:17]  Node(s) [] is in the torrent and node(s)[1] have left.
+[19:43:19]  Connected by ('127.0.0.1', 37313)
+[19:43:19]  Node2 is searching for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[19:43:19]  Node 2 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[19:43:19]  Connected by ('127.0.0.1', 64937)
+[19:43:20]  Connected by ('127.0.0.1', 58146)
+[19:43:20]  Node2 is searching for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[19:43:20]  Node 2 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[19:43:20]  Connected by ('127.0.0.1', 64943)
+[19:43:26]  Connected by ('127.0.0.1', 65024)
+[19:43:32]  Connected by ('127.0.0.1', 19165)
+[19:43:32]  Connected by ('127.0.0.1', 65064)
+[19:43:33]  Connected by ('127.0.0.1', 23310)
+[19:43:33]  Node 1 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[19:43:35]  Connected by ('127.0.0.1', 63031)
+[19:43:35]  Connected by ('127.0.0.1', 65114)
+[19:43:36]  Connected by ('127.0.0.1', 7903)
+[19:43:36]  Node2 is searching for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[19:43:36]  Node 2 owns 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[19:43:36]  Connected by ('127.0.0.1', 65116)
+[19:43:36]  Connected by ('127.0.0.1', 65118)
+[19:43:36]  Connected by ('127.0.0.1', 65120)
+[19:43:36]  Connected by ('127.0.0.1', 65121)
+[19:43:39]  Node(s) [] is in the torrent and node(s)[1] have left.
+[19:43:52]  Connected by ('127.0.0.1', 65280)
+[19:43:55]  Connected by ('127.0.0.1', 65357)
+[19:44:01]  Node(s) [] is in the torrent and node(s)[1] have left.
+[19:44:23]  Node(s) [] is in the torrent and node(s)[1] have left.
+[19:44:45]  Node(s) [] is in the torrent and node(s)[1] have left.
+[19:45:07]  Node(s) [] is in the torrent and node(s)[1] have left.
+[19:45:29]  Node(s) [2] is in the torrent and node(s)[] have left.
+[19:45:51]  Node(s) [] is in the torrent and node(s)[2] have left.
+[19:46:13]  Node(s) [] is in the torrent and node(s)[2] have left.
+[19:46:35]  Node(s) [] is in the torrent and node(s)[2] have left.

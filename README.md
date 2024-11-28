@@ -69,7 +69,7 @@ $ python3 tracker.py
    (Note that each of them must be run in a separate window of your terminal if you are running this project in a single local computer)
 
 ```
-$ python3 node.py -node_id 1
+$ python node.py -node_id 1
 # in another tab of terminal
 $ python3 node.py -node_id 2
 ```

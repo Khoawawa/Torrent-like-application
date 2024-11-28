@@ -45,67 +45,102 @@ class Node:
 
 
     def split_file_to_chunks(self, file_path: str, rng: tuple) -> list:
-        with open(file_path, "r+b") as f:
-            mm = mmap.mmap(f.fileno(), 0)[rng[0]: rng[1]]
-            # we divide each chunk to a fixed-size pieces to be transferable
+        with open(file_path, "rb") as f:
+            # Đọc toàn bộ nội dung file
+            f.seek(rng[0])  # Di chuyển con trỏ đến vị trí bắt đầu
+            content = f.read(rng[1] - rng[0])  # Đọc phần nội dung cần thiết
+            
+            # Chia thành các pieces có kích thước cố định
             piece_size = config.constants.CHUNK_PIECES_SIZE
-            return [mm[p: p + piece_size] for p in range(0, rng[1] - rng[0], piece_size)]
+            return [content[p: p + piece_size] for p in range(0, len(content), piece_size)]
 
     def reassemble_file(self, chunks: list, file_path: str):
-        with open(file_path, "bw+") as f:
-            for ch in chunks:
-                f.write(ch)
-            f.flush()
-            f.close()
-
-    def send_chunk(self, info_hash, rng: tuple, dest_node_id: int, dest_addr: tuple,conn_socket):
+        # Ghép tất cả các chunks lại
+        content = b''.join(chunks)
         
-        file_name = self.torrent_data['info']['file_name']
-        file_path = f"{config.directory.node_files_dir}node{self.node_id}/{file_name}"
-
-        chunk_pieces = self.split_file_to_chunks(file_path=file_path,
-                                                 rng=rng)
-        temp_sock = conn_socket
+        # Tạo thư mục cha nếu chưa tồn tại
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
         
-        for idx, p in enumerate(chunk_pieces):
-            msg = ChunkSharing(src_node_id=self.node_id,
-                               dest_node_id=dest_node_id,
-                               info_hash=info_hash,
-                               range=rng,
-                               idx=idx,
-                               chunk=p)
-            
-            encoded_msg = msg.encode()
-            msg_length = len(encoded_msg)
-            length_prefix = struct.pack("!I", msg_length)
-            temp_sock.sendall(length_prefix + encoded_msg)
-            
-            log_content = f"The {idx}/{len(chunk_pieces)} has been sent!"
-            log(node_id=self.node_id, content=log_content)
-            print(f"Message size: {sys.getsizeof(encoded_msg)} bytes")
-            
+        try:
+            # Thử decode như text file
+            text_content = content.decode('utf-8')
+            # Loại bỏ các khoảng trắng và newline dư thừa ở đầu và cuối
+            text_content = text_content.strip()
+            # Chuẩn hóa các dòng: thay thế nhiều newline thành một newline
+            text_content = '\n'.join(line.strip() for line in text_content.splitlines())
+            with open(file_path, 'w', encoding='utf-8', newline='') as f:
+                f.write(text_content)
+        except UnicodeDecodeError:
+            # Nếu không decode được thì write dưới dạng binary
+            with open(file_path, 'wb') as f:
+                f.write(content)
 
-        # now let's tell the neighboring peer that sending has finished (idx = -1)
+    def send_chunk(self, info_hash, rng: tuple, dest_node_id: int, dest_addr: tuple, conn_socket):
+        if 'files' in self.torrent_data['info']:  # Multi-file mode
+            folder_name = self.torrent_data['info']['file_name']
+            folder_path = f"{config.directory.node_files_dir}node{self.node_id}/{folder_name}"
+            
+            for file_info in self.torrent_data['info']['files']:
+                file_path = os.path.join(folder_path, file_info['file_name'])
+                chunk_pieces = self.split_file_to_chunks(file_path=file_path, rng=rng)
+                
+                for idx, p in enumerate(chunk_pieces):
+                    msg = ChunkSharing(src_node_id=self.node_id,
+                                     dest_node_id=dest_node_id,
+                                     info_hash=info_hash,
+                                     range=rng,
+                                     idx=idx,
+                                     chunk=p)
+                    
+                    encoded_msg = msg.encode()
+                    msg_length = len(encoded_msg)
+                    length_prefix = struct.pack("!I", msg_length)
+                    conn_socket.sendall(length_prefix + encoded_msg)
+                    
+                    log_content = f"The {idx}/{len(chunk_pieces)} of {file_info['file_name']} has been sent!"
+                    log(node_id=self.node_id, content=log_content)
+        else:  # Single file mode - existing code
+            file_name = self.torrent_data['info']['file_name']
+            file_path = f"{config.directory.node_files_dir}node{self.node_id}/{file_name}"
+            chunk_pieces = self.split_file_to_chunks(file_path=file_path, rng=rng)
+            
+            for idx, p in enumerate(chunk_pieces):
+                msg = ChunkSharing(src_node_id=self.node_id,
+                                 dest_node_id=dest_node_id,
+                                 info_hash=info_hash,
+                                 range=rng,
+                                 idx=idx,
+                                 chunk=p)
+                
+                encoded_msg = msg.encode()
+                msg_length = len(encoded_msg)
+                length_prefix = struct.pack("!I", msg_length)
+                conn_socket.sendall(length_prefix + encoded_msg)
+                
+                log_content = f"The {idx}/{len(chunk_pieces)} has been sent!"
+                log(node_id=self.node_id, content=log_content)
+
+        # Send finish message
         msg = ChunkSharing(src_node_id=self.node_id,
-                           dest_node_id=dest_node_id,
-                           info_hash=info_hash,
-                           range=rng)
+                          dest_node_id=dest_node_id,
+                          info_hash=info_hash,
+                          range=rng)
         encoded_msg = msg.encode()
-        # Send the length of the finish message followed by the message itself
         msg_length = len(encoded_msg)
         length_prefix = struct.pack("!I", msg_length)
-        temp_sock.sendall(length_prefix + encoded_msg)
+        conn_socket.sendall(length_prefix + encoded_msg)
 
-        log_content = "The process of sending a chunk to node{} of file {} has finished!".format(dest_node_id, file_name)
+        log_content = "The process of sending chunks has finished!"
         log(node_id=self.node_id, content=log_content)
 
+        # Update tracker
         msg = Node2Tracker(node_id=self.node_id,
-                           mode=config.tracker_requests_mode.UPDATE,
-                           info_hash=info_hash,
-                           left=0,
-                           port=self.rcv_socket.getsockname()[1])
+                          mode=config.tracker_requests_mode.UPDATE,
+                          info_hash=info_hash,
+                          left=0,
+                          port=self.rcv_socket.getsockname()[1])
         
-        tracker_sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+        tracker_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         tracker_sock.connect(tuple(config.constants.TRACKER_ADDR))
         tracker_sock.sendall(msg.encode())
         tracker_sock.close()
@@ -270,16 +305,6 @@ class Node:
         return sorted_downloaded_chunks
 
     def split_file_owners(self, file_owners: list, info: dict, info_hash):
-        '''
-        Method to split the file owners and assign each to a range of pieces.
-        
-        Args:
-            file_owners (list): A list of tuples (peer, freq_list), where:
-                - peer: Information about a peer (node_ID, addr, left).
-                - freq_list
-            info (dict): Torrent info data containing metadata about the file.
-            info_hash: Torrent identifier (e.g., unique hash to identify this torrent).
-        '''
         owners = []
         # get owners that are seeders
         for owner in file_owners:
@@ -292,44 +317,72 @@ class Node:
             return
         # sort owners based on their sending frequency
         owners = sorted(owners, key=lambda x: x[1], reverse=True)
-            
+        
         to_be_used_owners = owners[:config.constants.MAX_SPLITTNES_RATE]
-        #IMPLEMENT LOGIC FOR MULTI FILE OR ONE FILE HERE
-        # 1. first ask the size of the file from peers
-        log_content = f"You are going to download {info_hash} from Node(s) {[o[0]['node_id'] for o in to_be_used_owners]}"
-        file_size = info['file_size']
-        step = file_size / len(to_be_used_owners)
-        chunks_ranges = [(round(step*i), round(step*(i+1))) for i in range(len(to_be_used_owners))]
+        
+        # Check if it's a folder or single file
+        if 'files' in info:  # Multi-file mode
+            # Create folder if it doesn't exist
+            folder_path = f"{config.directory.node_files_dir}node{self.node_id}/{info['file_name']}"
+            os.makedirs(folder_path, exist_ok=True)
+            
+            # Download each file in the folder
+            for file_info in info['files']:
+                file_size = file_info['length']
+                step = file_size / len(to_be_used_owners)
+                chunks_ranges = [(round(step*i), round(step*(i+1))) for i in range(len(to_be_used_owners))]
+                
+                self.downloaded_files[info_hash] = []
+                neighboring_peers_threads = []
+                
+                for idx, obj in enumerate(to_be_used_owners):
+                    t = Thread(target=self.receive_chunk, args=(info_hash, chunks_ranges[idx], obj))
+                    t.setDaemon(True)
+                    t.start()
+                    neighboring_peers_threads.append(t)
+                
+                for t in neighboring_peers_threads:
+                    t.join()
+                    
+                # Sort and reassemble the file
+                sorted_chunks = self.sort_downloaded_chunks(info_hash=info_hash)
+                total_file = []
+                file_path = os.path.join(folder_path, file_info['file_name'])
+                
+                for chunk in sorted_chunks:
+                    for piece in chunk:
+                        total_file.append(piece["chunk"])
+                
+                self.reassemble_file(chunks=total_file, file_path=file_path)
+                log_content = f"{file_info['file_name']} has been downloaded to {folder_path}"
+                log(node_id=self.node_id, content=log_content)
+                
+        else:  # Single file mode - existing code
+            file_size = info['file_size']
+            step = file_size / len(to_be_used_owners)
+            chunks_ranges = [(round(step*i), round(step*(i+1))) for i in range(len(to_be_used_owners))]
 
-        # 3. Create a thread for each neighbor peer to get a chunk from it
-        self.downloaded_files[info_hash] = []
-        neighboring_peers_threads = []
-        for idx, obj in enumerate(to_be_used_owners):
-            t = Thread(target=self.receive_chunk, args=(info_hash, chunks_ranges[idx], obj))
-            t.setDaemon(True)
-            t.start()
-            neighboring_peers_threads.append(t)
-        for t in neighboring_peers_threads:
-            t.join()
+            self.downloaded_files[info_hash] = []
+            neighboring_peers_threads = []
+            for idx, obj in enumerate(to_be_used_owners):
+                t = Thread(target=self.receive_chunk, args=(info_hash, chunks_ranges[idx], obj))
+                t.setDaemon(True)
+                t.start()
+                neighboring_peers_threads.append(t)
+            for t in neighboring_peers_threads:
+                t.join()
 
-        log_content = "All the chunks of {} has downloaded from neighboring peers. But they must be reassembled!".format(info_hash)
-        log(node_id=self.node_id, content=log_content)
-
-        # 4. Now we have downloaded all the chunks of the file. It's time to sort them.
-        sorted_chunks = self.sort_downloaded_chunks(info_hash=info_hash)
-        log_content = f"All the pieces of the {info_hash} is now sorted and ready to be reassembled."
-        log(node_id=self.node_id, content=log_content)
-
-        # 5. Finally, we assemble the chunks to re-build the file
-        total_file = []
-        file_path = f"{config.directory.node_files_dir}node{self.node_id}/{info['file_name']}"
-        for chunk in sorted_chunks:
-            for piece in chunk:
-                total_file.append(piece["chunk"])
-        self.reassemble_file(chunks=total_file,
-                             file_path=file_path)
-        log_content = f"{info['file_name']} has successfully downloaded and saved in my files directory."
-        log(node_id=self.node_id, content=log_content)
+            sorted_chunks = self.sort_downloaded_chunks(info_hash=info_hash)
+            total_file = []
+            file_path = f"{config.directory.node_files_dir}node{self.node_id}/{info['file_name']}"
+            
+            for chunk in sorted_chunks:
+                for piece in chunk:
+                    total_file.append(piece["chunk"])
+            self.reassemble_file(chunks=total_file, file_path=file_path)
+            log_content = f"{info['file_name']} has successfully downloaded and saved in my files directory."
+            log(node_id=self.node_id, content=log_content)
+            
         self.files.append(info['file_name'])
 
     def set_download_mode(self, torrent_file: str):

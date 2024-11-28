@@ -767,3 +767,304 @@ incomplete: 0
 [19:27:14]  I informed the tracker that I'm still alive in the torrent!
 [19:27:34]  I informed the tracker that I'm still alive in the torrent!
 [19:27:40]  Receiving Socket was closed: stopping listener
+[09:35:11]  ***************** Node program started just right now! *****************
+[09:35:11]  You entered Torrent. Receiving port: 32822
+[09:35:11]  I informed the tracker that I'm still alive in the torrent!
+[09:37:08]  ***************** Node program started just right now! *****************
+[09:37:08]  You entered Torrent. Receiving port: 38911
+[09:37:08]  I informed the tracker that I'm still alive in the torrent!
+[09:37:23]  You dont have the torrent file!
+[09:37:28]  I informed the tracker that I'm still alive in the torrent!
+[09:37:30]  You dont have the torrent file!
+[09:37:33]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[09:37:33]  Sending request to tracker on port 15138 for 92abf8f80a1ac88adec7629f110ed69f1eda0cc2
+[09:37:33]  Asking for chunks of node 1 at address ['127.0.0.1', 21194]
+[09:37:33]  I sent a request for a chunk of 92abf8f80a1ac88adec7629f110ed69f1eda0cc2 for node1
+[09:37:33]  All the chunks of 92abf8f80a1ac88adec7629f110ed69f1eda0cc2 has downloaded from neighboring peers. But they must be reassembled!
+[09:37:33]  All the pieces of the 92abf8f80a1ac88adec7629f110ed69f1eda0cc2 is now sorted and ready to be reassembled.
+[09:37:33]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[09:37:48]  I informed the tracker that I'm still alive in the torrent!
+[09:38:08]  I informed the tracker that I'm still alive in the torrent!
+[09:38:49]  ***************** Node program started just right now! *****************
+[09:38:49]  You entered Torrent. Receiving port: 11450
+[09:38:49]  I informed the tracker that I'm still alive in the torrent!
+[09:39:04]  You dont have the torrent file!
+[09:39:09]  I informed the tracker that I'm still alive in the torrent!
+[09:39:13]  You just started to download a_b_c.torrent. Let's search it in torrent!
+[09:39:13]  Sending request to tracker on port 63785 for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[09:39:13]  No one has 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[09:39:29]  I informed the tracker that I'm still alive in the torrent!
+[09:39:49]  I informed the tracker that I'm still alive in the torrent!
+[09:40:09]  I informed the tracker that I'm still alive in the torrent!
+[09:40:29]  I informed the tracker that I'm still alive in the torrent!
+[09:40:49]  I informed the tracker that I'm still alive in the torrent!
+[09:41:09]  I informed the tracker that I'm still alive in the torrent!
+[09:41:29]  I informed the tracker that I'm still alive in the torrent!
+[09:41:49]  I informed the tracker that I'm still alive in the torrent!
+[09:42:09]  I informed the tracker that I'm still alive in the torrent!
+[09:42:29]  I informed the tracker that I'm still alive in the torrent!
+[09:42:49]  I informed the tracker that I'm still alive in the torrent!
+[09:43:09]  I informed the tracker that I'm still alive in the torrent!
+[09:43:29]  I informed the tracker that I'm still alive in the torrent!
+[10:01:56]  ***************** Node program started just right now! *****************
+[10:01:56]  You entered Torrent. Receiving port: 57592
+[10:01:56]  I informed the tracker that I'm still alive in the torrent!
+[10:02:06]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[10:02:06]  Sending request to tracker on port 45248 for 92abf8f80a1ac88adec7629f110ed69f1eda0cc2
+[10:02:06]  Asking for chunks of node 1 at address ['127.0.0.1', 62014]
+[10:02:06]  I sent a request for a chunk of 92abf8f80a1ac88adec7629f110ed69f1eda0cc2 for node1
+[10:02:06]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[10:02:16]  I informed the tracker that I'm still alive in the torrent!
+[10:02:36]  I informed the tracker that I'm still alive in the torrent!
+[10:02:37]  You dont have the torrent file!
+[10:02:41]  You just started to download a_b_c.torrent. Let's search it in torrent!
+[10:02:41]  Sending request to tracker on port 4666 for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:02:41]  Asking for chunks of node 1 at address ['127.0.0.1', 62014]
+[10:02:41]  I sent a request for a chunk of 362b593aa3a56fdb454fbdca3c8b119816807c2a for node1
+[10:02:41]  file_A.txt has been downloaded to node_files/node2/a_b_c
+[10:02:41]  Asking for chunks of node 1 at address ['127.0.0.1', 62014]
+[10:02:41]  I sent a request for a chunk of 362b593aa3a56fdb454fbdca3c8b119816807c2a for node1
+[10:02:41]  file_B.txt has been downloaded to node_files/node2/a_b_c
+[10:02:41]  Asking for chunks of node 1 at address ['127.0.0.1', 62014]
+[10:02:41]  I sent a request for a chunk of 362b593aa3a56fdb454fbdca3c8b119816807c2a for node1
+[10:02:41]  file_C.txt has been downloaded to node_files/node2/a_b_c
+[10:02:56]  I informed the tracker that I'm still alive in the torrent!
+[10:03:16]  I informed the tracker that I'm still alive in the torrent!
+[10:03:36]  I informed the tracker that I'm still alive in the torrent!
+[10:03:56]  I informed the tracker that I'm still alive in the torrent!
+[10:04:16]  I informed the tracker that I'm still alive in the torrent!
+[10:04:36]  I informed the tracker that I'm still alive in the torrent!
+[10:04:56]  I informed the tracker that I'm still alive in the torrent!
+[10:05:16]  I informed the tracker that I'm still alive in the torrent!
+[10:05:36]  I informed the tracker that I'm still alive in the torrent!
+[10:05:56]  I informed the tracker that I'm still alive in the torrent!
+[10:06:16]  I informed the tracker that I'm still alive in the torrent!
+[10:06:36]  I informed the tracker that I'm still alive in the torrent!
+[10:06:56]  I informed the tracker that I'm still alive in the torrent!
+[10:07:16]  I informed the tracker that I'm still alive in the torrent!
+[10:09:34]  ***************** Node program started just right now! *****************
+[10:09:34]  You entered Torrent. Receiving port: 31240
+[10:09:34]  I informed the tracker that I'm still alive in the torrent!
+[10:09:54]  I informed the tracker that I'm still alive in the torrent!
+[10:09:56]  You just started to download a_b_c.torrent. Let's search it in torrent!
+[10:09:56]  Sending request to tracker on port 33182 for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:09:56]  Asking for chunks of node 1 at address ['127.0.0.1', 46658]
+[10:09:56]  I sent a request for a chunk of 362b593aa3a56fdb454fbdca3c8b119816807c2a for node1
+[10:10:06]  file_A.txt has been downloaded to node_files/node2/a_b_c
+[10:10:06]  Asking for chunks of node 1 at address ['127.0.0.1', 46658]
+[10:10:06]  I sent a request for a chunk of 362b593aa3a56fdb454fbdca3c8b119816807c2a for node1
+[10:10:14]  I informed the tracker that I'm still alive in the torrent!
+[10:10:16]  file_B.txt has been downloaded to node_files/node2/a_b_c
+[10:10:16]  Asking for chunks of node 1 at address ['127.0.0.1', 46658]
+[10:10:16]  I sent a request for a chunk of 362b593aa3a56fdb454fbdca3c8b119816807c2a for node1
+[10:10:26]  file_C.txt has been downloaded to node_files/node2/a_b_c
+[10:10:34]  I informed the tracker that I'm still alive in the torrent!
+[10:10:54]  I informed the tracker that I'm still alive in the torrent!
+[10:11:14]  I informed the tracker that I'm still alive in the torrent!
+[10:11:34]  I informed the tracker that I'm still alive in the torrent!
+[10:11:54]  I informed the tracker that I'm still alive in the torrent!
+[10:12:14]  I informed the tracker that I'm still alive in the torrent!
+[10:12:34]  I informed the tracker that I'm still alive in the torrent!
+[10:12:54]  I informed the tracker that I'm still alive in the torrent!
+[10:13:14]  I informed the tracker that I'm still alive in the torrent!
+[10:13:34]  I informed the tracker that I'm still alive in the torrent!
+[10:14:41]  ***************** Node program started just right now! *****************
+[10:14:41]  You entered Torrent. Receiving port: 20845
+[10:14:41]  I informed the tracker that I'm still alive in the torrent!
+[10:14:52]  You dont have the torrent file!
+[10:15:01]  I informed the tracker that I'm still alive in the torrent!
+[10:15:03]  You just started to download a_b_c.torrent. Let's search it in torrent!
+[10:15:03]  Sending request to tracker on port 30493 for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:15:03]  Asking for chunks of node 1 at address ['127.0.0.1', 64579]
+[10:15:03]  I sent a request for a chunk of 362b593aa3a56fdb454fbdca3c8b119816807c2a for node1
+[10:15:03]  file_A.txt has been downloaded to node_files/node2/a_b_c
+[10:15:03]  Asking for chunks of node 1 at address ['127.0.0.1', 64579]
+[10:15:03]  I sent a request for a chunk of 362b593aa3a56fdb454fbdca3c8b119816807c2a for node1
+[10:15:03]  file_B.txt has been downloaded to node_files/node2/a_b_c
+[10:15:03]  Asking for chunks of node 1 at address ['127.0.0.1', 64579]
+[10:15:03]  I sent a request for a chunk of 362b593aa3a56fdb454fbdca3c8b119816807c2a for node1
+[10:15:03]  file_C.txt has been downloaded to node_files/node2/a_b_c
+[10:15:21]  I informed the tracker that I'm still alive in the torrent!
+[10:15:41]  I informed the tracker that I'm still alive in the torrent!
+[10:16:01]  I informed the tracker that I'm still alive in the torrent!
+[10:16:21]  I informed the tracker that I'm still alive in the torrent!
+[10:18:54]  ***************** Node program started just right now! *****************
+[10:18:54]  You entered Torrent. Receiving port: 5479
+[10:18:54]  I informed the tracker that I'm still alive in the torrent!
+[10:18:56]  You just started to download a_b_c.torrent. Let's search it in torrent!
+[10:18:56]  Sending request to tracker on port 24105 for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:18:56]  Asking for chunks of node 1 at address ['127.0.0.1', 30932]
+[10:18:56]  I sent a request for a chunk of 362b593aa3a56fdb454fbdca3c8b119816807c2a for node1
+[10:18:58]  file_A.txt has been downloaded to node_files/node2/a_b_c
+[10:18:58]  Asking for chunks of node 1 at address ['127.0.0.1', 30932]
+[10:18:58]  I sent a request for a chunk of 362b593aa3a56fdb454fbdca3c8b119816807c2a for node1
+[10:19:00]  file_B.txt has been downloaded to node_files/node2/a_b_c
+[10:19:00]  Asking for chunks of node 1 at address ['127.0.0.1', 30932]
+[10:19:00]  I sent a request for a chunk of 362b593aa3a56fdb454fbdca3c8b119816807c2a for node1
+[10:19:02]  file_C.txt has been downloaded to node_files/node2/a_b_c
+[10:19:14]  I informed the tracker that I'm still alive in the torrent!
+[10:20:28]  ***************** Node program started just right now! *****************
+[10:20:28]  You entered Torrent. Receiving port: 42691
+[10:20:28]  I informed the tracker that I'm still alive in the torrent!
+[10:20:48]  I informed the tracker that I'm still alive in the torrent!
+[10:21:01]  You just started to download a_b_c.torrent. Let's search it in torrent!
+[10:21:01]  Sending request to tracker on port 2894 for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:21:01]  Asking for chunks of node 1 at address ['127.0.0.1', 46623]
+[10:21:01]  I sent a request for a chunk of 362b593aa3a56fdb454fbdca3c8b119816807c2a for node1
+[10:21:01]  file_A.txt has been downloaded to node_files/node2/a_b_c
+[10:21:01]  Asking for chunks of node 1 at address ['127.0.0.1', 46623]
+[10:21:01]  I sent a request for a chunk of 362b593aa3a56fdb454fbdca3c8b119816807c2a for node1
+[10:21:01]  file_B.txt has been downloaded to node_files/node2/a_b_c
+[10:21:01]  Asking for chunks of node 1 at address ['127.0.0.1', 46623]
+[10:21:01]  I sent a request for a chunk of 362b593aa3a56fdb454fbdca3c8b119816807c2a for node1
+[10:21:01]  file_C.txt has been downloaded to node_files/node2/a_b_c
+[10:21:08]  I informed the tracker that I'm still alive in the torrent!
+[10:21:28]  I informed the tracker that I'm still alive in the torrent!
+[10:21:48]  I informed the tracker that I'm still alive in the torrent!
+[10:22:08]  I informed the tracker that I'm still alive in the torrent!
+[10:22:28]  I informed the tracker that I'm still alive in the torrent!
+[10:23:01]  ***************** Node program started just right now! *****************
+[10:23:01]  You entered Torrent. Receiving port: 44518
+[10:23:01]  I informed the tracker that I'm still alive in the torrent!
+[10:23:03]  You just started to download a_b_c.torrent. Let's search it in torrent!
+[10:23:03]  Sending request to tracker on port 17583 for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:23:05]  file_A.txt has been downloaded to node_files/node2/a_b_c
+[10:23:07]  file_B.txt has been downloaded to node_files/node2/a_b_c
+[10:23:09]  file_C.txt has been downloaded to node_files/node2/a_b_c
+[10:23:21]  I informed the tracker that I'm still alive in the torrent!
+[10:23:41]  I informed the tracker that I'm still alive in the torrent!
+[10:24:01]  I informed the tracker that I'm still alive in the torrent!
+[10:24:21]  I informed the tracker that I'm still alive in the torrent!
+[10:24:45]  ***************** Node program started just right now! *****************
+[10:24:45]  You entered Torrent. Receiving port: 29655
+[10:24:45]  I informed the tracker that I'm still alive in the torrent!
+[10:24:47]  You just started to download a_b_c.torrent. Let's search it in torrent!
+[10:24:47]  Sending request to tracker on port 26633 for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:24:49]  file_A.txt has been downloaded to node_files/node2/a_b_c
+[10:24:52]  file_B.txt has been downloaded to node_files/node2/a_b_c
+[10:24:54]  file_C.txt has been downloaded to node_files/node2/a_b_c
+[10:44:05]  ***************** Node program started just right now! *****************
+[10:44:05]  You entered Torrent. Receiving port: 63487
+[10:44:05]  I informed the tracker that I'm still alive in the torrent!
+[10:44:25]  I informed the tracker that I'm still alive in the torrent!
+[10:44:27]  You dont have the torrent file!
+[10:44:34]  You just started to download a_b_c.torrent. Let's search it in torrent!
+[10:44:34]  Sending request to tracker on port 8058 for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:44:34]  Asking for chunks of node 1 at address ['127.0.0.1', 44143]
+[10:44:34]  I sent a request for a chunk of 362b593aa3a56fdb454fbdca3c8b119816807c2a for node1
+[10:44:34]  file_A.txt has been downloaded to node_files/node2/a_b_c
+[10:44:34]  Asking for chunks of node 1 at address ['127.0.0.1', 44143]
+[10:44:34]  I sent a request for a chunk of 362b593aa3a56fdb454fbdca3c8b119816807c2a for node1
+[10:44:34]  file_B.txt has been downloaded to node_files/node2/a_b_c
+[10:44:34]  Asking for chunks of node 1 at address ['127.0.0.1', 44143]
+[10:44:34]  I sent a request for a chunk of 362b593aa3a56fdb454fbdca3c8b119816807c2a for node1
+[10:44:34]  file_C.txt has been downloaded to node_files/node2/a_b_c
+[10:44:45]  I informed the tracker that I'm still alive in the torrent!
+[10:45:05]  I informed the tracker that I'm still alive in the torrent!
+[10:45:25]  I informed the tracker that I'm still alive in the torrent!
+[10:45:45]  I informed the tracker that I'm still alive in the torrent!
+[10:46:05]  I informed the tracker that I'm still alive in the torrent!
+[10:48:06]  ***************** Node program started just right now! *****************
+[10:48:06]  You entered Torrent. Receiving port: 7514
+[10:48:06]  I informed the tracker that I'm still alive in the torrent!
+[10:48:09]  You just started to download a_b_c.torrent. Let's search it in torrent!
+[10:48:09]  Sending request to tracker on port 34420 for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:48:09]  Asking for chunks of node 1 at address ['127.0.0.1', 23305]
+[10:48:09]  I sent a request for a chunk of 362b593aa3a56fdb454fbdca3c8b119816807c2a for node1
+[10:48:11]  file_A.txt has been downloaded to node_files/node2/a_b_c
+[10:48:11]  Asking for chunks of node 1 at address ['127.0.0.1', 23305]
+[10:48:11]  I sent a request for a chunk of 362b593aa3a56fdb454fbdca3c8b119816807c2a for node1
+[10:48:13]  file_B.txt has been downloaded to node_files/node2/a_b_c
+[10:48:13]  Asking for chunks of node 1 at address ['127.0.0.1', 23305]
+[10:48:13]  I sent a request for a chunk of 362b593aa3a56fdb454fbdca3c8b119816807c2a for node1
+[10:48:15]  file_C.txt has been downloaded to node_files/node2/a_b_c
+[10:48:26]  I informed the tracker that I'm still alive in the torrent!
+[10:48:46]  I informed the tracker that I'm still alive in the torrent!
+[10:49:06]  I informed the tracker that I'm still alive in the torrent!
+[10:49:26]  I informed the tracker that I'm still alive in the torrent!
+[10:49:46]  I informed the tracker that I'm still alive in the torrent!
+[10:50:06]  I informed the tracker that I'm still alive in the torrent!
+[10:50:26]  I informed the tracker that I'm still alive in the torrent!
+[10:50:46]  I informed the tracker that I'm still alive in the torrent!
+[10:51:06]  I informed the tracker that I'm still alive in the torrent!
+[10:51:26]  I informed the tracker that I'm still alive in the torrent!
+[10:52:45]  ***************** Node program started just right now! *****************
+[10:52:45]  You entered Torrent. Receiving port: 43091
+[10:52:45]  I informed the tracker that I'm still alive in the torrent!
+[10:53:05]  I informed the tracker that I'm still alive in the torrent!
+[10:53:25]  I informed the tracker that I'm still alive in the torrent!
+[10:53:33]  You just started to download a_b_c.torrent. Let's search it in torrent!
+[10:53:33]  Sending request to tracker on port 10791 for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[10:53:33]  Asking for chunks of node 1 at address ['127.0.0.1', 29854]
+[10:53:33]  I sent a request for a chunk of 362b593aa3a56fdb454fbdca3c8b119816807c2a for node1
+[10:53:34]  file_A.txt has been downloaded to node_files/node2/a_b_c
+[10:53:34]  Asking for chunks of node 1 at address ['127.0.0.1', 29854]
+[10:53:34]  I sent a request for a chunk of 362b593aa3a56fdb454fbdca3c8b119816807c2a for node1
+[10:53:34]  file_B.txt has been downloaded to node_files/node2/a_b_c
+[10:53:34]  Asking for chunks of node 1 at address ['127.0.0.1', 29854]
+[10:53:34]  I sent a request for a chunk of 362b593aa3a56fdb454fbdca3c8b119816807c2a for node1
+[10:53:34]  file_C.txt has been downloaded to node_files/node2/a_b_c
+[10:53:45]  I informed the tracker that I'm still alive in the torrent!
+[10:54:05]  I informed the tracker that I'm still alive in the torrent!
+[10:54:25]  I informed the tracker that I'm still alive in the torrent!
+[10:54:45]  I informed the tracker that I'm still alive in the torrent!
+[10:55:05]  I informed the tracker that I'm still alive in the torrent!
+[10:55:25]  I informed the tracker that I'm still alive in the torrent!
+[10:55:45]  I informed the tracker that I'm still alive in the torrent!
+[10:56:05]  I informed the tracker that I'm still alive in the torrent!
+[10:56:25]  I informed the tracker that I'm still alive in the torrent!
+[10:56:45]  I informed the tracker that I'm still alive in the torrent!
+[10:57:05]  I informed the tracker that I'm still alive in the torrent!
+[10:57:25]  I informed the tracker that I'm still alive in the torrent!
+[10:57:45]  I informed the tracker that I'm still alive in the torrent!
+[10:58:05]  I informed the tracker that I'm still alive in the torrent!
+[19:41:54]  ***************** Node program started just right now! *****************
+[19:41:54]  You entered Torrent. Receiving port: 63864
+[19:41:54]  I informed the tracker that I'm still alive in the torrent!
+[19:42:02]  You dont have the torrent file!
+[19:42:14]  I informed the tracker that I'm still alive in the torrent!
+[19:42:15]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[19:42:15]  Sending request to tracker on port 9267 for 92abf8f80a1ac88adec7629f110ed69f1eda0cc2
+[19:42:15]  No one has 92abf8f80a1ac88adec7629f110ed69f1eda0cc2
+[19:42:21]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[19:42:21]  Sending request to tracker on port 25225 for 92abf8f80a1ac88adec7629f110ed69f1eda0cc2
+[19:42:21]  No one has 92abf8f80a1ac88adec7629f110ed69f1eda0cc2
+[19:42:37]  ***************** Node program started just right now! *****************
+[19:42:37]  You entered Torrent. Receiving port: 51737
+[19:42:37]  I informed the tracker that I'm still alive in the torrent!
+[19:42:38]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[19:42:38]  Sending request to tracker on port 16888 for 92abf8f80a1ac88adec7629f110ed69f1eda0cc2
+[19:42:38]  Asking for chunks of node 1 at address ['127.0.0.1', 64996]
+[19:42:38]  I sent a request for a chunk of 92abf8f80a1ac88adec7629f110ed69f1eda0cc2 for node1
+[19:42:38]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[19:42:57]  I informed the tracker that I'm still alive in the torrent!
+[19:42:58]  You dont have the torrent file!
+[19:43:04]  You dont have the torrent file!
+[19:43:12]  You just started to download a_b_c.torrent. Let's search it in torrent!
+[19:43:12]  Sending request to tracker on port 48554 for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[19:43:12]  No one has 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[19:43:13]  You just started to download a_b_c.torrent. Let's search it in torrent!
+[19:43:13]  Sending request to tracker on port 49427 for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[19:43:13]  No one has 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[19:43:17]  I informed the tracker that I'm still alive in the torrent!
+[19:43:19]  You just started to download a_b_c.torrent. Let's search it in torrent!
+[19:43:19]  Sending request to tracker on port 37313 for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[19:43:19]  No one has 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[19:43:20]  You just started to download a_b_c.torrent. Let's search it in torrent!
+[19:43:20]  Sending request to tracker on port 58146 for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[19:43:20]  No one has 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[19:43:35]  ***************** Node program started just right now! *****************
+[19:43:35]  You entered Torrent. Receiving port: 53116
+[19:43:35]  I informed the tracker that I'm still alive in the torrent!
+[19:43:36]  You just started to download a_b_c.torrent. Let's search it in torrent!
+[19:43:36]  Sending request to tracker on port 7903 for 362b593aa3a56fdb454fbdca3c8b119816807c2a
+[19:43:36]  Asking for chunks of node 1 at address ['127.0.0.1', 13063]
+[19:43:36]  I sent a request for a chunk of 362b593aa3a56fdb454fbdca3c8b119816807c2a for node1
+[19:43:36]  file_A.txt has been downloaded to node_files/node2/a_b_c
+[19:43:36]  Asking for chunks of node 1 at address ['127.0.0.1', 13063]
+[19:43:36]  I sent a request for a chunk of 362b593aa3a56fdb454fbdca3c8b119816807c2a for node1
+[19:43:36]  file_B.txt has been downloaded to node_files/node2/a_b_c
+[19:43:36]  Asking for chunks of node 1 at address ['127.0.0.1', 13063]
+[19:43:36]  I sent a request for a chunk of 362b593aa3a56fdb454fbdca3c8b119816807c2a for node1
+[19:43:36]  file_C.txt has been downloaded to node_files/node2/a_b_c
+[19:43:55]  I informed the tracker that I'm still alive in the torrent!
