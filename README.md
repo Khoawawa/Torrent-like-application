@@ -18,7 +18,7 @@ FACULTY OF COMPUTER SCIENCE AND ENGINEERING
 **Computer Network / Semester 241**
 <br/>
 **Group 8**
-
+# Project: SIMPLE TORRENT-LIKE APPLICATION
 </div>
 
 Table of contents
@@ -42,7 +42,6 @@ Table of contents
    * [Conclusion](#conclusion)
 
 <!--te-->
-# Project: SIMPLE TORRENT-LIKE APPLICATION
 ## Team members
 ## Requirements
 Đề bài được mô tả chi tiết trong file <[HK1_2122_VideoStreamingApplication_Assig1.pdf](https://github.com/toanvo4121/CSE-ComputerNetwork-VideoStreamingApplication/files/7495860/HK1_2122_VideoStreamingApplication_Assig1.pdf)>
