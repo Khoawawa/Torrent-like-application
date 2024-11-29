@@ -68,3 +68,35 @@
 [17:54:12]  I informed the tracker that I'm still alive in the torrent!
 [17:54:32]  I informed the tracker that I'm still alive in the torrent!
 [17:54:52]  I informed the tracker that I'm still alive in the torrent!
+[17:55:12]  I informed the tracker that I'm still alive in the torrent!
+[17:55:32]  I informed the tracker that I'm still alive in the torrent!
+[17:55:52]  I informed the tracker that I'm still alive in the torrent!
+[17:56:12]  I informed the tracker that I'm still alive in the torrent!
+[17:56:32]  I informed the tracker that I'm still alive in the torrent!
+[17:56:52]  I informed the tracker that I'm still alive in the torrent!
+[17:57:12]  I informed the tracker that I'm still alive in the torrent!
+[17:57:32]  I informed the tracker that I'm still alive in the torrent!
+[17:57:52]  I informed the tracker that I'm still alive in the torrent!
+[17:58:12]  I informed the tracker that I'm still alive in the torrent!
+[17:58:32]  I informed the tracker that I'm still alive in the torrent!
+[18:40:27]  ***************** Node program started just right now! *****************
+[18:40:27]  You entered Torrent. Receiving port: 55645
+[18:40:27]  I informed the tracker that I'm still alive in the torrent!
+[18:40:42]  For info hash d91838522436ecfe7d0595ac62e1a2a32457da2a:
+complete: 1
+incomplete: 0
+downloaded: 71
+[18:40:47]  I informed the tracker that I'm still alive in the torrent!
+[18:41:01]  You just started to download file_A.txt.torrent. Let's search it in torrent!
+[18:41:01]  Sending request to tracker for d91838522436ecfe7d0595ac62e1a2a32457da2a
+[18:41:01]  Asking for chunks of node 2 at address ['10.9.1.190', 54640]
+[18:41:01]  Asking for chunks of node 1 at address ['10.9.1.75', 55590]
+[18:41:01]  I sent a request for a chunk of d91838522436ecfe7d0595ac62e1a2a32457da2a for node2
+[18:41:01]  I sent a request for a chunk of d91838522436ecfe7d0595ac62e1a2a32457da2a for node1
+[18:41:01]  All the chunks of d91838522436ecfe7d0595ac62e1a2a32457da2a has downloaded from neighboring peers. But they must be reassembled!
+[18:41:01]  All the pieces of the d91838522436ecfe7d0595ac62e1a2a32457da2a is now sorted and ready to be reassembled.
+[18:41:01]  file_A.txt has successfully downloaded and saved in my files directory.
+[18:41:07]  I informed the tracker that I'm still alive in the torrent!
+[18:41:27]  I informed the tracker that I'm still alive in the torrent!
+[18:41:47]  I informed the tracker that I'm still alive in the torrent!
+[18:41:48]  You exited the torrent!

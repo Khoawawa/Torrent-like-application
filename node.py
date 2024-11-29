@@ -43,13 +43,8 @@ class Node:
         self.torrent_data = None
         print(self.rcv_socket.getsockname())
 
-    def send_segment(self, sock: socket.socket, data: bytes, addr: tuple):
-        print(addr)
-        sock.connect(addr)
-        sock.sendall(data)
-
-
     def split_file_to_chunks(self, file_path: str, rng: tuple) -> list:
+        
         with open(file_path, "r+b") as f:
             mm = mmap.mmap(f.fileno(), 0)[rng[0]: rng[1]]
             # we divide each chunk to a fixed-size pieces to be transferable
@@ -62,13 +57,41 @@ class Node:
                 f.write(ch)
             f.flush()
             f.close()
-
+    def split_files_to_chunk(self,folder_path: str,rng: tuple):
+        files = [f for f in os.listdir(folder_path)]
+        initial_byte,ending_byte = rng
+        piece_size = config.constants.CHUNK_PIECES_SIZE
+        chunk_pieces = []
+        folder_offset = 0
+        for file in files:
+            file_path = os.path.join(folder_path,file)
+            file_size = os.path.getsize(file_path)
+            
+            if initial_byte >= file_size + folder_offset:
+                folder_offset += file_size
+                continue
+            with open(file_path, "r+b") as f:
+                mm = mmap.mmap(f.fileno(), 0)
+                
+                start = max(0, initial_byte - folder_offset)
+                end = min(file_size,ending_byte - folder_offset)
+                
+                for p in range(start,end,piece_size):
+                    chunk_pieces.append(mm[p: min(p+piece_size, end)])
+            folder_offset += file_size
+            
+            if folder_offset >= ending_byte:
+                break
+        return chunk_pieces
+    
     def send_chunk(self, info_hash, rng: tuple, dest_node_id: int, dest_addr: tuple,conn_socket):
         
         file_name = self.torrent_data['info']['file_name']
         file_path = f"{config.directory.node_files_dir}node{self.node_id}/{file_name}"
-
-        chunk_pieces = self.split_file_to_chunks(file_path=file_path,
+        if 'files' in self.torrent_data['info']:
+            chunk_pieces = self.split_files_to_chunk(folder_path=file_path,rng=rng)
+        else:
+            chunk_pieces = self.split_file_to_chunks(file_path=file_path,
                                                  rng=rng)
         temp_sock = conn_socket
         
@@ -314,7 +337,28 @@ class Node:
             sorted_downloaded_chunks.append(value_sorted_by_idx)
 
         return sorted_downloaded_chunks
-
+    def reassemble_folder(self,chunks,folder_path,info):
+        if not os.path.exists(folder_path):
+            os.makedirs(folder_path)
+        folder_offset = 0
+        piece_size = config.constants.CHUNK_PIECES_SIZE
+        for file_info in info['files']:
+            file_name = file_info['file_name']
+            file_size = file_info['length']
+            num_chunks = (file_size +piece_size -1) // piece_size
+            
+            file_path = os.path.join(folder_path,file_name)
+            
+            with open(file_path,"wb+") as f:
+                curr_chunk_idx = 0
+                while curr_chunk_idx < num_chunks:
+                    chunk = chunks[curr_chunk_idx + folder_offset]
+                    
+                    f.write(chunk)
+                    curr_chunk_idx+=1
+                    
+            folder_offset += num_chunks
+                    
     def split_file_owners(self, file_owners: list, info: dict, info_hash):
         '''
         Method to split the file owners and assign each to a range of pieces.
@@ -341,7 +385,6 @@ class Node:
 
         to_be_used_owners = owners[:config.constants.MAX_SPLITTNES_RATE]
         #IMPLEMENT LOGIC FOR MULTI FILE OR ONE FILE HERE
-        # 1. first ask the size of the file from peers
         log_content = f"You are going to download {info_hash} from Node(s) {[o[0]['node_id'] for o in to_be_used_owners]}"
         file_size = info['file_size']
         step = file_size / len(to_be_used_owners)
@@ -372,7 +415,10 @@ class Node:
         for chunk in sorted_chunks:
             for piece in chunk:
                 total_file.append(piece["chunk"])
-        self.reassemble_file(chunks=total_file,
+        if 'files' in info:
+            self.reassemble_folder(chunks=total_file,folder_path= file_path,info=info)
+        else:
+            self.reassemble_file(chunks=total_file,
                              file_path=file_path)
         log_content = f"{info['file_name']} has successfully downloaded and saved in my files directory."
         log(node_id=self.node_id, content=log_content)
@@ -607,7 +653,17 @@ def run(args):
                 torrent_file.create_torrent_file(node.node_id, torrent_data)
                 log_content = f"Node {node.node_id} has created {torrent_data['info']['file_name']}.torrent"
                 log(node_id=node.node_id,content=log_content)
-
+        elif mode == 'createTorMult':
+            file = f"{config.directory.node_files_dir}node{node.node_id}/{file}"
+            if not os.path.isdir(file):
+                log_content = f"Error: Folder '{file}' does not exist in node {node.node_id}'s directory."
+                log(node_id=node.node_id,content=log_content)
+            else:
+                torrent_file = TorrentFile(file, False)
+                torrent_data = torrent_file.create_torrent_data()
+                torrent_file.create_torrent_file(node.node_id, torrent_data)
+                log_content = f"Node {node.node_id} has created {torrent_data['info']['file_name']}.torrent"
+                log(node_id=node.node_id,content=log_content)
         elif mode == 'createMag':
             file = f"{config.directory.node_files_dir}node{node.node_id}/{file}"
             if not os.path.isfile(file):
