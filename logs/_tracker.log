@@ -5317,3 +5317,33 @@ d0595ac62e1a2a32457da2a for node1
 [17:53:45]  Connected by ('10.9.1.75', 52833)
 [17:53:54]  Connected by ('10.9.1.75', 52847)
 [17:53:56]  Connected by ('10.9.1.75', 52848)
+[17:54:05]  Connected by ('10.9.1.75', 52865)
+[17:54:07]  Node(s) [1, 2, 3] is in the torrent and node(s)[] have left.
+[17:54:14]  Connected by ('10.9.1.75', 52879)
+[17:54:16]  Connected by ('10.9.1.75', 52880)
+[17:54:25]  Connected by ('10.9.1.75', 52901)
+[17:54:34]  Connected by ('10.9.1.75', 52902)
+[17:54:36]  Connected by ('10.9.1.75', 52903)
+[17:54:45]  Connected by ('10.9.1.75', 52909)
+[17:54:47]  Node(s) [1, 2, 3] is in the torrent and node(s)[] have left.
+[17:54:54]  Connected by ('10.9.1.75', 52923)
+[17:54:56]  Connected by ('10.9.1.75', 52924)
+[17:55:05]  Connected by ('10.9.1.75', 52926)
+[17:55:14]  Connected by ('10.9.1.75', 52927)
+[17:55:16]  Connected by ('10.9.1.75', 52928)
+[17:55:25]  Connected by ('10.9.1.75', 52929)
+[17:55:27]  Node(s) [1, 2, 3] is in the torrent and node(s)[] have left.
+[17:55:34]  Connected by ('10.9.1.75', 52932)
+[17:55:36]  Connected by ('10.9.1.75', 52934)
+[17:55:45]  Connected by ('10.9.1.75', 52935)
+[17:55:54]  Connected by ('10.9.1.75', 52936)
+[17:55:56]  Connected by ('10.9.1.75', 52937)
+[17:56:05]  Connected by ('10.9.1.75', 52940)
+[17:56:07]  Node(s) [1, 2, 3] is in the torrent and node(s)[] have left.
+[17:56:09]  Connected by ('10.9.1.75', 52943)
+[17:56:09]  Node 3 exited torrent intentionally.
+[17:56:14]  Connected by ('10.9.1.75', 52951)
+[17:56:19]  Connected by ('10.9.1.75', 52952)
+[17:56:19]  Node 1 exited torrent intentionally.
+[17:56:24]  Connected by ('10.9.1.75', 52956)
+[17:56:24]  Node 2 exited torrent intentionally.
