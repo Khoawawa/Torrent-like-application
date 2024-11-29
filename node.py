@@ -425,6 +425,8 @@ class Node:
         self.files.append(info['file_name'])
     
     def ask_peer_info(self, info_hash, file_owners):
+        if len(file_owners) == 0:
+            return None
         file_owner = file_owners[0]
         msg = NodeInfo(self.node_id, file_owner[0]['node_id'], info_hash, None)
 
@@ -479,7 +481,10 @@ class Node:
                 # Left here doesnt matter ?
                 tracker_response = self.search_torrent(info_hash=info_hash,left=int(file_size))
                 info = self.ask_peer_info(info_hash, tracker_response['peers'])
-
+                if info == None:
+                    log_content = f"Noone send {info_hash}. Please try again!"
+                    log(node_id=self.node_id, content=log_content)
+                    return
                 self.torrent_data = {
                     'announce': tracker_url,
                     'info_hash': info_hash,
