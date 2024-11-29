@@ -1,12 +1,30 @@
-# Simple Torrent-like Application (STA)
-This is python implementation of the popular peer-to-peer protocol for file distribution. 
-This project, was the course project of Computer Networks course at Ho Chi Minh city University of Technology in Semester 1 2024 - 2025.
+<div align="center">
+VIETNAM NATIONAL UNIVERSITY, HO CHI MINH CITY
+<br />
+UNIVERSITY OF TECHNOLOGY
+<br />
+FACULTY OF COMPUTER SCIENCE AND ENGINEERING
+<br />
+<br />
+
+[![N|Solid](https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/HCMUT_official_logo.png/238px-HCMUT_official_logo.png)](https://www.hcmut.edu.vn/vi)
+<br />
+<br />
+<img src="https://img.shields.io/github/stars/Khoawawa/Torrent-like-application?color=white&logo=github">&emsp;<img src="https://img.shields.io/github/last-commit/Khoawawa/Torrent-like-application?color=blue">
+<br />
+<img src="https://img.shields.io/github/languages/top/Khoawawa/Torrent-like-application?color=yellow&logo=python&logoColor=yellow">&emsp;<img src="https://img.shields.io/github/repo-size/Khoawawa/Torrent-like-application?color=orange&label=size&logo=git&logoColor=orange">
+<br />
+
+**Computer Network / Semester 241**
+<br/>
+**Group 8**
+
+</div>
 
 Table of contents
 ==============
 
 <!--ts-->
-   * [Introduction to BitTorrent](#introduction)
    * [Installation](#installation)
    * [How to run](#how-to-run)
    * [Usage](#usage)
@@ -24,28 +42,7 @@ Table of contents
    * [Conclusion](#conclusion)
 
 <!--te-->
-
-## Introduction to BitTorrent
-
-<p align="center">
-  <img src="https://github.com/mohammadhashemii/BitTorrent-Python/blob/main/docs/bittorrent.jpg" height="400">	
-</p>
-
-Before you read this section, it must be noted that there is a complete and well-explained introduction to BitTorrent protocol
-in the reference book [Computer Networking: A top-Down Approach](https://www.amazon.com/Computer-Networking-Top-Down-Approach-6th/dp/0132856204) which all intuition behind this source were inspired by materials in this book.
-I also put the three pages of this book which is describing BitTorrent in [`docs/Computer_Networking_A_top_Down_Approach.pdf`](https://github.com/mohammadhashemii/BitTorrent-Python/Computer_Networking_A_top_Down_Approach.pdf).
-
-Here there is a brief intro to BitTorrent:
-
-BitTorrent is a popular P2P protocol for file distribution.
-The collection of all peers participating in the distribution of a particular file is called a ***torrent***.
-Peers in a torrent download equal-size chunks of the file from one another.
-When a peer first joins a torrent, it has no chunks. Over time, it accumulates more and more chunks. 
-While it downloads chunks it also uploads chunks to other peers.
-
-Each torrent has an infrastructure node called a ***tracker***.
-When a peer joins a torrent, it registers itself with the tracker and periodically informs the tracker that it is still in the torrent. 
-In this manner, the tracker keeps track of the peers that are participating in the torrent.
+# Project: SIMPLE TORRENT-LIKE APPLICATION
 
 ## Installation
 Clone the repository on your local system by running the commands below in terminal.
