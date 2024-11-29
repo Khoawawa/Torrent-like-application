@@ -345,19 +345,20 @@ class Node:
         for file_info in info['files']:
             file_name = file_info['file_name']
             file_size = file_info['length']
-            num_chunks = (file_size +piece_size -1) // piece_size
             
             file_path = os.path.join(folder_path,file_name)
             
             with open(file_path,"wb+") as f:
-                curr_chunk_idx = 0
-                while curr_chunk_idx < num_chunks:
-                    chunk = chunks[curr_chunk_idx + folder_offset]
-                    
-                    f.write(chunk)
-                    curr_chunk_idx+=1
-                    
-            folder_offset += num_chunks
+                while file_size > 0:
+                    chunk = chunks[folder_offset]
+                    if len(chunk) <= file_size:
+                        f.write(chunk)
+                        file_size -= len(chunk)
+                        folder_offset += 1
+                    else:
+                        f.write(chunk[:file_size])
+                        chunks[folder_offset] = chunk[file_size:]
+                        file_size = 0
                     
     def split_file_owners(self, file_owners: list, info: dict, info_hash):
         '''
@@ -415,6 +416,7 @@ class Node:
         for chunk in sorted_chunks:
             for piece in chunk:
                 total_file.append(piece["chunk"])
+        print(len(chunk))
         if 'files' in info:
             self.reassemble_folder(chunks=total_file,folder_path= file_path,info=info)
         else:
