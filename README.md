@@ -1,4 +1,4 @@
-# BitTorrent-Python
+# Simple Torrent-like Application (STA)
 This is python implementation of the popular peer-to-peer protocol for file distribution. 
 This project, was the course project of Computer Networks course at Ho Chi Minh city University of Technology in Semester 1 2024 - 2025.
 
