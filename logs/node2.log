@@ -1107,3 +1107,75 @@ incomplete: 0
 [22:46:35]  I informed the tracker that I'm still alive in the torrent!
 [22:46:55]  I informed the tracker that I'm still alive in the torrent!
 [22:47:15]  I informed the tracker that I'm still alive in the torrent!
+[22:49:45]  ***************** Node program started just right now! *****************
+[22:49:45]  You entered Torrent. Receiving port: 12880
+[22:49:45]  I informed the tracker that I'm still alive in the torrent!
+[22:49:59]  You just started to download a_b_c.torrent. Let's search it in torrent!
+[22:49:59]  Sending request to tracker on port 33063 for 6c67c196fff1e3452b68fffd4e6bed5f659f4214
+[22:49:59]  No one has 6c67c196fff1e3452b68fffd4e6bed5f659f4214
+[22:50:05]  I informed the tracker that I'm still alive in the torrent!
+[22:50:16]  ***************** Node program started just right now! *****************
+[22:50:16]  You entered Torrent. Receiving port: 34764
+[22:50:16]  I informed the tracker that I'm still alive in the torrent!
+[22:50:18]  You just started to download a_b_c.torrent. Let's search it in torrent!
+[22:50:18]  Sending request to tracker on port 57280 for 6c67c196fff1e3452b68fffd4e6bed5f659f4214
+[22:50:18]  Attempt 1/3: Connecting to node 1 at address ['127.0.0.1', 24625]
+[22:50:18]  Successfully connected and sent request for chunks to node 1
+[22:50:18]  file_A.txt has been downloaded to node_files/node2/a_b_c
+[22:50:18]  file_B.txt has been downloaded to node_files/node2/a_b_c
+[22:50:18]  file_C.txt has been downloaded to node_files/node2/a_b_c
+[22:50:18]  N5-2018.pdf has been downloaded to node_files/node2/a_b_c
+[09:49:35]  ***************** Node program started just right now! *****************
+[09:49:35]  You entered Torrent. Receiving port: 2466
+[09:49:35]  I informed the tracker that I'm still alive in the torrent!
+[09:49:44]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[09:49:44]  Sending request to tracker on port 17642 for 92abf8f80a1ac88adec7629f110ed69f1eda0cc2
+[09:49:44]  Attempt 1/3: Connecting to node 1 at address ['127.0.0.1', 53699]
+[09:49:44]  Successfully connected and sent request for chunks to node 1
+[09:49:54]  I informed the tracker that I'm still alive in the torrent!
+[09:50:14]  I informed the tracker that I'm still alive in the torrent!
+[09:50:34]  I informed the tracker that I'm still alive in the torrent!
+[09:50:54]  I informed the tracker that I'm still alive in the torrent!
+[09:51:14]  I informed the tracker that I'm still alive in the torrent!
+[09:51:34]  I informed the tracker that I'm still alive in the torrent!
+[09:52:24]  ***************** Node program started just right now! *****************
+[09:52:24]  You entered Torrent. Receiving port: 28736
+[09:52:24]  I informed the tracker that I'm still alive in the torrent!
+[09:52:25]  You dont have the torrent file!
+[09:52:31]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[09:52:31]  Sending request to tracker on port 35422 for 92abf8f80a1ac88adec7629f110ed69f1eda0cc2
+[09:52:31]  Attempt 1/3: Connecting to node 1 at address ['127.0.0.1', 26256]
+[09:52:31]  Successfully connected and sent request for chunks to node 1
+[09:52:31]  N5-2018.pdf has successfully downloaded and saved in my files directory.
+[09:52:44]  I informed the tracker that I'm still alive in the torrent!
+[09:53:01]  You just started to download a_b_c.torrent. Let's search it in torrent!
+[09:53:01]  Sending request to tracker on port 60614 for 6c67c196fff1e3452b68fffd4e6bed5f659f4214
+[09:53:01]  Attempt 1/3: Connecting to node 1 at address ['127.0.0.1', 26256]
+[09:53:01]  Successfully connected and sent request for chunks to node 1
+[09:53:01]  N5-2018.pdf has been downloaded to node_files/node2/a_b_c
+[09:53:04]  I informed the tracker that I'm still alive in the torrent!
+[09:53:24]  I informed the tracker that I'm still alive in the torrent!
+[09:53:44]  I informed the tracker that I'm still alive in the torrent!
+[09:54:04]  I informed the tracker that I'm still alive in the torrent!
+[09:55:22]  ***************** Node program started just right now! *****************
+[09:55:22]  You entered Torrent. Receiving port: 20634
+[09:55:22]  I informed the tracker that I'm still alive in the torrent!
+[09:55:35]  You dont have the torrent file!
+[09:55:42]  I informed the tracker that I'm still alive in the torrent!
+[09:55:49]  You just started to download a_b_c.torrent. Let's search it in torrent!
+[09:55:49]  Sending request to tracker on port 61806 for 74fa2771991dee837727e17ad9ac248fcf4f24cd
+[09:55:49]  Attempt 1/3: Connecting to node 1 at address ['127.0.0.1', 55912]
+[09:55:49]  Successfully connected and sent request for chunks to node 1
+[09:55:49]  file_A.txt has been downloaded to node_files/node2/a_b_c
+[09:55:49]  file_B.txt has been downloaded to node_files/node2/a_b_c
+[09:55:49]  file_C.txt has been downloaded to node_files/node2/a_b_c
+[09:55:49]  N5-2019.pdf has been downloaded to node_files/node2/a_b_c
+[09:56:02]  I informed the tracker that I'm still alive in the torrent!
+[09:56:22]  I informed the tracker that I'm still alive in the torrent!
+[09:56:39]  You dont have the torrent file!
+[09:56:42]  I informed the tracker that I'm still alive in the torrent!
+[09:56:47]  You just started to download N5-2018.pdf.torrent. Let's search it in torrent!
+[09:56:47]  Sending request to tracker on port 38055 for 92abf8f80a1ac88adec7629f110ed69f1eda0cc2
+[09:56:47]  Attempt 1/3: Connecting to node 1 at address ['127.0.0.1', 55912]
+[09:56:47]  Successfully connected and sent request for chunks to node 1
+[09:56:47]  N5-2018.pdf has successfully downloaded and saved in my files directory.

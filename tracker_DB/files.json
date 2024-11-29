@@ -1,9 +1,10 @@
 {
-    "362b593aa3a56fdb454fbdca3c8b119816807c2a": [
-        "{\"node_id\": 2, \"addr\": [\"127.0.0.1\", 52216], \"left\": 0, \"is_seed\": -1, \"is_seeder\": 0}",
-        "{\"node_id\": 1, \"addr\": [\"127.0.0.1\", 31190], \"left\": 0, \"is_seed\": 1}",
-        "{\"node_id\": 2, \"addr\": [\"127.0.0.1\", 4456], \"left\": 0, \"is_seed\": -1, \"is_seeder\": 0}",
-        "{\"node_id\": 2, \"addr\": [\"127.0.0.1\", 9425], \"left\": 0, \"is_seed\": -1, \"is_seeder\": 0}",
-        "{\"node_id\": 2, \"addr\": [\"127.0.0.1\", 60232], \"left\": 0, \"is_seed\": -1, \"is_seeder\": 0}"
+    "74fa2771991dee837727e17ad9ac248fcf4f24cd": [
+        "{\"node_id\": 1, \"addr\": [\"127.0.0.1\", 55912], \"left\": 0, \"is_seed\": 1}",
+        "{\"node_id\": 2, \"addr\": [\"127.0.0.1\", 61806], \"left\": 0, \"is_seed\": -1, \"is_seeder\": 0}"
+    ],
+    "92abf8f80a1ac88adec7629f110ed69f1eda0cc2": [
+        "{\"node_id\": 1, \"addr\": [\"127.0.0.1\", 55912], \"left\": 0, \"is_seed\": 1}",
+        "{\"node_id\": 2, \"addr\": [\"127.0.0.1\", 38055], \"left\": 0, \"is_seed\": -1, \"is_seeder\": 0}"
     ]
 }

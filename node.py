@@ -405,7 +405,7 @@ class Node:
                 log_content = f"{file_name} has been downloaded to {folder_path}"
                 log(node_id=self.node_id, content=log_content)
                 
-        else:  # Single file mode - existing code
+        else:  # Single file mode
             file_size = info['file_size']
             step = file_size / len(to_be_used_owners)
             chunks_ranges = [(round(step*i), round(step*(i+1))) for i in range(len(to_be_used_owners))]
@@ -420,18 +420,23 @@ class Node:
             for t in neighboring_peers_threads:
                 t.join()
 
-            sorted_chunks = self.sort_downloaded_chunks(info_hash=info_hash)
+            # Get the first (and only) file from the sorted chunks
+            sorted_chunks_by_file = self.sort_downloaded_chunks(info_hash=info_hash)
+            file_name = list(sorted_chunks_by_file.keys())[0]  # Get the only file name
+            sorted_chunks = sorted_chunks_by_file[file_name]
+            
             total_file = []
             file_path = f"{config.directory.node_files_dir}node{self.node_id}/{info['file_name']}"
             
             for chunk in sorted_chunks:
                 for piece in chunk:
                     total_file.append(piece["chunk"])
+                
             self.reassemble_file(chunks=total_file, file_path=file_path)
             log_content = f"{info['file_name']} has successfully downloaded and saved in my files directory."
             log(node_id=self.node_id, content=log_content)
             
-        self.files.append(info['file_name'])
+            self.files.append(info['file_name'])
 
     def set_download_mode(self, torrent_file: str):
         file_path = f"{config.directory.node_files_dir}node{self.node_id}/{torrent_file}"
