@@ -43,7 +43,9 @@ Table of contents
 
 <!--te-->
 # Project: SIMPLE TORRENT-LIKE APPLICATION
-
+## Team members
+## Requirements
+Đề bài được mô tả chi tiết trong file <[HK1_2122_VideoStreamingApplication_Assig1.pdf](https://github.com/toanvo4121/CSE-ComputerNetwork-VideoStreamingApplication/files/7495860/HK1_2122_VideoStreamingApplication_Assig1.pdf)>
 ## Installation
 Clone the repository on your local system by running the commands below in terminal.
 ```
