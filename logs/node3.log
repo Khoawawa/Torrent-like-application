@@ -340,3 +340,18 @@ downloaded: 71
 [17:55:36]  I informed the tracker that I'm still alive in the torrent!
 [17:55:56]  I informed the tracker that I'm still alive in the torrent!
 [17:56:09]  You exited the torrent!
+[18:30:27]  ***************** Node program started just right now! *****************
+[18:30:27]  You entered Torrent. Receiving port: 56735
+[18:30:27]  I informed the tracker that I'm still alive in the torrent!
+[18:30:47]  I informed the tracker that I'm still alive in the torrent!
+[18:31:05]  You just started to download ABC.torrent. Let's search it in torrent!
+[18:31:05]  Sending request to tracker for 12e4904ec3376c4d4fcf5c20990f38a99630b842
+[18:31:05]  Asking for chunks of node 2 at address ['10.9.1.75', 53425]
+[18:31:05]  Asking for chunks of node 1 at address ['10.9.1.190', 56706]
+a99630b842 for node2
+[18:31:05]  I sent a request for a chunk of 12e4904ec3376c4d4fcf5c20990f38a99630b842 for node1
+[18:31:05]  All the chunks of 12e4904ec3376c4d4fcf5c20990f38a99630b842 has downloaded from neighboring peers. But they must be reassembled!
+[18:31:05]  All the pieces of the 12e4904ec3376c4d4fcf5c20990f38a99630b842 is now sorted and ready to be reassembled.
+[18:31:06]  ABC has successfully downloaded and saved in my files directory.
+[18:31:07]  I informed the tracker that I'm still alive in the torrent!
+[18:31:27]  I informed the tracker that I'm still alive in the torrent!

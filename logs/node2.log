@@ -11562,3 +11562,74 @@ ed: stopping listener
 [17:56:05]  I informed the tracker that I'm still alive in the torrent!
 [17:56:24]  Receiving Socket was closed: stopping listener
 [17:56:24]  Stopped listening to request
+[18:30:15]  ***************** Node program started just right now! *****************
+[18:30:15]  You entered Torrent. Receiving port: 53425
+[18:30:15]  I informed the tracker that I'm still alive in the torrent!
+[18:30:35]  I informed the tracker that I'm still alive in the torrent!
+[18:30:55]  You are free now! You are waiting for other nodes' requests!
+[18:30:55]  Listening on port 53425
+[18:30:55]  I informed the tracker that I'm still alive in the torrent!
+[18:31:06]  Connected to ('10.9.1.190', 56773)
+[18:31:06]  The 0/61 has been sent!
+[18:31:06]  The 1/61 has been sent!
+[18:31:06]  The 2/61 has been sent!
+[18:31:06]  The 3/61 has been sent!
+[18:31:06]  The 4/61 has been sent!
+[18:31:06]  The 5/61 has been sent!
+[18:31:06]  The 6/61 has been sent!
+[18:31:06]  The 7/61 has been sent!
+[18:31:06]  The 8/61 has been sent!
+[18:31:06]  The 9/61 has been sent!
+[18:31:06]  The 10/61 has been sent!
+[18:31:06]  The 11/61 has been sent!
+[18:31:06]  The 12/61 has been sent!
+[18:31:06]  The 13/61 has been sent!
+[18:31:06]  The 14/61 has been sent!
+[18:31:06]  The 15/61 has been sent!
+[18:31:06]  The 16/61 has been sent!
+[18:31:06]  The 17/61 has been sent!
+[18:31:06]  The 18/61 has been sent!
+[18:31:06]  The 19/61 has been sent!
+[18:31:06]  The 20/61 has been sent!
+[18:31:06]  The 21/61 has been sent!
+[18:31:06]  The 22/61 has been sent!
+[18:31:06]  The 23/61 has been sent!
+[18:31:06]  The 24/61 has been sent!
+[18:31:06]  The 25/61 has been sent!
+[18:31:06]  The 26/61 has been sent!
+[18:31:06]  The 27/61 has been sent!
+[18:31:06]  The 28/61 has been sent!
+[18:31:06]  The 29/61 has been sent!
+[18:31:06]  The 30/61 has been sent!
+[18:31:06]  The 31/61 has been sent!
+[18:31:06]  The 32/61 has been sent!
+[18:31:06]  The 33/61 has been sent!
+[18:31:06]  The 34/61 has been sent!
+[18:31:06]  The 35/61 has been sent!
+[18:31:06]  The 36/61 has been sent!
+[18:31:06]  The 37/61 has been sent!
+[18:31:06]  The 38/61 has been sent!
+[18:31:06]  The 39/61 has been sent!
+[18:31:06]  The 40/61 has been sent!
+[18:31:06]  The 41/61 has been sent!
+[18:31:06]  The 42/61 has been sent!
+[18:31:06]  The 43/61 has been sent!
+[18:31:06]  The 44/61 has been sent!
+[18:31:06]  The 45/61 has been sent!
+[18:31:06]  The 46/61 has been sent!
+[18:31:06]  The 47/61 has been sent!
+[18:31:06]  The 48/61 has been sent!
+[18:31:06]  The 49/61 has been sent!
+[18:31:06]  The 50/61 has been sent!
+[18:31:06]  The 51/61 has been sent!
+[18:31:06]  The 52/61 has been sent!
+[18:31:06]  The 53/61 has been sent!
+[18:31:06]  The 54/61 has been sent!
+[18:31:06]  The 55/61 has been sent!
+[18:31:06]  The 56/61 has been sent!
+[18:31:06]  The 57/61 has been sent!
+[18:31:06]  The 58/61 has been sent!
+[18:31:06]  The 59/61 has been sent!
+[18:31:06]  The 60/61 has been sent!
+[18:31:06]  The process of sending a chunk to node3 of file ABC has finished!
+[18:31:15]  I informed the tracker that I'm still alive in the torrent!

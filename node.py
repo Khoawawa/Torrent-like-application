@@ -295,9 +295,17 @@ class Node:
         piece_size = self.torrent_data['info']['piece_size']
         #WAITING FOR THE OWNER TO ANSWER BACK WITH THE CHUNKS BYTE
         i = 0
+        def recv_exact(sock, length):
+            data = b''
+            while len(data) < length:
+                chunk = sock.recv(length - len(data))
+                if not chunk:
+                    return None  # Connection closed
+                data += chunk
+            return data
         while True:
 
-            length_data = temp_sock.recv(4)
+            length_data = recv_exact(temp_sock, 4)
             if not length_data:
                 log_content = f'Idx{i}: No data received! Closing connection'
                 log(node_id=self.node_id,content=log_content)
