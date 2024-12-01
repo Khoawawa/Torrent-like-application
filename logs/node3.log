@@ -68,3 +68,290 @@
 [17:54:12]  I informed the tracker that I'm still alive in the torrent!
 [17:54:32]  I informed the tracker that I'm still alive in the torrent!
 [17:54:52]  I informed the tracker that I'm still alive in the torrent!
+[17:55:12]  I informed the tracker that I'm still alive in the torrent!
+[17:55:32]  I informed the tracker that I'm still alive in the torrent!
+[17:55:52]  I informed the tracker that I'm still alive in the torrent!
+[17:56:12]  I informed the tracker that I'm still alive in the torrent!
+[17:56:32]  I informed the tracker that I'm still alive in the torrent!
+[17:56:52]  I informed the tracker that I'm still alive in the torrent!
+[17:57:12]  I informed the tracker that I'm still alive in the torrent!
+[17:57:32]  I informed the tracker that I'm still alive in the torrent!
+[17:57:52]  I informed the tracker that I'm still alive in the torrent!
+[17:58:12]  I informed the tracker that I'm still alive in the torrent!
+[17:58:32]  I informed the tracker that I'm still alive in the torrent!
+[18:40:27]  ***************** Node program started just right now! *****************
+[18:40:27]  You entered Torrent. Receiving port: 55645
+[18:40:27]  I informed the tracker that I'm still alive in the torrent!
+[18:40:42]  For info hash d91838522436ecfe7d0595ac62e1a2a32457da2a:
+complete: 1
+incomplete: 0
+downloaded: 71
+[18:40:47]  I informed the tracker that I'm still alive in the torrent!
+[18:41:01]  You just started to download file_A.txt.torrent. Let's search it in torrent!
+[18:41:01]  Sending request to tracker for d91838522436ecfe7d0595ac62e1a2a32457da2a
+[18:41:01]  Asking for chunks of node 2 at address ['10.9.1.190', 54640]
+[18:41:01]  Asking for chunks of node 1 at address ['10.9.1.75', 55590]
+[18:41:01]  I sent a request for a chunk of d91838522436ecfe7d0595ac62e1a2a32457da2a for node2
+[18:41:01]  I sent a request for a chunk of d91838522436ecfe7d0595ac62e1a2a32457da2a for node1
+[18:41:01]  All the chunks of d91838522436ecfe7d0595ac62e1a2a32457da2a has downloaded from neighboring peers. But they must be reassembled!
+[18:41:01]  All the pieces of the d91838522436ecfe7d0595ac62e1a2a32457da2a is now sorted and ready to be reassembled.
+[18:41:01]  file_A.txt has successfully downloaded and saved in my files directory.
+[18:41:07]  I informed the tracker that I'm still alive in the torrent!
+[18:41:27]  I informed the tracker that I'm still alive in the torrent!
+[18:41:47]  I informed the tracker that I'm still alive in the torrent!
+[18:41:48]  You exited the torrent!
+[15:46:24]  ***************** Node program started just right now! *****************
+[15:46:24]  You entered Torrent. Receiving port: 65448
+[15:46:24]  I informed the tracker that I'm still alive in the torrent!
+[15:46:35]  You just started to download ABC.torrent. Let's search it in torrent!
+[15:46:35]  Sending request to tracker for 76adb44c15257afbcadbd4594c296079b26a664e
+[15:46:35]  Asking for chunks of node 1 at address ['10.9.1.75', 65425]
+[15:46:35]  Asking for chunks of node 2 at address ['10.9.1.75', 65438]
+[15:46:35]  I sent a request for a chunk of 76adb44c15257afbcadbd4594c296079b26a664e for node1
+[15:46:35]  I sent a request for a chunk of 76adb44c15257afbcadbd4594c296079b26a664e for node2
+[15:46:44]  I informed the tracker that I'm still alive in the torrent!
+[15:46:45]  All the chunks of 76adb44c15257afbcadbd4594c296079b26a664e has downloaded from neighboring peers. But they must be reassembled!
+[15:46:45]  All the pieces of the 76adb44c15257afbcadbd4594c296079b26a664e is now sorted and ready to be reassembled.
+[15:46:46]  ABC has successfully downloaded and saved in my files directory.
+[15:47:04]  I informed the tracker that I'm still alive in the torrent!
+[15:47:10]  You just started to download ABC.torrent. Let's search it in torrent!
+[15:47:10]  Sending request to tracker for 76adb44c15257afbcadbd4594c296079b26a664e
+[15:47:10]  Asking for chunks of node 1 at address ['10.9.1.75', 65425]
+[15:47:10]  Asking for chunks of node 2 at address ['10.9.1.75', 65438]
+[15:47:10]  I sent a request for a chunk of 76adb44c15257afbcadbd4594c296079b26a664e for node1
+[15:47:10]  I sent a request for a chunk of 76adb44c15257afbcadbd4594c296079b26a664e for node2
+[15:47:20]  All the chunks of 76adb44c15257afbcadbd4594c296079b26a664e has downloaded from neighboring peers. But they must be reassembled!
+[15:47:20]  All the pieces of the 76adb44c15257afbcadbd4594c296079b26a664e is now sorted and ready to be reassembled.
+[15:47:21]  ABC has successfully downloaded and saved in my files directory.
+[15:47:24]  I informed the tracker that I'm still alive in the torrent!
+[15:47:44]  I informed the tracker that I'm still alive in the torrent!
+[15:48:04]  I informed the tracker that I'm still alive in the torrent!
+[15:48:24]  I informed the tracker that I'm still alive in the torrent!
+[15:48:44]  I informed the tracker that I'm still alive in the torrent!
+[15:49:04]  I informed the tracker that I'm still alive in the torrent!
+[15:49:24]  I informed the tracker that I'm still alive in the torrent!
+[15:49:44]  I informed the tracker that I'm still alive in the torrent!
+[15:50:04]  I informed the tracker that I'm still alive in the torrent!
+[15:50:24]  I informed the tracker that I'm still alive in the torrent!
+[15:50:44]  I informed the tracker that I'm still alive in the torrent!
+[15:51:04]  I informed the tracker that I'm still alive in the torrent!
+[15:51:09]  You just started to download ABC.torrent. Let's search it in torrent!
+[15:51:09]  Sending request to tracker for 76adb44c15257afbcadbd4594c296079b26a664e
+[15:51:09]  No one has 76adb44c15257afbcadbd4594c296079b26a664e
+[15:51:12]  You just started to download ABC.torrent. Let's search it in torrent!
+[15:51:12]  Sending request to tracker for 76adb44c15257afbcadbd4594c296079b26a664e
+[15:51:12]  No one has 76adb44c15257afbcadbd4594c296079b26a664e
+[15:51:24]  I informed the tracker that I'm still alive in the torrent!
+[15:51:38]  You exited the torrent!
+[15:51:42]  ***************** Node program started just right now! *****************
+[15:51:42]  You entered Torrent. Receiving port: 49268
+[15:51:42]  I informed the tracker that I'm still alive in the torrent!
+[15:51:44]  You just started to download ABC.torrent. Let's search it in torrent!
+[15:51:44]  Sending request to tracker for 12e4904ec3376c4d4fcf5c20990f38a99630b842
+[15:51:44]  Asking for chunks of node 1 at address ['10.9.1.75', 49235]
+[15:51:44]  Asking for chunks of node 2 at address ['10.9.1.75', 49245]
+[15:51:44]  I sent a request for a chunk of 12e4904ec3376c4d4fcf5c20990f38a99630b842 for node1
+[15:51:44]  I sent a request for a chunk of 12e4904ec3376c4d4fcf5c20990f38a99630b842 for node2
+[15:51:44]  All the chunks of 12e4904ec3376c4d4fcf5c20990f38a99630b842 has downloaded from neighboring peers. But they must be reassembled!
+[15:51:44]  All the pieces of the 12e4904ec3376c4d4fcf5c20990f38a99630b842 is now sorted and ready to be reassembled.
+[15:51:44]  ABC has successfully downloaded and saved in my files directory.
+[15:52:02]  I informed the tracker that I'm still alive in the torrent!
+[15:52:22]  I informed the tracker that I'm still alive in the torrent!
+[15:52:42]  I informed the tracker that I'm still alive in the torrent!
+[15:53:02]  I informed the tracker that I'm still alive in the torrent!
+[15:53:22]  I informed the tracker that I'm still alive in the torrent!
+[15:53:42]  I informed the tracker that I'm still alive in the torrent!
+[15:54:02]  I informed the tracker that I'm still alive in the torrent!
+[15:54:22]  I informed the tracker that I'm still alive in the torrent!
+[15:54:42]  I informed the tracker that I'm still alive in the torrent!
+[15:55:02]  I informed the tracker that I'm still alive in the torrent!
+[15:55:22]  I informed the tracker that I'm still alive in the torrent!
+[15:55:42]  I informed the tracker that I'm still alive in the torrent!
+[15:56:02]  I informed the tracker that I'm still alive in the torrent!
+[15:56:22]  I informed the tracker that I'm still alive in the torrent!
+[15:56:42]  I informed the tracker that I'm still alive in the torrent!
+[15:57:02]  I informed the tracker that I'm still alive in the torrent!
+[15:57:22]  I informed the tracker that I'm still alive in the torrent!
+[15:57:42]  I informed the tracker that I'm still alive in the torrent!
+[15:58:02]  I informed the tracker that I'm still alive in the torrent!
+[15:58:22]  I informed the tracker that I'm still alive in the torrent!
+[15:58:42]  I informed the tracker that I'm still alive in the torrent!
+[15:59:02]  I informed the tracker that I'm still alive in the torrent!
+[15:59:22]  I informed the tracker that I'm still alive in the torrent!
+[15:59:42]  I informed the tracker that I'm still alive in the torrent!
+[16:00:02]  I informed the tracker that I'm still alive in the torrent!
+[16:00:22]  I informed the tracker that I'm still alive in the torrent!
+[16:00:42]  I informed the tracker that I'm still alive in the torrent!
+[16:01:02]  I informed the tracker that I'm still alive in the torrent!
+[16:01:22]  I informed the tracker that I'm still alive in the torrent!
+[16:01:42]  I informed the tracker that I'm still alive in the torrent!
+[16:02:02]  I informed the tracker that I'm still alive in the torrent!
+[16:02:22]  I informed the tracker that I'm still alive in the torrent!
+[16:02:42]  I informed the tracker that I'm still alive in the torrent!
+[16:03:02]  I informed the tracker that I'm still alive in the torrent!
+[16:03:22]  I informed the tracker that I'm still alive in the torrent!
+[16:03:42]  I informed the tracker that I'm still alive in the torrent!
+[16:04:02]  I informed the tracker that I'm still alive in the torrent!
+[16:04:22]  I informed the tracker that I'm still alive in the torrent!
+[16:04:42]  I informed the tracker that I'm still alive in the torrent!
+[16:05:02]  I informed the tracker that I'm still alive in the torrent!
+[16:05:22]  I informed the tracker that I'm still alive in the torrent!
+[16:05:42]  I informed the tracker that I'm still alive in the torrent!
+[16:06:02]  I informed the tracker that I'm still alive in the torrent!
+[16:06:22]  I informed the tracker that I'm still alive in the torrent!
+[16:06:42]  I informed the tracker that I'm still alive in the torrent!
+[16:07:02]  I informed the tracker that I'm still alive in the torrent!
+[16:07:22]  I informed the tracker that I'm still alive in the torrent!
+[16:07:42]  I informed the tracker that I'm still alive in the torrent!
+[16:08:02]  I informed the tracker that I'm still alive in the torrent!
+[16:08:22]  I informed the tracker that I'm still alive in the torrent!
+[16:08:42]  I informed the tracker that I'm still alive in the torrent!
+[16:09:55]  ***************** Node program started just right now! *****************
+[16:09:55]  You entered Torrent. Receiving port: 50072
+[16:09:55]  I informed the tracker that I'm still alive in the torrent!
+[16:10:11]  I informed the tracker that I'm still alive in the torrent!
+[16:10:16]  You just started to download ABC.torrent. Let's search it in torrent!
+[16:10:16]  Sending request to tracker for 12e4904ec3376c4d4fcf5c20990f38a99630b842
+[16:10:16]  Asking for chunks of node 1 at address ['10.9.1.75', 49948]
+[16:10:16]  I sent a request for a chunk of 12e4904ec3376c4d4fcf5c20990f38a99630b842 for node1
+[16:10:16]  Asking for chunks of node 2 at address ['10.9.1.75', 49953]
+[16:10:16]  I sent a request for a chunk of 12e4904ec3376c4d4fcf5c20990f38a99630b842 for node2
+[16:10:16]  All the chunks of 12e4904ec3376c4d4fcf5c20990f38a99630b842 has downloaded from neighboring peers. But they must be reassembled!
+[16:10:16]  All the pieces of the 12e4904ec3376c4d4fcf5c20990f38a99630b842 is now sorted and ready to be reassembled.
+[16:13:16]  ***************** Node program started just right now! *****************
+[16:13:16]  You entered Torrent. Receiving port: 50140
+[16:13:16]  I informed the tracker that I'm still alive in the torrent!
+[16:13:36]  I informed the tracker that I'm still alive in the torrent!
+[16:13:56]  I informed the tracker that I'm still alive in the torrent!
+[16:14:16]  I informed the tracker that I'm still alive in the torrent!
+[16:14:19]  ***************** Node program started just right now! *****************
+[16:14:19]  You entered Torrent. Receiving port: 50180
+[16:14:19]  I informed the tracker that I'm still alive in the torrent!
+[16:14:23]  You just started to download ABC.torrent. Let's search it in torrent!
+[16:14:23]  Sending request to tracker for 12e4904ec3376c4d4fcf5c20990f38a99630b842
+[16:14:23]  Asking for chunks of node 2 at address ['10.9.1.75', 50148]
+[16:14:23]  Asking for chunks of node 1 at address ['10.9.1.75', 50169]
+[16:14:23]  I sent a request for a chunk of 12e4904ec3376c4d4fcf5c20990f38a99630b842 for node2
+[16:14:23]  I sent a request for a chunk of 12e4904ec3376c4d4fcf5c20990f38a99630b842 for node1
+[16:14:33]  All the chunks of 12e4904ec3376c4d4fcf5c20990f38a99630b842 has downloaded from neighboring peers. But they must be reassembled!
+[16:14:33]  All the pieces of the 12e4904ec3376c4d4fcf5c20990f38a99630b842 is now sorted and ready to be reassembled.
+[16:14:39]  I informed the tracker that I'm still alive in the torrent!
+[16:14:59]  I informed the tracker that I'm still alive in the torrent!
+[16:15:19]  I informed the tracker that I'm still alive in the torrent!
+[16:15:39]  I informed the tracker that I'm still alive in the torrent!
+[16:15:47]  You exited the torrent!
+[16:16:21]  ***************** Node program started just right now! *****************
+[16:16:21]  You entered Torrent. Receiving port: 50263
+[16:16:21]  I informed the tracker that I'm still alive in the torrent!
+[16:16:35]  I informed the tracker that I'm still alive in the torrent!
+[16:16:55]  I informed the tracker that I'm still alive in the torrent!
+[16:17:04]  You just started to download ABC.torrent. Let's search it in torrent!
+[16:17:04]  Sending request to tracker for 12e4904ec3376c4d4fcf5c20990f38a99630b842
+[16:17:04]  Asking for chunks of node 1 at address ['10.9.1.75', 50241]
+[16:17:04]  I sent a request for a chunk of 12e4904ec3376c4d4fcf5c20990f38a99630b842 for node1
+[16:17:04]  Asking for chunks of node 2 at address ['10.9.1.75', 50246]
+[16:17:04]  I sent a request for a chunk of 12e4904ec3376c4d4fcf5c20990f38a99630b842 for node2
+[16:19:35]  ***************** Node program started just right now! *****************
+[16:19:35]  You entered Torrent. Receiving port: 50379
+[16:19:35]  I informed the tracker that I'm still alive in the torrent!
+[16:19:42]  You just started to download ABC.torrent. Let's search it in torrent!
+[16:19:42]  Sending request to tracker for 12e4904ec3376c4d4fcf5c20990f38a99630b842
+[16:19:42]  Asking for chunks of node 2 at address ['10.9.1.75', 50246]
+[16:19:42]  I sent a request for a chunk of 12e4904ec3376c4d4fcf5c20990f38a99630b842 for node2
+[16:44:09]  ***************** Node program started just right now! *****************
+[16:44:09]  You entered Torrent. Receiving port: 50989
+[16:44:09]  I informed the tracker that I'm still alive in the torrent!
+[16:44:14]  You just started to download ABC.torrent. Let's search it in torrent!
+[16:44:14]  Sending request to tracker for 12e4904ec3376c4d4fcf5c20990f38a99630b842
+[16:44:14]  Asking for chunks of node 1 at address ['10.9.1.75', 50591]
+[16:44:14]  I sent a request for a chunk of 12e4904ec3376c4d4fcf5c20990f38a99630b842 for node1
+[16:44:14]  I sent a request for a chunk of 12e4904ec3376c4d4fcf5c20990f38a99630b842 for node2
+[16:44:45]  All the chunks of 12e4904ec3376c4d4fcf5c20990f38a99630b842 has downloaded from neighboring peers. But they must be reassembled!
+[16:44:45]  All the pieces of the 12e4904ec3376c4d4fcf5c20990f38a99630b842 is now sorted and ready to be reassembled.
+[16:44:47]  I informed the tracker that I'm still alive in the torrent!
+[16:44:47]  I informed the tracker that I'm still alive in the torrent!
+[16:46:38]  I informed the tracker that I'm still alive in the torrent!
+[16:46:38]  I informed the tracker that I'm still alive in the torrent!
+[16:46:38]  I informed the tracker that I'm still alive in the torrent!
+[16:46:38]  I informed the tracker that I'm still alive in the torrent!
+[16:46:38]  I informed the tracker that I'm still alive in the torrent!
+[17:24:19]  ***************** Node program started just right now! *****************
+[17:24:19]  You entered Torrent. Receiving port: 51881
+[17:24:19]  I informed the tracker that I'm still alive in the torrent!
+[17:24:26]  You just started to download ABC.torrent. Let's search it in torrent!
+[17:24:26]  Sending request to tracker for 12e4904ec3376c4d4fcf5c20990f38a99630b842
+[17:24:26]  Asking for chunks of node 1 at address ['10.9.1.75', 51786]
+[17:24:26]  Asking for chunks of node 2 at address ['10.9.1.75', 51848]
+[17:24:26]  I sent a request for a chunk of 12e4904ec3376c4d4fcf5c20990f38a99630b842 for node1
+[17:24:26]  I sent a request for a chunk of 12e4904ec3376c4d4fcf5c20990f38a99630b842 for node2
+[17:24:26]  All the chunks of 12e4904ec3376c4d4fcf5c20990f38a99630b842 has downloaded from neighboring peers. But they must be reassembled!
+[17:24:26]  All the pieces of the 12e4904ec3376c4d4fcf5c20990f38a99630b842 is now sorted and ready to be reassembled.
+[17:24:26]  ABC has successfully downloaded and saved in my files directory.
+[17:24:39]  I informed the tracker that I'm still alive in the torrent!
+[17:24:59]  I informed the tracker that I'm still alive in the torrent!
+[17:25:04]  You exited the torrent!
+[17:25:18]  ***************** Node program started just right now! *****************
+[17:25:18]  You entered Torrent. Receiving port: 51913
+[17:25:18]  I informed the tracker that I'm still alive in the torrent!
+[17:25:33]  I informed the tracker that I'm still alive in the torrent!
+[17:25:50]  You just started to download ABC.torrent. Let's search it in torrent!
+[17:25:50]  Sending request to tracker for 12e4904ec3376c4d4fcf5c20990f38a99630b842
+[17:26:04]  I informed the tracker that I'm still alive in the torrent!
+[17:26:53]  I informed the tracker that I'm still alive in the torrent!
+[17:26:53]  I informed the tracker that I'm still alive in the torrent!
+[17:26:53]  I informed the tracker that I'm still alive in the torrent!
+[17:26:53]  Asking for chunks of node 1 at address ['10.9.1.75', 51786]
+[17:26:53]  Asking for chunks of node 2 at address ['10.9.1.75', 51848]
+[17:26:53]  I sent a request for a chunk of 12e4904ec3376c4d4fcf5c20990f38a99630b842 for node1
+[17:26:53]  I sent a request for a chunk of 12e4904ec3376c4d4fcf5c20990f38a99630b842 for node2
+[17:27:21]  I informed the tracker that I'm still alive in the torrent!
+[17:27:21]  All the chunks of 12e4904ec3376c4d4fcf5c20990f38a99630b842 has downloaded from neighboring peers. But they must be reassembled!
+[17:27:32]  All the pieces of the 12e4904ec3376c4d4fcf5c20990f38a99630b842 is now sorted and ready to be reassembled.
+[17:51:32]  ***************** Node program started just right now! *****************
+[17:51:32]  You entered Torrent. Receiving port: 52614
+[17:51:32]  I informed the tracker that I'm still alive in the torrent!
+[17:51:39]  You just started to download ABC.torrent. Let's search it in torrent!
+[17:51:39]  Sending request to tracker for 12e4904ec3376c4d4fcf5c20990f38a99630b842
+[17:51:39]  Asking for chunks of node 1 at address ['10.9.1.75', 51786]
+[17:51:39]  I sent a request for a chunk of 12e4904ec3376c4d4fcf5c20990f38a99630b842 for node1
+[17:51:42]  All the chunks of 12e4904ec3376c4d4fcf5c20990f38a99630b842 has downloaded from neighboring peers. But they must be reassembled!
+[17:51:42]  All the pieces of the 12e4904ec3376c4d4fcf5c20990f38a99630b842 is now sorted and ready to be reassembled.
+[17:51:52]  I informed the tracker that I'm still alive in the torrent!
+[17:52:36]  ***************** Node program started just right now! *****************
+[17:52:36]  You entered Torrent. Receiving port: 52758
+[17:52:36]  I informed the tracker that I'm still alive in the torrent!
+[17:52:43]  You just started to download ABC.torrent. Let's search it in torrent!
+[17:52:43]  Sending request to tracker for 12e4904ec3376c4d4fcf5c20990f38a99630b842
+[17:52:43]  Asking for chunks of node 1 at address ['10.9.1.75', 52720]
+[17:52:43]  Asking for chunks of node 2 at address ['10.9.1.75', 52751]
+[17:52:43]  I sent a request for a chunk of 12e4904ec3376c4d4fcf5c20990f38a99630b842 for node1
+[17:52:43]  I sent a request for a chunk of 12e4904ec3376c4d4fcf5c20990f38a99630b842 for node2
+[17:52:43]  All the chunks of 12e4904ec3376c4d4fcf5c20990f38a99630b842 has downloaded from neighboring peers. But they must be reassembled!
+[17:52:43]  All the pieces of the 12e4904ec3376c4d4fcf5c20990f38a99630b842 is now sorted and ready to be reassembled.
+[17:52:43]  ABC has successfully downloaded and saved in my files directory.
+[17:52:56]  I informed the tracker that I'm still alive in the torrent!
+[17:53:16]  I informed the tracker that I'm still alive in the torrent!
+[17:53:36]  I informed the tracker that I'm still alive in the torrent!
+[17:53:56]  I informed the tracker that I'm still alive in the torrent!
+[17:54:16]  I informed the tracker that I'm still alive in the torrent!
+[17:54:36]  I informed the tracker that I'm still alive in the torrent!
+[17:54:56]  I informed the tracker that I'm still alive in the torrent!
+[17:55:16]  I informed the tracker that I'm still alive in the torrent!
+[17:55:36]  I informed the tracker that I'm still alive in the torrent!
+[17:55:56]  I informed the tracker that I'm still alive in the torrent!
+[17:56:09]  You exited the torrent!
+[18:30:27]  ***************** Node program started just right now! *****************
+[18:30:27]  You entered Torrent. Receiving port: 56735
+[18:30:27]  I informed the tracker that I'm still alive in the torrent!
+[18:30:47]  I informed the tracker that I'm still alive in the torrent!
+[18:31:05]  You just started to download ABC.torrent. Let's search it in torrent!
+[18:31:05]  Sending request to tracker for 12e4904ec3376c4d4fcf5c20990f38a99630b842
+[18:31:05]  Asking for chunks of node 2 at address ['10.9.1.75', 53425]
+[18:31:05]  Asking for chunks of node 1 at address ['10.9.1.190', 56706]
+a99630b842 for node2
+[18:31:05]  I sent a request for a chunk of 12e4904ec3376c4d4fcf5c20990f38a99630b842 for node1
+[18:31:05]  All the chunks of 12e4904ec3376c4d4fcf5c20990f38a99630b842 has downloaded from neighboring peers. But they must be reassembled!
+[18:31:05]  All the pieces of the 12e4904ec3376c4d4fcf5c20990f38a99630b842 is now sorted and ready to be reassembled.
+[18:31:06]  ABC has successfully downloaded and saved in my files directory.
+[18:31:07]  I informed the tracker that I'm still alive in the torrent!
+[18:31:27]  I informed the tracker that I'm still alive in the torrent!

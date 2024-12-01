@@ -9,13 +9,13 @@ CFG = {
     },
     "constants": {
         "AVAILABLE_PORTS_RANGE": (1024, 65535), # range of available ports on the local computer
-        "TRACKER_ADDR": ('10.9.1.75', 12345),
+        "TRACKER_ADDR": ('10.229.10.132', 12345),
         "MAX_UDP_SEGMENT_DATA_SIZE": 65527,
-        "BUFFER_SIZE": 8192,        # MACOSX UDP MTU is 9216
-        "CHUNK_PIECES_SIZE": 8192 - 2000, # Each chunk pieces(segments of UDP) must be lower than UDP buffer size
+        "BUFFER_SIZE": 8192,        
+        "CHUNK_PIECES_SIZE": 8192 - 2000, # Each chunk pieces(segments of UDP) must be lower than TCP buffer size
         "MAX_SPLITTNES_RATE": 3,    # number of neighboring peers which the node take chunks of a file in parallel
         "NODE_TIME_INTERVAL": 20,        # the interval time that each node periodically informs the tracker (in seconds)
-        "TRACKER_TIME_INTERVAL": 22      #the interval time that the tracker periodically checks which nodes are in the torrent (in seconds)
+        "TRACKER_TIME_INTERVAL": 40      #the interval time that the tracker periodically checks which nodes are in the torrent (in seconds)
     },
     "tracker_requests_mode": {
         "REGISTER": 0,  # tells the tracker that it is in the torrent
